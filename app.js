@@ -23,12 +23,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/svgs', svgs);
-app.use('/towers', towersRouter);
-app.use('/tubs', tubsRouter);
-app.use('/greenhouses', greenhousesRouter);
+app.use('/api/', indexRouter);
+app.use('/api/users', usersRouter);
+app.use('/api/svgs', svgs);
+app.use('/api/towers', towersRouter);
+app.use('/api/tubs', tubsRouter);
+app.use('/api/greenhouses', greenhousesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
