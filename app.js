@@ -9,7 +9,6 @@ var usersRouter = require('./routes/api/users');
 var towersRouter = require('./routes/api/towers');
 var tubsRouter = require('./routes/api/tubs');
 var greenhousesRouter = require('./routes/api/greenhouses');
-var svgs = require('./routes/api/svgs');
 
 var app = express();
 
@@ -25,7 +24,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api/', indexRouter);
 app.use('/api/users', usersRouter);
-app.use('/api/svgs', svgs);
 app.use('/api/towers', towersRouter);
 app.use('/api/tubs', tubsRouter);
 app.use('/api/greenhouses', greenhousesRouter);
