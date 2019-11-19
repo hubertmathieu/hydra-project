@@ -30,8 +30,17 @@ router.get('/', (req, res) => {
     return res.send(Object.values(towers));
 });
 
+router.post('/test', (req, res) => {
+    let name=req.body.name;
+    let message=req.body.message;
+    console.log("name = "+name+", message is "+message);
+    res.send("it worked")
+});
+
 router.get('/:towerId', (req, res) => {
     return res.send(towers[req.params.towerId]);
 });
+
+
 
 module.exports = router;
