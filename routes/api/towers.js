@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var database = require('../../database');
 
 let towers = {
     1: {
@@ -28,7 +29,9 @@ let towers = {
 
 
 router.get('/', (req, res) => {
-    return res.send(Object.values(towers));
+    database.findAllTowers((data) => {
+        res.send(data);
+    });
 });
 
 router.post('/test', (req, res) => {
