@@ -4,16 +4,14 @@ var router = express.Router();
 
 let guigui = [{
   id: 1,
-  iconName : 'faTemperatureLow',
   title: "Temp.",
-  value: "23.5 °C"
+  value: "30.6 °C"
 },
   {
     id: 2,
-    iconName : 'faTint',
     title: "Humidité",
-    value: "45.64 %"
-  }];
+    value: "56.43 %"
+}];
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -21,9 +19,10 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', function(req, res, next) {
-  var  ph = req.body.ph;
-  var  temp = req.body.temp;
-  res.send( 'Receiving Ph : ' + ph + ' and temp : ' + temp);
+  console.log("My beautiful body");
+  console.log(req.body);
+  console.log(req.body.temp);
+  console.log(req.body.ph);
 });
 
 router.get('/gui', function(req, res, next) {
