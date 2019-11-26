@@ -2,30 +2,27 @@ var express = require('express');
 var router = express.Router();
 var database = require('../../database');
 
-let towers = {
-    1: {
-        id: '1',
-        type: 'tower',
-        name: 'tower 1',
-        data: {
-            temperature: '36C',
-            humidity: '21%',
-            lastSpray: '11/11/2019 - 21:33:41',
-            nextSpray: '11/11/2019 - 21:38:41'
+router.post('/', function(req, res, next){
+    /*let type=req.body.type;
+    let id=req.body.id;
+    let temperature=req.body.data.temperature;
+    let humidity=req.body.data.humidity;
+    let jsonTower={
+        "type":type,
+        "id":id,
+        "data":{
+            "temperature":temperature,
+            "humidity":humidity
         }
-    },
-    2: {
-        id: '2',
-        type: 'tower',
-        name: 'tower 1',
-        data: {
-            temperature: '36C',
-            humidity: '346456456',
-            lastSpray: '11/11/2019 - 21:33:41',
-            nextSpray: '11/11/2019 - 21:38:41'
-        }
-    }
-};
+    };
+    console.log(jsonTower);
+    database.insertData(jsonTower);
+    console.log("Test");
+    res.send(jsonTower);*/
+    console.log(req.body);
+    database.insertData(req.body);
+    res.send(req.body);
+});
 
 
 router.get('/', (req, res) => {
@@ -48,7 +45,11 @@ router.get('/send', (req, res) => {
 });
 
 router.get('/:towerId', (req, res) => {
-    return res.send(towers[req.params.towerId]);
+    database.findTowerById(req.params.towerId, (data) => {
+        res.send(data);
+    });
 });
+
+
 
 module.exports = router;

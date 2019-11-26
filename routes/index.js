@@ -21,8 +21,7 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res, next) {
   console.log("My beautiful body");
   console.log(req.body);
-  console.log(req.body.temp);
-  console.log(req.body.ph);
+  res.send("Youu good");
 });
 
 router.get('/gui', function(req, res, next) {
