@@ -34,7 +34,7 @@ Vous trouverez ci-dessous la liste des matériaux ainsi que la liste des différ
 
 La prochaine étape consiste à mettre sur pied un serveur Node Express. Nous avons utilisé la distribution Debian dans cet exemple. 
 
-Installez nodeJS, puis vérifiez la version de l'installation. 
+Installez nodeJS et MongoDB, puis vérifiez la version de l'installation. 
 ```
 $sudo apt-get install nodejs
 $node -v 
