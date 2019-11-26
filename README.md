@@ -65,8 +65,7 @@ $npm start
 ## Auteurs
 
 * **[Cégep de Sorel-Tracy](https://cegepst.qc.ca)**
-
-Voyez aussi la liste des [contributeurs](https://github.com/LudoB99/hydra-project/graphs/contributors) qui ont participé au projet.
+* Voyez aussi la liste des [contributeurs](https://github.com/LudoB99/hydra-project/graphs/contributors) qui ont participé au projet.
 
 ## License
 
