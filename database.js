@@ -143,3 +143,35 @@ exports.removeUser = function (user) {
         });
     });
 };
+
+exports.findThreshold = function (callback) {
+    mongoClient.connect(url, function (err, db) {
+        if (err) throw err;
+        db.db('hydra').collection('threshold').findOne(function (err, result) {
+            if (err) throw err;
+            callback(result);
+            db.close();
+        })
+    })
+};
+
+exports.findDefaultConfig = function (callback) {
+    mongoClient.connect(url, function (err, db) {
+        if (err) throw err;
+        db.db('hydra').collection('config').findOne(function (err, result) {
+            if (err) throw err;
+            callback(result);
+            db.close();
+        })
+    })
+};
+
+exports.updateConfig = function (config) {
+    mongoClient.connect(url, function (err, db) {
+        if (err) throw err;
+        db.db('hydra').collection('config').update({_id: config._id}, config, function (err, result) {
+            if (err) throw err;
+            db.close();
+        })
+    })
+};
