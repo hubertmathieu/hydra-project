@@ -9,6 +9,7 @@ var usersRouter = require('./routes/api/users');
 var towersRouter = require('./routes/api/towers');
 var tubsRouter = require('./routes/api/tubs');
 var greenhousesRouter = require('./routes/api/greenhouses');
+var configRouter = require('./routes/api/config');
 
 var app = express();
 
@@ -27,6 +28,7 @@ app.use('/api/users', usersRouter);
 app.use('/api/towers', towersRouter);
 app.use('/api/tubs', tubsRouter);
 app.use('/api/greenhouses', greenhousesRouter);
+app.use('/api/config', configRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
