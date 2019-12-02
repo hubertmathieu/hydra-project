@@ -144,27 +144,6 @@ exports.removeUser = function (user) {
     });
 };
 
-exports.findThreshold = function (callback) {
-    mongoClient.connect(url, function (err, db) {
-        if (err) throw err;
-        db.db('hydra').collection('threshold').findOne(function (err, result) {
-            if (err) throw err;
-            callback(result);
-            db.close();
-        })
-    })
-};
-
-exports.updateThreshold = function (threshold) {
-    mongoClient.connect(url, function (err, db) {
-        if (err) throw err;
-        db.db('hydra').collection('threshold').update({_id: threshold._id}, threshold, function (err, res) {
-            if (err) throw err;
-            db.close();
-        })
-    })
-};
-
 exports.findDefaultConfig = function (callback) {
     mongoClient.connect(url, function (err, db) {
         if (err) throw err;

@@ -14,22 +14,11 @@ router.post('/', function (req, res) {
         var newConfig = {};
         newConfig.delay = req.body.delay || config.delay;
         newConfig.phDown = req.body.phDown || config.phDown;
+        newConfig.maxPh = req.body.maxPh || config.maxPh;
+        newConfig.minPh = req.body.minPh || config.minPh;
+        newConfig.maxHumidity = req.body.maxHumidity || config.maxHumidity;
+        newConfig.minHumidity = req.body.minHumidity || config.minHumidity;
         database.updateConfig(newConfig);
-    });
-});
-
-router.get('/threshold', function (req, res, next) {
-    database.findThreshold((thresholds) => {
-        res.send(thresholds);
-    });
-});
-
-router.post('/threshold', function (req, res) {
-    database.findDefaultConfig((threshold) => {
-        var newThreshold = {};
-        newThreshold.humidity = req.body.humidity || threshold.humidity;
-        newThreshold.ph = req.body.ph || threshold.ph;
-        database.updateConfig(newThreshold);
     });
 });
 
