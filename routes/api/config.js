@@ -13,7 +13,7 @@ router.post('/', function (req, res) {
     database.findDefaultConfig((config) => {
         console.log(req.body);
         console.log(config);
-        database.updateConfig(config._id, req.body, function (err, res) {
+        database.updateConfig(config._id, req.body, function (err) {
             if (err) res.send({status: "error"}); else res.send({status: "success"})
         });
     });
