@@ -18,12 +18,6 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.post('/', function(req, res, next) {
-  console.log("My beautiful body");
-  console.log(req.body);
-  res.send("Youu good");
-});
-
 router.get('/gui', function(req, res, next) {
   res.send(guigui);
 });
