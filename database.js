@@ -26,7 +26,7 @@ exports.findAllGreenhouses = function (callback) {
 exports.findGreenhouseById = function (id, callback) {
     mongoClient.connect(url, function(err, db) {
         if (err) throw err;
-        db.db('hydra').collection('data').find({type:"greenhouse", id:id}).toArray(function(err, result) {
+        db.db('hydra').collection('data').findOne({type:"greenhouse", id:id}, function(err, result) {
             if (err) throw err;
             callback(result);
             db.close();
@@ -48,7 +48,7 @@ exports.findAllTowers = function (callback) {
 exports.findTowerById = function (id, callback) {
     mongoClient.connect(url, function(err, db) {
         if (err) throw err;
-        db.db('hydra').collection('data').find({type:"tower", id:id}).toArray(function(err, result) {
+        db.db('hydra').collection('data').findOne({type:"tower", id:id}, function(err, result) {
             if (err) throw err;
             callback(result);
             db.close();
@@ -70,7 +70,7 @@ exports.findAllTubs = function (callback) {
 exports.findTubById = function (id, callback) {
     mongoClient.connect(url, function(err, db) {
         if (err) throw err;
-        db.db('hydra').collection('data').find({type:"tub", id:id}).toArray(function(err, result) {
+        db.db('hydra').collection('data').findOne({type:"tub", id:id}, function(err, result) {
             if (err) throw err;
             callback(result);
             db.close();
@@ -92,7 +92,7 @@ exports.findAllUsers = function (callback) {
 exports.findUserById = function (id, callback) {
     mongoClient.connect(url, function(err, db) {
         if (err) throw err;
-        db.db('hydra').collection('user').find({_id:id}).toArray(function(err, result) {
+        db.db('hydra').collection('user').findOne({_id:id}, function(err, result) {
             if (err) throw err;
             callback(result);
             db.close();
