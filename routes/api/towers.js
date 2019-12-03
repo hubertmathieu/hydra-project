@@ -3,22 +3,6 @@ var router = express.Router();
 var database = require('../../database');
 
 router.post('/', function(req, res, next){
-    /*let type=req.body.type;
-    let id=req.body.id;
-    let temperature=req.body.data.temperature;
-    let humidity=req.body.data.humidity;
-    let jsonTower={
-        "type":type,
-        "id":id,
-        "data":{
-            "temperature":temperature,
-            "humidity":humidity
-        }
-    };
-    console.log(jsonTower);
-    database.insertData(jsonTower);
-    console.log("Test");
-    res.send(jsonTower);*/
     console.log(req.body);
     database.insertData(req.body);
     res.send(req.body);
@@ -50,6 +34,11 @@ router.get('/:towerId', (req, res) => {
     });
 });
 
+router.get('/:towerId/lastInsert', (req, res) => {
+    database.findLastInsertedTower(req.params.towerId, (data) => {
+        res.send(data);
+    });
+});
 
 
 module.exports = router;

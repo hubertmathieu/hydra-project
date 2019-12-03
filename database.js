@@ -56,6 +56,17 @@ exports.findTowerById = function (id, callback) {
     });
 };
 
+exports.findLastInsertedTower = function (id, callback) {
+    mongoClient.connect(url, function(err,db) {
+        if (err) throw err;
+        db.db('hydra').collection('data').find({type:"tower", id:id}, { sort: { _id: -1 }, limit: 1 }).toArray(function(err, result) {
+            if (err) throw err;
+            callback(result);
+            db.close();
+        });
+    });
+};
+
 exports.findAllTubs = function (callback) {
     mongoClient.connect(url, function(err, db) {
         if (err) throw err;
