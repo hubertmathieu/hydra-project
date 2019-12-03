@@ -11,14 +11,7 @@ router.get('/', function (req, res, next) {
 
 router.post('/', function (req, res) {
     database.findDefaultConfig((config) => {
-        var newConfig = {};
-        newConfig.delay = req.body.delay || config.delay;
-        newConfig.phDown = req.body.phDown || config.phDown;
-        newConfig.maxPh = req.body.maxPh || config.maxPh;
-        newConfig.minPh = req.body.minPh || config.minPh;
-        newConfig.maxHumidity = req.body.maxHumidity || config.maxHumidity;
-        newConfig.minHumidity = req.body.minHumidity || config.minHumidity;
-        database.updateConfig(newConfig);
+        database.updateConfig(config._id, req.body);
     });
 });
 

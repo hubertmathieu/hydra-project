@@ -155,10 +155,10 @@ exports.findDefaultConfig = function (callback) {
     })
 };
 
-exports.updateConfig = function (config) {
+exports.updateConfig = function (configId, config) {
     mongoClient.connect(url, function (err, db) {
         if (err) throw err;
-        db.db('hydra').collection('config').update({_id: config._id}, config, function (err, res) {
+        db.db('hydra').collection('config').update({_id: configId}, {$set: config}, function (err, res) {
             if (err) throw err;
             db.close();
         })
