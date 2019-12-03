@@ -48,7 +48,7 @@ exports.findAllTowers = function (callback) {
 exports.findTowerById = function (id, callback) {
     mongoClient.connect(url, function(err, db) {
         if (err) throw err;
-        db.db('hydra').collection('data').findOne({type:"tower", id:id}, function(err, result) {
+        db.db('hydra').collection('data').find({type:"tower", id:id}, function(err, result) {
             if (err) throw err;
             callback(result);
             db.close();
