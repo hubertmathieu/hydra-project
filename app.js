@@ -1,18 +1,17 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/api/users');
-var towersRouter = require('./routes/api/towers');
-var tubsRouter = require('./routes/api/tubs');
-var greenhousesRouter = require('./routes/api/greenhouses');
-var configRouter = require('./routes/api/config');
-var thresholdRouter = require('./routes/api/threshold');
-
-var app = express();
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/api/users');
+const tubsRouter = require('./routes/api/tubs');
+const greenhousesRouter = require('./routes/api/greenhouses');
+const towersRouter = require('./routes/api/towers');
+const sseRouter = require('./routes/api/stream');
+const configRouter = require('./routes/api/config');
+const app = express();
+const thresholdRouter = require('./routes/api/threshold');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -29,8 +28,19 @@ app.use('/api/users', usersRouter);
 app.use('/api/towers', towersRouter);
 app.use('/api/tubs', tubsRouter);
 app.use('/api/greenhouses', greenhousesRouter);
+app.use('/stream', sseRouter);
 app.use('/api/config', configRouter);
 app.use('/api/threshold', thresholdRouter);
+
+/* SSE Accessible par URL dans un seul endroit du document.
+app.get('/stream', (req, res)=>{
+  res.status(200).set({
+    "connection": "keep-alive",
+    "content-type": "text/event-stream"
+  });
+  res.write(`data: Hello there \n\n`);
+}); */
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
