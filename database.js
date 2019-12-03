@@ -164,3 +164,24 @@ exports.updateConfig = function (configId, config) {
         })
     })
 };
+
+exports.findDefaultThreshold = function (callback) {
+    mongoClient.connect(url, function (err, db) {
+        if (err) throw err;
+        db.db('hydra').collection('threshold').findOne(function (err, result) {
+            if (err) throw err;
+            callback(result);
+            db.close();
+        })
+    })
+};
+
+exports.updateThreshold = function (thresholdId, newValues) {
+    mongoClient.connect(url, function (err, db) {
+        if (err) throw err;
+        db.db('hydra').collection('threshold').update({_id: thresholdId}, {$set: newValues}, function (err, res) {
+            if (err) throw err;
+            db.close();
+        })
+    })
+};
