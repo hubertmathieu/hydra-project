@@ -12,6 +12,7 @@ router.get('/', function (req, res, next) {
 router.post('/', function (req, res) {
     database.findDefaultConfig((config) => {
         console.log(req.body);
+        console.log(config);
         database.updateConfig(config._id, req.body);
     });
 });
