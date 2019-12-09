@@ -158,7 +158,7 @@ exports.findDefaultConfig = function (callback) {
 exports.updateConfig = function (configId, config, callback) {
     mongoClient.connect(url, function (err, db) {
         if (err) throw err;
-        db.db('hydra').collection('config').update({_id: configId}, {$set: config}, function (err) {
+        db.db('hydra').collection('config').updateOne({_id: configId}, {$set: config}, function (err) {
             if (err) throw err;
             callback(err);
             db.close();

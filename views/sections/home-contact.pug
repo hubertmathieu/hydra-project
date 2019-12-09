@@ -1,0 +1,26 @@
+section#contact.section-bg.wow.fadeInUp.position-relative
+    .container
+        +sectionTitle("Contact", "Texte")
+        .row.contact-info
+            +contactFeature("Adresse", "ion-md-navigate")
+                address 2020 du finfin
+            +contactFeature("Téléphone", "ion-md-call", "555-555-5555", "tel:5555555555").side-borders
+            +contactFeature("Courriel", "ion-md-mail", "info@example.com", "mailto:info@example.com")
+        .form
+            form.contactForm(action='' method='post' role='form')
+                .form-row
+                    .form-group.col-md-6
+                        +input("text", "name", "Votre nom")(data-rule='minlen:4' data-msg='Veuillez entrer au moins 4 caractères')
+                    .form-group.col-md-6
+                        +input("email", "email", "Votre courriel")(data-rule='email' data-msg='Veuillez entrer un courriel valide')
+                .form-group
+                    +input("text", "subject", "Sujet")(data-rule='minlen:4' data-msg='Veuillez entrer au moins 4 caractères')
+                .form-group
+                    +textArea("message", 5, "Votre message")(data-rule='required' data-msg='Veuillez écrire un message')
+                .text-center
+                    +submitButton("Envoyer le message")
+    .section-not-available.d-flex.align-items-center.justify-content-center
+        .card
+            .card-body.w-auto.text-center
+                h5.card-title Section non-disponible
+                h6.card-subtitle Le formulaire de contact sera disponible sous peu!

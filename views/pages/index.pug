@@ -1,0 +1,41 @@
+//- --- TODOS -----------------------------------------------
+  TODO: SECTIONS
+    - (ABOUT US)    Missions - Plan - Vision
+    - (FACTS)       Des chiffres
+    - (OUR CLIENTS) Nos partenaires
+    - (TEAM)        L'equipe
+    - (CONTACT US)  Nous contacter
+    - Map
+    - Abrégé de chaque page (Stats, serre, genèse)
+  -----------------------------------------------------------
+
+extends ../layouts/main-layout
+include ../mixins/mixins
+
+block content
+
+    // ===== SECTION CARROUSEL =====
+    include ../sections/home-carousel
+
+    main#main
+
+        // ===== SECTION LE PROJET =====
+        include ../sections/home-project
+
+        // ===== SECTION CTA =====
+        +callToAction("Un projet en exploitation libre", "Texte", "Visitez notre page GitHub!", "#")
+
+        // ===== SECTION CHIFFRES =====
+        include ../sections/home-numbers
+
+        // ===== SECTION PARTENAIRES =====
+        include ../sections/home-partners
+
+        // ===== SECTION ÉQUIPE =====
+        include ../sections/home-team
+
+        // ===== SECTION CONTACT =====
+        include ../sections/home-contact
+
+        // ===== SECTION MAP =====
+        include ../sections/home-map

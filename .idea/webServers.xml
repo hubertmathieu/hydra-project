@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="f3d44440-beb8-4280-bb13-571001dedf9c" name="hydra-project" url="http://206.167.241.235">
-        <fileTransfer host="206.167.241.235" port="22" rootFolder="/home/etudiant/hydra-project" accessType="SFTP">
+        <fileTransfer host="206.167.241.235" port="22" rootFolder="/home/etudiant" accessType="SFTP">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>

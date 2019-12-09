@@ -1,0 +1,24 @@
+//- --- TODOS -----------------------------------------------
+
+  -----------------------------------------------------------
+
+extends ../layouts/main-layout
+include ../mixins/mixins
+
+block content
+
+    +pageHeader("À Propos", "Sous-texte", "images/intro-carousel/1.jpg")
+
+    main#main
+        section#genesis.wow.fadeInUp.page-section
+            .container
+                +sectionTitle("Genèse du projet")
+        section#expectations.wow.fadeInUp.page-section.section-bg
+            .container
+                +sectionTitle("Attentes")
+        section#process.wow.fadeInUp.page-section
+            .container
+                +sectionTitle("Déroulement (phase 1, 2...)")
+        section#future.wow.fadeInUp.page-section.section-bg
+            .container
+                +sectionTitle("La suite des choses")

@@ -1,0 +1,12 @@
+- const subtext1 = "test";
+- const subtext2 = "test";
+- const subtext3 = "test";
+- const subtext4 = "test";
+
+section#intro
+    .intro-container
+        +carousel('introCarousel')
+            +carouselItem("images/intro-carousel/1.jpg", "Une serre aéroponique flottante connectée", subtext1, "#").active
+            +carouselItem("images/intro-carousel/2.jpg", "Des données pertinentes pour une gestion efficace", subtext2, "#")
+            +carouselItem("images/intro-carousel/3.jpg", "Une serre pas comme les autres", subtext3, "#")
+            +carouselItem("images/intro-carousel/4.jpg", "Un projet à saveur pédagogique", subtext4, "#")
