@@ -2,13 +2,90 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="145832ed-cb2e-4455-9784-bce895124076" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/database.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/error.jade" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/index.jade" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layout.jade" beforeDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/routes/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="45" lean-forward="true" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/api/stream.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/admin.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="668">
+              <caret line="76" selection-start-line="76" selection-end-line="76" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package-lock.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="568">
+              <caret line="2972" column="5" selection-start-line="2972" selection-start-column="5" selection-end-line="2972" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -21,30 +98,89 @@
     <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="567" />
-    <option name="y" value="23" />
-    <option name="width" value="1353" />
-    <option name="height" value="989" />
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/routes/svg.js" />
+        <option value="$PROJECT_DIR$/routes/users.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/routes/api/tubs.js" />
+        <option value="$PROJECT_DIR$/routes/api/greenhouses.js" />
+        <option value="$PROJECT_DIR$/routes/api/svgs.js" />
+        <option value="&lt;f3d44440-beb8-4280-bb13-571001dedf9c&gt;/package.json" />
+        <option value="$PROJECT_DIR$/routes/api/towers.js" />
+        <option value="$PROJECT_DIR$/public/sse.js" />
+        <option value="$PROJECT_DIR$/routes/api/users.js" />
+        <option value="$PROJECT_DIR$/views/index.jade" />
+        <option value="$PROJECT_DIR$/routes/api/stream.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/sse.js" />
+        <option value="$PROJECT_DIR$/routes/api/config.js" />
+        <option value="$PROJECT_DIR$/database.js" />
+        <option value="$PROJECT_DIR$/routes/routes/index.js" />
+        <option value="$PROJECT_DIR$/routes/index.js" />
+        <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/package-lock.json" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/controllers/index.js" />
+      </list>
+    </option>
   </component>
-  <component name="ProjectId" id="1URKw68eNZACxrwdQlNxO8PVIPI" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
+  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
-    <option name="showLibraryContents" value="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="hydra-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hydra-project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hydra-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hydra-project" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hydra-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hydra-project" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hydra-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hydra-project" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hydra-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hydra-project" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="13.2.0" />
+    <property name="javascript.nodejs.core.library.configured.version" value="10.16.3" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
@@ -54,19 +190,21 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/routes" />
+      <recent name="$PROJECT_DIR$/public/javascripts" />
       <recent name="$PROJECT_DIR$/routes/api" />
       <recent name="$PROJECT_DIR$/public/svgs" />
     </key>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
+  <component name="RunDashboard">
+    <option name="ruleStates">
       <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
       </list>
     </option>
   </component>
@@ -87,9 +225,10 @@
       <workItem from="1574106353690" duration="220000" />
       <workItem from="1574707588553" duration="2701000" />
       <workItem from="1574773278440" duration="2208000" />
-      <workItem from="1575314204184" duration="2046000" />
-      <workItem from="1575379413574" duration="3508000" />
-      <workItem from="1575385494251" duration="823000" />
+      <workItem from="1574960977689" duration="49000" />
+      <workItem from="1575313793847" duration="18340000" />
+      <workItem from="1575895999850" duration="269000" />
+      <workItem from="1575922040739" duration="1704000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1574104182555</created>
@@ -141,17 +280,121 @@
       <updated>1574709500059</updated>
     </task>
     <task id="LOCAL-00008" summary="database.js">
-      <created>1575384697165</created>
+      <created>1575385082090</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1575384697165</updated>
+      <updated>1575385082090</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="res">
+      <created>1575386884902</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1575386884902</updated>
+    </task>
+    <task id="LOCAL-00010" summary="&#10;allo">
+      <created>1575387905125</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1575387905125</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="48286000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19595315" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="npm" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32970297" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32970297" />
+      <window_info anchor="bottom" id="File Transfer" order="9" weight="0.32871288" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.25742576" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Remote Host" order="3" weight="0.29552716" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25487098" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="File Transfer" order="9" visible="true" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Remote Host" order="3" visible="true" weight="0.32960597" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
@@ -159,32 +402,139 @@
     <MESSAGE value="Removed SVGS route as we can get it from /public" />
     <MESSAGE value="Post function" />
     <MESSAGE value="database.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="database.js" />
+    <MESSAGE value="res" />
+    <MESSAGE value="&#10;allo" />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;allo" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="496" y="225" key="#Deployment" timestamp="1575381650048">
-      <screen x="0" y="0" width="1792" height="1120" />
-    </state>
-    <state x="496" y="225" key="#Deployment/0.0.1792.1120@0.0.1792.1120" timestamp="1575381650048" />
-    <state x="360" y="222" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575381173463">
-      <screen x="0" y="0" width="1792" height="1120" />
-    </state>
-    <state x="360" y="222" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1575381173463" />
-    <state x="451" y="162" key="CommitChangelistDialog2" timestamp="1575384697027">
-      <screen x="0" y="0" width="1792" height="1120" />
-    </state>
-    <state x="451" y="162" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1575384697027" />
-    <state x="679" y="484" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1575381906246">
-      <screen x="0" y="0" width="1792" height="1120" />
-    </state>
-    <state x="679" y="484" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1792.1120@0.0.1792.1120" timestamp="1575381906246" />
-    <state x="767" y="441" key="publish.login" timestamp="1575379987764">
-      <screen x="0" y="0" width="1792" height="1120" />
-    </state>
-    <state x="767" y="441" key="publish.login/0.0.1792.1120@0.0.1792.1120" timestamp="1575379987764" />
-    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1575324289029">
-      <screen x="0" y="0" width="1792" height="1120" />
-    </state>
-    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1575324289029" />
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/routes/users.js" />
+    <entry file="file://$PROJECT_DIR$/public/svgs/test-serre.svg" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/tubs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/svgs/serre.svg" />
+    <entry file="file://$PROJECT_DIR$/routes/api/svgs.js" />
+    <entry file="file://$PROJECT_DIR$/routes/api/greenhouses.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/sse.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/towers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="15" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2445">
+          <caret line="163" column="23" selection-start-line="163" selection-start-column="23" selection-end-line="163" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/layout.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="601">
+          <caret line="1586" column="1" selection-start-line="1586" selection-start-column="1" selection-end-line="1586" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="668">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="568">
+          <caret line="2972" column="5" selection-start-line="2972" selection-start-column="5" selection-end-line="2972" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/stream.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/admin.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="45" lean-forward="true" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

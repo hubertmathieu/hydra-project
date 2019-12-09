@@ -26,7 +26,7 @@ exports.findAllGreenhouses = function (callback) {
 exports.findGreenhouseById = function (id, callback) {
     mongoClient.connect(url, function(err, db) {
         if (err) throw err;
-        db.db('hydra').collection('data').findOne({type:"greenhouse", id:id}, function(err, result) {
+        db.db('hydra').collection('data').find({type:"greenhouse", id:id}).toArray(function(err, result) {
             if (err) throw err;
             callback(result);
             db.close();
@@ -48,18 +48,7 @@ exports.findAllTowers = function (callback) {
 exports.findTowerById = function (id, callback) {
     mongoClient.connect(url, function(err, db) {
         if (err) throw err;
-        db.db('hydra').collection('data').find({type:"tower", id:id}, function(err, result) {
-            if (err) throw err;
-            callback(result);
-            db.close();
-        });
-    });
-};
-
-exports.findLastInsertedTower = function (id, callback) {
-    mongoClient.connect(url, function(err,db) {
-        if (err) throw err;
-        db.db('hydra').collection('data').find({type:"tower", id:id}, { sort: { _id: -1 }, limit: 1 }).toArray(function(err, result) {
+        db.db('hydra').collection('data').find({type:"tower", id:id}).toArray(function(err, result) {
             if (err) throw err;
             callback(result);
             db.close();
@@ -81,7 +70,7 @@ exports.findAllTubs = function (callback) {
 exports.findTubById = function (id, callback) {
     mongoClient.connect(url, function(err, db) {
         if (err) throw err;
-        db.db('hydra').collection('data').findOne({type:"tub", id:id}, function(err, result) {
+        db.db('hydra').collection('data').find({type:"tub", id:id}).toArray(function(err, result) {
             if (err) throw err;
             callback(result);
             db.close();
@@ -166,10 +155,32 @@ exports.findDefaultConfig = function (callback) {
     })
 };
 
-exports.updateConfig = function (configId, config) {
+exports.updateConfig = function (configId, config, callback) {
     mongoClient.connect(url, function (err, db) {
         if (err) throw err;
-        db.db('hydra').collection('config').update({_id: configId}, {$set: config}, function (err, res) {
+        db.db('hydra').collection('config').updateOne({_id: configId}, {$set: config}, function (err) {
+            if (err) throw err;
+            callback(err);
+            db.close();
+        })
+    })
+};
+
+exports.findDefaultThreshold = function (callback) {
+    mongoClient.connect(url, function (err, db) {
+        if (err) throw err;
+        db.db('hydra').collection('threshold').findOne(function (err, result) {
+            if (err) throw err;
+            callback(result);
+            db.close();
+        })
+    })
+};
+
+exports.updateThreshold = function (thresholdId, newValues) {
+    mongoClient.connect(url, function (err, db) {
+        if (err) throw err;
+        db.db('hydra').collection('threshold').update({_id: thresholdId}, {$set: newValues}, function (err, res) {
             if (err) throw err;
             db.close();
         })

@@ -1,6 +1,11 @@
 var express = require('express');
 var router = express.Router();
+const controller = require('../controllers/index');
 
+router.get('/', controller.getAccueil);
+router.get('/statistiques', controller.getStatistiques);
+router.get('/serre', controller.getSerre);
+router.get('/a-propos', controller.getPropos);
 
 let guigui = [{
   id: 1,
@@ -12,17 +17,6 @@ let guigui = [{
     title: "Humidité",
     value: "56.43 %"
 }];
-
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
-
-router.post('/', function(req, res, next) {
-  console.log("My beautiful body");
-  console.log(req.body);
-  res.send("Youu good");
-});
 
 router.get('/gui', function(req, res, next) {
   res.send(guigui);

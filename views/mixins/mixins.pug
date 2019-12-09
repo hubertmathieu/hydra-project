@@ -1,0 +1,131 @@
+mixin callToAction(title, text, buttonText, href)
+    section#call-to-action.wow.fadeIn
+        .container.text-center
+            h3 #{title}
+            p #{text}
+            a.cta-btn(href=href) #{buttonText}
+
+mixin carouselItem(imagePath, title, subtitle, buttonLink)
+    .carousel-item&attributes(attributes)
+        .carousel-background
+            img(src=imagePath alt='Image carrousel')
+        .carousel-container
+            .carousel-content
+                h2 #{title}
+                p #{subtitle}
+                a.btn-get-started.scrollto(href=buttonLink) En savoir plus
+
+mixin carousel(id)
+    .carousel.slide.carousel-fade(id=id data-ride='carousel')
+        ol.carousel-indicators
+        .carousel-inner(role='listbox')
+            block
+        a.carousel-control-prev(href=`#${ id }` role='button' data-slide='prev')
+            span.carousel-control-prev-icon.ion-chevron-left(aria-hidden='true')
+            span.sr-only Précédent
+        a.carousel-control-next(href=`#${ id }` role='button' data-slide='next')
+            span.carousel-control-next-icon.ion-chevron-right(aria-hidden='true')
+            span.sr-only Suivant
+
+mixin backToTopButton
+    a.back-to-top(href='#')
+        i.fa.fa-chevron-up
+
+mixin footerMenuItem(text, href)
+    - const link = href || '#';
+    li
+        i.ion-ios-arrow-forward
+        a(href=link) #{text}
+
+mixin sectionTitle(title, text)
+    header.section-header&attributes(attributes)
+        h3 #{title}
+        if text
+            p #{text}
+
+mixin aboutCard(title, text, imgSrc, iconClass)
+    .col-md-4.wow.fadeInUp&attributes(attributes)
+        .about-col
+            .img
+                img.img-fluid(src=imgSrc, alt=title)
+                .icon
+                    i(class=iconClass)
+            h2.title
+                a(href='#') #{title}
+            p #{text}
+
+mixin teamMember(name, title, imgSrc)
+    .col-lg-3.col-md-6.wow.fadeInUp&attributes(attributes)
+        .member
+            img.img-fluid(src=imgSrc alt=name)
+            .member-info
+                .member-info-content
+                    h4 #{name}
+                    span #{title}
+
+mixin bigNumber(number, title)
+    .col-lg-3.col-6.text-center
+        span(data-toggle='counter-up')&attributes(attributes) #{number}
+        p #{title}
+
+mixin partnerImage(title, imgSrc)
+    .partner.d-flex.align-items-center(style=`max-width: calc(100% / ${ partnersCount })` data-toggle="tooltip" data-placement="top" title=title data-delay='{ "show": 1000, "hide": 100 }')
+        img(src=imgSrc, alt=title)
+
+mixin contactFeature(title, iconClass, content, href)
+    .col-md-4
+        .contact-feature&attributes(attributes)
+            i(class=iconClass)
+            h3 #{title}
+            if content
+                p: a(href=href) #{content}
+            else
+                block
+
+mixin input(type, name, placeholder)
+    input.form-control(id=name, type=type, name=name, placeholder=placeholder)&attributes(attributes)
+    .validation
+
+mixin textArea(name, rows, placeholder)
+    textarea.form-control(name=name, rows=rows, placeholder=placeholder)&attributes(attributes)
+    .validation
+
+mixin submitButton(text)
+    button(type='submit')&attributes(attributes) #{text}
+
+mixin footerCol(title, colClass)
+    .col-lg-4.col-md-6(class=colClass)
+        h4 #{title}
+        block
+
+mixin footerMainCol(title, text)
+    .col-lg-4.col-md-6.footer-info
+        h3 #{title}
+        p #{text}
+
+mixin footerAddress(address)
+    p
+        each element in address
+            | !{element}
+            br
+
+mixin footerCopyright(name)
+    .container
+        .copyright
+            | &copy; Copyright&nbsp
+            strong #{name}
+            | . Tous droits réservés.
+        .credits
+            //
+              All the links in the footer should remain intact.
+              You can delete the links only if you purchased the pro version.
+              Licensing information: https://bootstrapmade.com/license/
+              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=BizPage
+            | Designé par&nbsp
+            a(href='https://bootstrapmade.com/') BootstrapMade
+
+mixin pageHeader(title, text, bgImgPath)
+    header.page-header(style=`background-image: url('${ bgImgPath }')`)
+        .page-header-content
+            h1 #{title}
+            p #{text}

@@ -11,7 +11,14 @@ router.get('/', function (req, res, next) {
 
 router.post('/', function (req, res) {
     database.findDefaultConfig((config) => {
-        database.updateConfig(config._id, req.body);
+        console.log('REQUEST :');
+        console.log(req.body);
+        console.log('BD :');
+        console.log(config);
+        database.updateConfig(config._id, req.body, function (err) {
+            if (err) res.send({status: "error", title: "Erreur", message: "La modifcation n'a pas pu être complétée"});
+            else res.send({status: "success", title: "Succès", message: "La modifcation a été complétée avec succès"})
+        });
     });
 });
 

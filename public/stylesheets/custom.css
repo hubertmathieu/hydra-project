@@ -1,0 +1,268 @@
+html, body {
+    height: 100%;
+}
+
+#clients .partners {
+    display: flex;
+    justify-content: space-between;
+}
+
+#clients .partners .partner img {
+    padding: 15px;
+}
+
+#facts {
+    padding: 60px 0;
+}
+
+#contact .contact-feature {
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+#contact .side-borders {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+header.page-header {
+    height: 300px;
+    position: relative;
+}
+
+header.page-header::before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+header.page-header .page-header-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+
+header.page-header .page-header-content h1 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+header.page-header .page-header-content p {
+    margin: 0 auto;
+}
+
+section.page-section {
+    padding: 60px 0 40px;
+}
+
+.table td, .table th {
+    vertical-align: middle;
+}
+
+.partners .partner img {
+    max-height: 200px;
+}
+
+#pano {
+    position: relative;
+    height: 500px;
+}
+
+.hotspot {
+    background-color: #000000c2;
+    padding: 20px;
+    width: 250px;
+    border-radius: 20px;
+    color: #fff;
+    margin-left: -125px;
+}
+
+.hotspot * {
+    text-align: center;
+}
+
+.hotspot .hotspot-value-container {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.hotspot .hotspot-title {
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+.hotspot .hotspot-value {
+    color: limegreen;
+    font-weight: bold;
+    font-size: 48px;
+}
+
+.hotspot .hotspot-unit {
+    margin-left: 4px;
+    color: #888;
+}
+
+.hotspot:before {
+    content: ' ';
+    height: 0;
+    position: absolute;
+    width: 0;
+    left: calc(50% - 24px);
+    border: 24px solid transparent;
+    border-bottom-color: #000000c2;
+    top: -48px;
+}
+
+.hotspot .hotspot-actual-value {
+    display: block;
+    color: #888;
+    font-style: italic;
+    margin-top: -4px;
+}
+
+.section-not-available {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background-color: rgba(136, 136, 136, 0.51);
+}
+
+.number-plus:after {
+    content: "+";
+}
+
+h5.card-title {
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+#login {
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #f5f5f5;
+}
+
+#login .form-signin {
+    width: 100%;
+    max-width: 420px;
+    padding: 15px;
+    margin: auto;
+}
+
+#login .form-label-group {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+#login .form-label-group > input,
+#login .form-label-group > label {
+    height: 3.125rem;
+    padding: .75rem;
+}
+
+#login .form-label-group > label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    margin-bottom: 0; /* Override default `<label>` margin */
+    line-height: 1.5;
+    color: #495057;
+    pointer-events: none;
+    cursor: text; /* Match the input under the label */
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    transition: all .1s ease-in-out;
+}
+
+#login .form-label-group input::-webkit-input-placeholder {
+    color: transparent;
+}
+
+#login .form-label-group input:-ms-input-placeholder {
+    color: transparent;
+}
+
+#login .form-label-group input::-ms-input-placeholder {
+    color: transparent;
+}
+
+#login .form-label-group input::-moz-placeholder {
+    color: transparent;
+}
+
+#login .form-label-group input::placeholder {
+    color: transparent;
+}
+
+#login .form-label-group input:not(:placeholder-shown) {
+    padding-top: 1.25rem;
+    padding-bottom: .25rem;
+}
+
+#login .form-label-group input:not(:placeholder-shown) ~ label {
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    font-size: 12px;
+    color: #777;
+}
+
+#login .logo {
+    height: 100px;
+    width: auto;
+}
+
+body.has-fixed-navbar .navbar-brand img {
+    max-height: 36px;
+}
+
+.navbar-brand {
+    font-weight: 600;
+}
+
+.navbar .dropdown-menu {
+    margin-top: 6px;
+}
+
+.blank-spaces {
+    height: 1500px;
+}
+
+.charts .card {
+    height: 250px;
+    max-height: 250px;
+}
+
+.list-group-item.active {
+    z-index: 2;
+    color: #fff;
+    background-color: #218838;
+    border-color: #218838;
+}
+
+.selector {
+    margin-top: 62px;
+    background-color: #eee;
+}
