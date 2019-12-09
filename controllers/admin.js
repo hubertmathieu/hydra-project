@@ -13,3 +13,17 @@ exports.getIndex = (req, res, next) => {
         path: "/"
     });
 };
+
+exports.getGraphics = (req, res, next) => {
+    res.render("admin/graphiques", {
+        pageTitle: pageTitlePrefix + "Graphiques",
+        path: "/graphiques"
+    });
+};
+
+exports.getConfig = (req, res, next) => {
+    res.render("admin/config", {
+        pageTitle: pageTitlePrefix + "Configuration",
+        path: "/config"
+    });
+};
