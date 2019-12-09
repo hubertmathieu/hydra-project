@@ -12,8 +12,8 @@ mixin carouselItem(imagePath, title, subtitle, buttonLink)
         .carousel-container
             .carousel-content
                 h2 #{title}
-                p #{subtitle}
-                a.btn-get-started.scrollto(href=buttonLink) En savoir plus
+                p !{subtitle}
+                //-a.btn-get-started.scrollto(href=buttonLink) En savoir plus
 
 mixin carousel(id)
     .carousel.slide.carousel-fade(id=id data-ride='carousel')
@@ -52,7 +52,7 @@ mixin aboutCard(title, text, imgSrc, iconClass)
                     i(class=iconClass)
             h2.title
                 a(href='#') #{title}
-            p #{text}
+            p !{text}
 
 mixin teamMember(name, title, imgSrc)
     .col-lg-3.col-md-6.wow.fadeInUp&attributes(attributes)

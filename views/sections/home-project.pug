@@ -1,7 +1,11 @@
+- const text1 = "Nous voulons rendre l'industrie agricole plus écologique, plus efficace, plus rentable et par le fait même, plus accessible à la population. Nous espérons effectivement piquer la curiosité des gens et leur donner une alternatie interessante pour subvenir à leur besoins alimentaires.";
+- const text2 = "Afin de réussir notre mission, nous avons creusé nos méninges pour que la serre requiert un minimum de coûts, de gestion et d'énergie. C'est avec ces contraintes que nos avons pensé à une serre hydroponique flottante connectée.";
+- const text3 = "Tout le code et la documentation est en <em>exploitation libre (Open Source)</em>, donc accessible au grand public. Nous espérons que les gens démontreront un grand intérêt pour ce projet, et que ce dernier continuera de s'améliorer grâce à l'aide de la communauté.";
+- const desc = "Cette serre devra répondre à plusieurs besoins, dont de limiter les interventions humaines en automatisant un maximum de processus et de récolter des données pertinentes aux utilisateurs à l’aide de capteurs. Elle devra également satisfaire les exigences en matière d'environnement et de coûts.";
 section#about
     .container
-        +sectionTitle("Projet", "Texte descriptif")
+        +sectionTitle("Projet", desc)
         .row.about-cols
-            +aboutCard("Notre mission", "Texte", "images/about-mission.jpg", "ion-md-locate")
-            +aboutCard("Notre plan", "Texte", "images/about-plan.jpg", "ion-md-clipboard")(data-wow-delay='0.1s')
-            +aboutCard("Notre vision", "Texte", "images/about-vision.jpg", "ion-md-eye")(data-wow-delay='0.2s')
+            +aboutCard("Notre mission", text1, "images/about-mission.jpg", "ion-md-locate")
+            +aboutCard("Notre plan", text2, "images/about-plan.jpg", "ion-md-clipboard")(data-wow-delay='0.1s')
+            +aboutCard("Notre vision", text3, "images/about-vision.jpg", "ion-md-eye")(data-wow-delay='0.2s')
