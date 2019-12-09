@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var database = require('../../database');
+const { verifyAuthentification } = require('../../auth/auth');
 
 router.post('/', function(req, res, next){
     console.log(req.body);
