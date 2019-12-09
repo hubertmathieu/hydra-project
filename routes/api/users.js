@@ -1,6 +1,11 @@
 var express = require('express');
 var router = express.Router();
 var database = require('../../database');
+const { verifyAuthentification } = require('../../auth/auth');
+
+router.get('/secret', verifyAuthentification, (req,res) =>{
+  res.send('Protected ressource');
+});
 
 router.get('/', function(req, res) {
   database.findAllUsers((data) => {

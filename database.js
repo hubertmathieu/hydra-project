@@ -1,6 +1,17 @@
 var mongoClient = require('mongodb').MongoClient;
 var url = 'mongodb://localhost:27017/hydra';
 
+exports.authentifyUser = function(userInfo, callback) {
+    mongoClient.connect(url, function(err, db) {
+        if (err) throw err;
+        db.db('hydra').collection('user').find({username:userInfo.username, password:userInfo.password}).toArray(function(err, result) {
+            if (err) throw err;
+            callback(result);
+            db.close();
+        });
+    });
+};
+
 exports.findAllData = function(callback) {
     mongoClient.connect(url, function(err, db) {
         if (err) throw err;

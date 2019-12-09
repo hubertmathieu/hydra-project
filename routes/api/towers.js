@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var database = require('../../database');
+const { verifyAuthentification } = require('../../auth/auth');
 
 router.post('/', function(req, res, next){
     console.log(req.body);
@@ -27,6 +28,11 @@ router.get('/:towerId', (req, res) => {
     });
 });
 
+router.get('/:towerId/lastInsert', (req, res) => {
+    database.findLastInsertedTower(req.params.towerId, (data) => {
+        res.send(data);
+    });
+});
 
 
 module.exports = router;
