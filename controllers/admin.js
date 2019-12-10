@@ -7,13 +7,6 @@ exports.getLogin = (req, res, next) => {
     });
 };
 
-exports.getIndex = (req, res, next) => {
-    res.render("admin/index", {
-        pageTitle: pageTitlePrefix + "Administration",
-        path: "/"
-    });
-};
-
 exports.getGraphics = (req, res, next) => {
     res.render("admin/graphiques", {
         pageTitle: pageTitlePrefix + "Graphiques",

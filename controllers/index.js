@@ -1,4 +1,4 @@
-const piecesList = require('pieces');
+const piecesList = require('../pieces');
 const pageTitlePrefix = "Serre Aéroponique Flottante Connectée | ";
 
 exports.getAccueil = (req, res, next) => {

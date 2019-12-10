@@ -1,0 +1,18 @@
+[
+    {
+        "categorie": "materiel",
+        "description": "Serre (6' x 10' x 7')",
+        "marque": "Palgram",
+        "modele": "HG5510",
+        "quantite": 1,
+        "url": "https://www.amazon.ca/Palram-HG5508PH-Greenhouse-Hangers-Included/dp/B079HDDQDM/"
+    },
+    {
+        "categorie": "electronique",
+        "description": "Capteur de température et d'humidité relative pour Arduino",
+        "marque": "ROBOJAX",
+        "modele": "HT11",
+        "quantite": 1,
+        "url": "https://www.amazon.ca/-/fr/Robojax-Super9shop-HT11-Temp%C3%A9rature-humidit%C3%A9-relative/dp/B079GBRYPD/"
+    }
+]
