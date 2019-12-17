@@ -1,0 +1,23 @@
+version: "3.7"
+services:
+  app:
+    container_name: app
+    restart: always
+    build: .
+    ports:
+      - 3000:3000
+    depends_on:
+      - mongo
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+  mongo:
+    container_name: mongo
+    image: mongo
+    restart: always
+    volumes:
+      - ./database/data/db:/data/db
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_DATABASE: database
