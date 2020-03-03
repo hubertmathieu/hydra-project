@@ -20,7 +20,7 @@ Vous trouverez ci-dessous la liste des matériaux ainsi que la liste des différ
 | [6x Capteur d'humidité](https://amzn.to/2OKojkT) | [Pompe à eau petit débit](https://amzn.to/37F01RS) | [Scellant](https://bit.ly/37GrR0q) |
 | [3x Capteur de pH](https://amzn.to/33jcuY7) | [Répartiteur de tuyaux](https://amzn.to/35Dt0nz) | [Disque rotatif](https://amzn.to/34mzRkX)| 
 | [5x Capteur de niveau d'eau](https://amzn.to/2XVFi8h) | [3x Buse 50 microns](https://bit.ly/2DeN8js) | [Bac de rangement](https://bit.ly/34lHJTV) |   
-| [1x FIPY](https://bit.ly/2KRR1iP) | [Ponceau 18po diamètre x 8po long](https://bit.ly/2OKOisl) | [pH Down](https://amzn.to/33lkYy6) | 
+| [1x FIPY](https://bit.ly/2KRR1iP) | [Ponceau 12po diamètre x 8po long](https://bit.ly/2OKOisl) | [pH Down](https://amzn.to/33lkYy6) | 
 | [1x Filtreur](https://amzn.to/2XLTqAy) | [Rouleau de tuyeau en vinyle](https://bit.ly/33ljoMG) | [Engrais](https://amzn.to/2qJ6oTC) | 
 | [2x Module Bluetooth](https://amzn.to/34l5aN6)| [Ruban d'étanchéité](https://amzn.to/2qKvdia) |                  |
 | [9x Valves solénoïdes](https://amzn.to/2DeVWWT) | [50x Colliers de serrage en plastique](https://bit.ly/2KPPf1u) |
