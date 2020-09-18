@@ -1,6 +1,4 @@
 #include <SoftwareSerial.h>
-char c=' ';
-boolean NL = true;
 float phCalibration = 21.20;
 
 //analog sensor pins
@@ -24,11 +22,10 @@ void loop() {
 
 void sendThrewBluetooth(char *data, int l){
   if (Serial.available()){
-    c = Serial.read();
     //write to using buetooth serial
-    if (c!=10 & c!=13 ) 
+    if (l>0 && l<1000 * 8) 
     {  
-      BTserial.write(data);
+      BTserial.write(data, l);
     }
   }
 }
