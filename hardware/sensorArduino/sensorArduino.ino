@@ -1,4 +1,9 @@
+//bluetooth ship doc https://drive.google.com/file/d/0B4urklB65vaCcEVyMm5haVVpMUk/view
+
 #include <SoftwareSerial.h>
+#define WATER_LEVEL_TRIGGER 600
+#define START_RIVER_PUMP 0
+
 float phCalibration = 21.20;
 
 //analog sensor pins
@@ -9,25 +14,37 @@ const short phSensor = A0;
 SoftwareSerial BTserial(0, 1); //RX and TX
 
 void setup() {
-    Serial.begin(9600); 
-    BTserial.begin(9600);  
+    Serial.begin(9600);
+    BTserial.begin(9600);
     Serial.println("bluetooth started");
 }
  
 void loop() {
-  Serial.println(readWaterLevel());
+  if (BTserial.available()){
+    char data = readBluetoothInput();
+    Serial.println(data);
+  }
   
-  delay(500);
+  if(Serial.available()){
+    char data = Serial.read();
+    sendTroughBluetooth(data);
+  }
+
+/*
+  float waterLevel = readWaterLevel();
+  if(waterLevel > WATER_LEVEL_TRIGGER){
+    startLakePump();
+  }*/
 }
 
-void sendThrewBluetooth(char *data, int l){
-  if (Serial.available()){
-    //write to using buetooth serial
-    if (l>0 && l<1000 * 8) 
-    {  
-      BTserial.write(data, l);
-    }
+void startLakePump(){
+  if(Serial.available() > 0){
+    Serial.write(START_RIVER_PUMP);
   }
+}
+
+void sendTroughBluetooth(char c){
+  BTserial.write(c);
 }
 
 char readBluetoothInput(){
@@ -66,7 +83,7 @@ float calculateAveragePh(int *buf, int l){
 void bSort(int *buf, short l){
   int temp;
   for(int i=0;i<l-1;i++){
-  for(int j=i+1;j<l;j++){
+    for(int j=i+1;j<l;j++){
      if(buf[i]>buf[j]){
         temp=buf[i];
         buf[i]=buf[j];
