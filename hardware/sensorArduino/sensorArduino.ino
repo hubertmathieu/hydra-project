@@ -1,8 +1,18 @@
 //bluetooth ship doc https://drive.google.com/file/d/0B4urklB65vaCcEVyMm5haVVpMUk/view
-
 #include <SoftwareSerial.h>
+
 #define WATER_LEVEL_TRIGGER 600
 #define START_RIVER_PUMP 0
+
+struct DataPacket{
+    char header = 't';
+	  float data = 0;
+};
+
+struct Packet{
+	  short length;
+    DataPacket *dPacket;
+};
 
 float phCalibration = 21.20;
 
@@ -14,11 +24,11 @@ const short phSensor = A0;
 SoftwareSerial BTserial(0, 1); //RX and TX
 
 void setup() {
-    Serial.begin(9600);
-    BTserial.begin(9600);
-    Serial.println("bluetooth started");
+  Serial.begin(9600);
+  BTserial.begin(9600);
+  Serial.println("bluetooth started");
 }
- 
+
 void loop() {
   if (BTserial.available()){
     char data = readBluetoothInput();
@@ -37,10 +47,36 @@ void loop() {
   }*/
 }
 
-void startLakePump(){
-  if(Serial.available() > 0){
-    Serial.write(START_RIVER_PUMP);
-  }
+
+//bluetooth related funcitons
+void sendBluetoothPacket(Packet packet){
+	byte data[packet.length + 1];
+	
+}
+
+int byteToInt(byte *bytes){
+  
+}
+
+short byteToShort(byte *bytes){
+  
+}
+
+void shortToByte(short data, byte *bytes){
+  bytes = malloc(2);
+  bytes[0] = (data >> 8) & 0xFF;
+  bytes[1] = data & 0xFF;
+}
+
+void floatToByte(float data, byte *bytes){
+	int intData = data * 100;
+  bytes = malloc(4);
+  unsigned long n = intData;
+
+  bytes[0] = (n >> 24) & 0xFF;
+  bytes[1] = (n >> 16) & 0xFF;
+  bytes[2] = (n >> 8) & 0xFF;
+  bytes[3] = n & 0xFF;
 }
 
 void sendTroughBluetooth(char c){
@@ -60,7 +96,7 @@ float readWaterLevel(){
   return (float)val;
 }
 
-
+//ph related functions
 float readPh(){
   int buf[10];
   for(int i=0;i<10;i++){
@@ -90,5 +126,12 @@ void bSort(int *buf, short l){
         buf[j]=temp;
       }
     }
+  }
+}
+
+//pump related functions
+void startLakePump(){
+  if(Serial.available() > 0){
+    Serial.write(START_RIVER_PUMP);
   }
 }
