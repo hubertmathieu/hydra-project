@@ -1,7 +1,7 @@
 from network import Bluetooth
 import time
 import lte
-import bluetooth
+import mble
 
 # soracom https://soracom.zendesk.com/hc/en-us/articles/218427317-What-is-an-APN-setting-and-how-do-you-set-it-up-
 # udp python https://wiki.python.org/moin/UdpCommunication
@@ -12,19 +12,27 @@ import bluetooth
 
 def charCallBack(chr):
     if (chr.properties() & Bluetooth.PROP_READ):
-        print('callback char {} value = {}'.format(chr.uuid(), chr.value()))
-        lte.sendDataToLte(chr.value().decode('utf-8'))
-        bluetooth.sendData("you sent: " + chr.value().decode('utf-8'))
+        print('callback char {} value = {}'.format(chr.uuid(), chr.value().decode('utf-8')))
+        #lte.sendDataToLte(chr.value())
+        mble.sendData(chr.value())
+        mble.close()
 
 
-bluetooth.initConnection("b\'1893d7152018\'")
-bluetooth.setCallBack(charCallBack)
+lte.initLte()
+
+#mble.initConnection("b\'1893d7152018\'")
+
+#mble.setCallBack(charCallBack)
 running = True
 
-while running:
-    bluetooth.sendData("connected to fipy")
+ctime =0
+while running and ctime < 5:
+    print(".")
     time.sleep(1)
+    ctime += 1
 
 
-bluetooth.close()
+#mble.close()
 lte.close()
+
+print("done !")

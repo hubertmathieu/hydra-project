@@ -121,9 +121,9 @@ function handleConnection(conn) {
 function binToData(bin){
   const dataByteLength = 5;
   let length = bin.length/dataByteLength;
-  let data = {}[length];
+  let data = [];
   for(let i=0; i<length; ++i){
-    let entry = new Object();
+    let entry = {};
     entry.header = String.fromCharCode(bin.readIntLE(dataByteLength*i, 1));
     entry.data = bin.readIntLE(dataByteLength*i + 1, 4);
     data.push(entry);

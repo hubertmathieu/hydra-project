@@ -16,6 +16,7 @@ connection = None
 char = None
 
 def initConnection(address):
+    print("starting bluetooth")
     while True:
         global connection
         devices = bluetooth.get_advertisements()
@@ -27,6 +28,8 @@ def initConnection(address):
                     connection = bluetooth.connect(device.mac)
                     print(device)
                     bluetooth.stop_scan()
+                    global char
+                    char = getBleChar()
                     return device
         time.sleep(0.05)
     return None
@@ -48,15 +51,16 @@ def setCallBack(func):
     char.callback(trigger=Bluetooth.CHAR_NOTIFY_EVENT, handler=func)
 
 
-def sendData(strData):
+def sendData(data):
     global char
     if connection.isconnected():
-        char.write(str.encode(strData))
+        char.write(data)
+        #char.write(str.encode(data))
 
 
 def close():
+    print("disconnecting ...")
     connection.disconnect()
     bluetooth.disconnect_client()
     bluetooth.deinit()
-
-char = getBleChar()
+    print("disconnected")
