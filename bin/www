@@ -12,7 +12,7 @@ var http = require('http');
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.PORT || '80');
 app.set('port', port);
 
 /**
@@ -88,3 +88,66 @@ function onListening() {
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
 }
+
+
+
+var net = require('net');
+var server = net.createServer();
+
+server.on('connection', handleConnection);
+server.listen(9000, function() {
+  console.log('server listening to %j', server.address());
+});
+function handleConnection(conn) {
+  var remoteAddress = conn.remoteAddress + ':' + conn.remotePort;
+  console.log('new client connection from %s', remoteAddress);
+  conn.on('data', onConnData);
+  conn.once('close', onConnClose);
+  conn.on('error', onConnError);
+  function onConnData(d) {
+    console.log('connection data from %s: %j', remoteAddress, d);
+    d = d.toString();
+    d = bin2String(d);
+    console.log(d);
+    conn.write(d.toString());
+  }
+  function onConnClose() {
+    console.log('connection from %s closed', remoteAddress);
+  }
+  function onConnError(err) {
+    console.log('Connection %s error: %s', remoteAddress, err.message);
+  }
+}
+
+function onConnData(d) {
+  console.log('connection data from %s: %j', remoteAddress, d);
+  console.log(d);
+
+}
+
+
+
+function bin2String(test) {
+  var temp =test.substring(0,8);
+  console.log(temp);
+  var start = String.fromCharCode(parseInt(temp,2));
+  console.log(start);
+  temp = test.substring(8);
+  console.log(temp);
+  var b1 = parseInt(temp,2);
+  if(b1 > 127) b1 -= 256;
+
+  console.log(start + b1);
+
+  return b1;
+}
+
+
+byteArrayToLong = function(/*byte[]*/byteArray) {
+  var value = 0;
+  for ( var i = byteArray.length - 1; i >= 0; i--) {
+    value = (value * 256) + byteArray[i];
+  }
+
+  return value;
+};

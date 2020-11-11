@@ -1,12 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="145832ed-cb2e-4455-9784-bce895124076" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/auth/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/database.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api/towers.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/towers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/users.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sshConfigs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/bin/www" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,14 +56,17 @@
     <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
-  </component>
+  <component name="ProjectId" id="1jByUBCWaG2KedNh9EMaHmKtxIB" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
@@ -41,11 +76,15 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.16.3" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -54,18 +93,6 @@
       <recent name="$PROJECT_DIR$/routes/api" />
       <recent name="$PROJECT_DIR$/public/svgs" />
     </key>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -88,6 +115,12 @@
       <workItem from="1575313793847" duration="18340000" />
       <workItem from="1575895999850" duration="269000" />
       <workItem from="1575922040739" duration="1704000" />
+      <workItem from="1603291794826" duration="2186000" />
+      <workItem from="1603972833468" duration="296000" />
+      <workItem from="1603973413798" duration="5852000" />
+      <workItem from="1604496134900" duration="2084000" />
+      <workItem from="1604499001256" duration="4281000" />
+      <workItem from="1605099498163" duration="3117000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1574104182555</created>
@@ -163,16 +196,14 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -191,6 +222,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
@@ -201,5 +233,35 @@
     <MESSAGE value="res" />
     <MESSAGE value="&#10;allo" />
     <option name="LAST_COMMIT_MESSAGE" value="&#10;allo" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="453" y="222" key="#Node.js_and_NPM" timestamp="1604497658573">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="453" y="222" key="#Node.js_and_NPM/0.0.1440.900@0.0.1440.900" timestamp="1604497658573" />
+    <state x="303" y="69" key="#SSH_Configurations" timestamp="1605099627416">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="303" y="69" key="#SSH_Configurations/0.0.1440.900@0.0.1440.900" timestamp="1605099627416" />
+    <state x="303" y="86" key="#SSH_Configurations/0.23.1440.823@0.23.1440.823" timestamp="1603292081642" />
+    <state x="221" y="55" key="SettingsEditor" timestamp="1605107585423">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="221" y="55" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1605107585423" />
+    <state x="221" y="73" key="SettingsEditor/0.23.1440.823@0.23.1440.823" timestamp="1603292175405" />
+    <state x="626" y="162" width="336" height="525" key="ftp.server.browser" timestamp="1605107132868">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="626" y="162" key="ftp.server.browser/0.0.1440.900@0.0.1440.900" timestamp="1605107132868" />
+    <state x="626" y="171" width="336" height="525" key="ftp.server.browser/0.23.1440.823@0.23.1440.823" timestamp="1603292174182" />
+    <state width="600" height="428" key="javadoc.popup" timestamp="1604498399129">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="600" height="428" key="javadoc.popup/0.0.1440.900@0.0.1440.900" timestamp="1604498399129" />
+    <state x="514" y="464" key="publish.login" timestamp="1603292057054">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state x="514" y="464" key="publish.login/0.23.1440.823@0.23.1440.823" timestamp="1603292057054" />
+    <state x="592" y="333" key="publish.login/0.23.1440.826@0.23.1440.826" timestamp="1603291877422" />
   </component>
 </project>
