@@ -106,10 +106,9 @@ function handleConnection(conn) {
   conn.on('error', onConnError);
   function onConnData(d) {
     console.log('connection data from %s: %j', remoteAddress, d);
-    d = d.toString();
-    d = bin2String(d);
-    console.log(d);
-    conn.write(d.toString());
+    let userInput = binToData(d);
+    console.log(userInput);
+    conn.write("connected to hydra server");
   }
   function onConnClose() {
     console.log('connection from %s closed', remoteAddress);
@@ -119,13 +118,24 @@ function handleConnection(conn) {
   }
 }
 
+function binToData(bin){
+  const dataByteLength = 5;
+  let length = bin.length/dataByteLength;
+  let data = {}[length];
+  for(let i=0; i<length; ++i){
+    let entry = new Object();
+    entry.header = String.fromCharCode(bin.readIntLE(dataByteLength*i, 1));
+    entry.data = bin.readIntLE(dataByteLength*i + 1, 4);
+    data.push(entry);
+  }
+  return data;
+}
+
 function onConnData(d) {
   console.log('connection data from %s: %j', remoteAddress, d);
   console.log(d);
 
 }
-
-
 
 function bin2String(test) {
   var temp =test.substring(0,8);
@@ -141,7 +151,6 @@ function bin2String(test) {
 
   return b1;
 }
-
 
 byteArrayToLong = function(/*byte[]*/byteArray) {
   var value = 0;
