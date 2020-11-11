@@ -32,13 +32,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="145832ed-cb2e-4455-9784-bce895124076" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sshConfigs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
+    <list default="true" id="145832ed-cb2e-4455-9784-bce895124076" name="Default Changelist" comment="test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/bin/www" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/backend/bin/www" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +80,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -120,7 +116,7 @@
       <workItem from="1603973413798" duration="5852000" />
       <workItem from="1604496134900" duration="2084000" />
       <workItem from="1604499001256" duration="4281000" />
-      <workItem from="1605099498163" duration="3117000" />
+      <workItem from="1605099498163" duration="4737000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1574104182555</created>
@@ -192,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575387905125</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="test">
+      <created>1605107634708</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1605107634708</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,7 +235,8 @@
     <MESSAGE value="database.js" />
     <MESSAGE value="res" />
     <MESSAGE value="&#10;allo" />
-    <option name="LAST_COMMIT_MESSAGE" value="&#10;allo" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
   <component name="WindowStateProjectService">
     <state x="453" y="222" key="#Node.js_and_NPM" timestamp="1604497658573">
@@ -244,16 +248,28 @@
     </state>
     <state x="303" y="69" key="#SSH_Configurations/0.0.1440.900@0.0.1440.900" timestamp="1605099627416" />
     <state x="303" y="86" key="#SSH_Configurations/0.23.1440.823@0.23.1440.823" timestamp="1603292081642" />
-    <state x="221" y="55" key="SettingsEditor" timestamp="1605107585423">
+    <state x="220" y="54" key="SettingsEditor" timestamp="1605109425642">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="221" y="55" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1605107585423" />
+    <state x="220" y="54" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1605109425642" />
     <state x="221" y="73" key="SettingsEditor/0.23.1440.823@0.23.1440.823" timestamp="1603292175405" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1605107950931">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1605107950931" />
+    <state x="642" y="191" key="VcsDiffUtil.ChangesDialog" timestamp="1605107843545">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="642" y="191" key="VcsDiffUtil.ChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1605107843545" />
     <state x="626" y="162" width="336" height="525" key="ftp.server.browser" timestamp="1605107132868">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="626" y="162" key="ftp.server.browser/0.0.1440.900@0.0.1440.900" timestamp="1605107132868" />
     <state x="626" y="171" width="336" height="525" key="ftp.server.browser/0.23.1440.823@0.23.1440.823" timestamp="1603292174182" />
+    <state x="395" y="245" key="git4idea.merge.GitPullDialog" timestamp="1605107896277">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="395" y="245" key="git4idea.merge.GitPullDialog/0.0.1440.900@0.0.1440.900" timestamp="1605107896277" />
     <state width="600" height="428" key="javadoc.popup" timestamp="1604498399129">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

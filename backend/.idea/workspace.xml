@@ -41,11 +41,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f12be67-3efa-4682-b647-816832bee97b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/bin/www" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hardware/fipy/holdlte.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hardware/fipy/lib/bluetooth.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hardware/fipy/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../hardware/fipy/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +84,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605109025937</updated>
       <workItem from="1605109026735" duration="1955000" />
+      <workItem from="1605115053727" duration="19000" />
     </task>
     <servers />
   </component>
@@ -102,6 +101,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="496" y="236" key="#Deployment" timestamp="1605111138598">
