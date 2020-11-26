@@ -11,12 +11,12 @@ router.get('/', function (req, res, next) {
 
 router.post('/', function (req, res) {
     database.findDefaultThreshold((threshold) => {
-        console.log(req.body);
+        console.log(JSON.stringify(req.body));
         console.log(threshold);
         database.updateThreshold(threshold._id, req.body, function (err, res) {
             if (err) res.send({status: "error"}); else res.send({status: "success"})
         });
-        res = "aaaa";
+        res.send("You've sent : " + JSON.stringify(req.body));
     });
 });
 

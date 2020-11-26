@@ -107,6 +107,7 @@ function handleConnection(conn) {
   function onConnData(d) {
     console.log('connection data from %s: %j', remoteAddress, d);
     let userInput = binToData(d);
+	userInput[0].data = userInput[0].data + 1;
     console.log(userInput);
     conn.write(dataToBin(userInput));
   }
@@ -136,8 +137,9 @@ function binToData(bin){
   let data = [];
   for(let i=0; i<length; ++i){
     let entry = {};
-    entry.header = String.fromCharCode(bin.readIntLE(dataByteLength*i, 1));
+    entry.header = String.fromCharCode(bin.readInt8(dataByteLength*i, 1));
     entry.data = bin.readIntBE(dataByteLength*i + 1, 4);
+	entry.data /= 100;
     data.push(entry);
   }
   return data;
