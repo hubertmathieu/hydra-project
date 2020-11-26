@@ -16,6 +16,7 @@ router.post('/', function (req, res) {
         database.updateThreshold(threshold._id, req.body, function (err, res) {
             if (err) res.send({status: "error"}); else res.send({status: "success"})
         });
+        res = "aaaa";
     });
 });
 
