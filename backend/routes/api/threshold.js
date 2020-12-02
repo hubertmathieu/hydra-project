@@ -14,6 +14,7 @@ router.post('/:serreId', function (req, res) {
         database.updateThreshold(threshold._id, req.body, function (err, res) {
             if (err) res.send({status: "error"}); else res.send("You've sent : " + JSON.stringify(req.body));
         });
+        res = "aaaa";
     });
     res.send("You've sent : " + JSON.stringify(req.body));
 });

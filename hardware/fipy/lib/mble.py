@@ -53,7 +53,7 @@ def setCallBack(func):
 
 def sendData(data):
     global char
-    if connection.isconnected():
+    if connection.isconnected() and data is not None:
         char.write(data)
         #char.write(str.encode(data))
 
@@ -64,3 +64,6 @@ def close():
     bluetooth.disconnect_client()
     bluetooth.deinit()
     print("disconnected")
+
+def isConnected():
+    return connection.isconnected()
