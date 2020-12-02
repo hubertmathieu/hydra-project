@@ -132,11 +132,14 @@ function dataToBin(data){
 
 function binToData(bin){
   const dataByteLength = 5;
+  console.log(bin.length);
   let length = bin.length/dataByteLength;
   let data = [];
   for(let i=0; i<length; ++i){
     let entry = {};
-    entry.header = String.fromCharCode(bin.readIntLE(dataByteLength*i, 1));
+    console.log(bin.readInt8(dataByteLength*i, 1));
+    console.log(bin.readIntLE(dataByteLength*i + 1, 4));
+    entry.header = String.fromCharCode(bin.readInt8(dataByteLength*i, 1));
     entry.data = bin.readIntBE(dataByteLength*i + 1, 4);
     data.push(entry);
   }
