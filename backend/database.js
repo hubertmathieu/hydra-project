@@ -197,3 +197,24 @@ exports.updateThreshold = function (thresholdId, newValues) {
         })
     })
 };
+
+exports.getConfigBuffer = function(ghId, callback){
+    mongoClient.connect(url, function (err, db){
+       if(err) throw err;
+       db.db('hydra').collection('threshold').findOne({serreId: ghId}, {configChanges: true, _id: false}, function (err, result){
+           if(err) throw err;
+           callback(result);
+           db.close();
+       })
+    });
+}
+
+exports.saveConfigBuffer = function(ghId, changes){
+    mongoClient.connect(url, function (err, db){
+        if(err) throw err;
+        db.db('hydra').collection('threshold').update({serreId: ghId}, {$set:{configChanges: changes}}, function (err, result){
+            if(err) throw err;
+            db.close();
+        })
+    });
+}

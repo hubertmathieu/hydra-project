@@ -34,7 +34,8 @@ def connectLte():
     print("] connected!")
 
 def sendDataToLte(data):
-    print("sending to lte " + data)
+    s.send(data)
+    print("sending to hydra server " + str(data))
 
 def cb_handler(arg):
     print("CB: LTE Coverage lost")
@@ -53,8 +54,8 @@ def initLte():
     global s
     s = socket.socket()
     s.connect((address, port))
-    s.sendall("fipy connected")
-    print('Received', readData())
+    #s.sendall("fipy connected")
+    #print('Received', readData())
 
 def sendSocket(data):
     s.send(data)
@@ -64,5 +65,7 @@ def close():
     lte.deinit()
 
 def readData():
-    #s = ssl.wrap_socket(s)
     return s.recv(1024)
+
+def isConnected():
+    return lte.isconnected()
