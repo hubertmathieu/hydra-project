@@ -32,13 +32,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="145832ed-cb2e-4455-9784-bce895124076" name="Default Changelist" comment="&#10;df">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
+    <list default="true" id="145832ed-cb2e-4455-9784-bce895124076" name="Default Changelist" comment="modify the bd to add id">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/backend/bin/www" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/database.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/api/threshold.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/api/threshold.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +132,7 @@
       <workItem from="1606770764905" duration="2467000" />
       <workItem from="1606778806736" duration="886000" />
       <workItem from="1606857787649" duration="1127000" />
-      <workItem from="1606859583004" duration="7852000" />
+      <workItem from="1606859583004" duration="8792000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1574104182555</created>
@@ -222,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605109450447</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="modify the bd to add id">
+      <created>1606921046478</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1606921046478</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,7 +267,8 @@
     <MESSAGE value="&#10;allo" />
     <MESSAGE value="test" />
     <MESSAGE value="&#10;df" />
-    <option name="LAST_COMMIT_MESSAGE" value="&#10;df" />
+    <MESSAGE value="modify the bd to add id" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify the bd to add id" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="95" key="#Deployment" timestamp="1606404546857">
@@ -280,10 +284,15 @@
     </state>
     <state x="303" y="69" key="#SSH_Configurations/0.0.1440.900@0.0.1440.900" timestamp="1605099627416" />
     <state x="303" y="86" key="#SSH_Configurations/0.23.1440.823@0.23.1440.823" timestamp="1603292081642" />
-    <state x="144" y="92" key="MergeDialog" timestamp="1606405766949">
-      <screen x="0" y="25" width="1440" height="815" />
+    <state x="144" y="74" key="MergeDialog" timestamp="1606921106623">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="144" y="74" key="MergeDialog/0.0.1440.900@0.0.1440.900" timestamp="1606921106623" />
     <state x="144" y="92" key="MergeDialog/0.25.1440.815@0.25.1440.815" timestamp="1606405766949" />
+    <state x="358" y="215" key="MultipleFileMergeDialog" timestamp="1606921106663">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="358" y="215" key="MultipleFileMergeDialog/0.0.1440.900@0.0.1440.900" timestamp="1606921106663" />
     <state x="485" y="156" key="RollbackChangesDialog" timestamp="1605708445811">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -293,18 +302,18 @@
     </state>
     <state x="220" y="54" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1605109425642" />
     <state x="221" y="73" key="SettingsEditor/0.23.1440.823@0.23.1440.823" timestamp="1603292175405" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1605109453884">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1606921112875">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1605109453884" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1606921112875" />
     <state x="642" y="191" key="VcsDiffUtil.ChangesDialog" timestamp="1605107843545">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="642" y="191" key="VcsDiffUtil.ChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1605107843545" />
-    <state x="521" y="358" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606405745452">
-      <screen x="0" y="25" width="1440" height="815" />
+    <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606921049104">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1605708431617" />
+    <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1606921049104" />
     <state x="521" y="358" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1440.815@0.25.1440.815" timestamp="1606405745452" />
     <state x="626" y="172" width="336" height="525" key="ftp.server.browser" timestamp="1606404545512">
       <screen x="0" y="25" width="1440" height="815" />
