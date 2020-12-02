@@ -78,6 +78,9 @@ $npm start
 * N = waterLevel1
 * O = waterLevel2
 * P = phTreshold
+
+## Current Serre
+    1 -> serre de la marina de St-Ours
 ## Auteurs
 
 * **[Cégep de Sorel-Tracy](https://cegepst.qc.ca)**

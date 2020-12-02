@@ -32,8 +32,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="145832ed-cb2e-4455-9784-bce895124076" name="Default Changelist" comment="modify the bd to add id">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="145832ed-cb2e-4455-9784-bce895124076" name="Default Changelist" comment="README.md">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -132,7 +131,7 @@
       <workItem from="1606770764905" duration="2467000" />
       <workItem from="1606778806736" duration="886000" />
       <workItem from="1606857787649" duration="1127000" />
-      <workItem from="1606859583004" duration="8792000" />
+      <workItem from="1606859583004" duration="8915000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1574104182555</created>
@@ -225,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606921046478</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="README.md">
+      <created>1606923063334</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1606923063334</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,7 +274,8 @@
     <MESSAGE value="test" />
     <MESSAGE value="&#10;df" />
     <MESSAGE value="modify the bd to add id" />
-    <option name="LAST_COMMIT_MESSAGE" value="modify the bd to add id" />
+    <MESSAGE value="README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="README.md" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="95" key="#Deployment" timestamp="1606404546857">
@@ -302,10 +309,10 @@
     </state>
     <state x="220" y="54" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1605109425642" />
     <state x="221" y="73" key="SettingsEditor/0.23.1440.823@0.23.1440.823" timestamp="1603292175405" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1606921112875">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1606923066361">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1606921112875" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1606923066361" />
     <state x="642" y="191" key="VcsDiffUtil.ChangesDialog" timestamp="1605107843545">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
