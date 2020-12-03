@@ -15,7 +15,7 @@ var dictionnary = {
     ph: 'n',
     waterLevel1: 'o',
     waterLevel2: 'p',
-    phTreshold: 'q'
+    phThreshold: 'q'
 }
 
 module.exports = dictionnary;
