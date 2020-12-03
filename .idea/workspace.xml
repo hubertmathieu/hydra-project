@@ -134,7 +134,7 @@
       <workItem from="1606778806736" duration="886000" />
       <workItem from="1606857787649" duration="1127000" />
       <workItem from="1606859583004" duration="10008000" />
-      <workItem from="1607000464576" duration="4214000" />
+      <workItem from="1607000464576" duration="5114000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1574104182555</created>
@@ -290,7 +290,21 @@
       <option name="project" value="LOCAL" />
       <updated>1607005127709</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="aaaaaaaaa part 3">
+      <created>1607005877706</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1607005877706</updated>
+    </task>
+    <task id="LOCAL-00024" summary="aaaaaaaaa part 3">
+      <created>1607005945995</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1607005945995</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,6 +368,10 @@
     </state>
     <state x="303" y="69" key="#SSH_Configurations/0.0.1440.900@0.0.1440.900" timestamp="1605099627416" />
     <state x="303" y="86" key="#SSH_Configurations/0.23.1440.823@0.23.1440.823" timestamp="1603292081642" />
+    <state x="100" y="100" width="1240" height="700" key="DiffContextDialog" timestamp="1607005993744">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="100" y="100" width="1240" height="700" key="DiffContextDialog/0.0.1440.900@0.0.1440.900" timestamp="1607005993744" />
     <state x="144" y="74" key="MergeDialog" timestamp="1607004658699">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -372,18 +390,18 @@
     </state>
     <state x="220" y="54" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1605109425642" />
     <state x="221" y="73" key="SettingsEditor/0.23.1440.823@0.23.1440.823" timestamp="1603292175405" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1607005130774">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1607005948239">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1607005130774" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1607005948239" />
     <state x="642" y="191" key="VcsDiffUtil.ChangesDialog" timestamp="1605107843545">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="642" y="191" key="VcsDiffUtil.ChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1605107843545" />
-    <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606921049104">
+    <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607006269791">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1606921049104" />
+    <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1607006269791" />
     <state x="521" y="358" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1440.815@0.25.1440.815" timestamp="1606405745452" />
     <state x="626" y="172" width="336" height="525" key="ftp.server.browser" timestamp="1606404545512">
       <screen x="0" y="25" width="1440" height="815" />
