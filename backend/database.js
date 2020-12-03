@@ -200,7 +200,7 @@ function getChangesFormatted(newValues) {
         changes.push({ [name] : newValues[propertyName] });
     }
     console.log(changes);
-    return [{'a':10}];
+    return changes;
 }
 
 exports.updateThreshold = function (thresholdId, newValues) {
