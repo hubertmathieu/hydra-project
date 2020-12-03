@@ -32,9 +32,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="145832ed-cb2e-4455-9784-bce895124076" name="Default Changelist" comment="test">
+    <list default="true" id="145832ed-cb2e-4455-9784-bce895124076" name="Default Changelist" comment="aaaaaaaaa part 3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/backend/bin/www" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/dictionnaryModule.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/dictionnaryModule.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +70,8 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="10.16.3" />
+    <property name="javascript.nodejs.core.library.configured.version" value="15.3.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.14.10" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -81,15 +82,18 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web.server" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/backend" />
       <recent name="$PROJECT_DIR$/routes" />
       <recent name="$PROJECT_DIR$/public/javascripts" />
       <recent name="$PROJECT_DIR$/routes/api" />
       <recent name="$PROJECT_DIR$/public/svgs" />
     </key>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -116,7 +120,21 @@
       <workItem from="1603973413798" duration="5852000" />
       <workItem from="1604496134900" duration="2084000" />
       <workItem from="1604499001256" duration="4281000" />
-      <workItem from="1605099498163" duration="4737000" />
+      <workItem from="1605099498163" duration="5577000" />
+      <workItem from="1605218041252" duration="202000" />
+      <workItem from="1605381655822" duration="4000" />
+      <workItem from="1605704169103" duration="5153000" />
+      <workItem from="1605810874686" duration="39000" />
+      <workItem from="1606159003196" duration="36000" />
+      <workItem from="1606311041319" duration="2023000" />
+      <workItem from="1606399272250" duration="8597000" />
+      <workItem from="1606525668462" duration="1000" />
+      <workItem from="1606525675638" duration="5000" />
+      <workItem from="1606770764905" duration="2467000" />
+      <workItem from="1606778806736" duration="886000" />
+      <workItem from="1606857787649" duration="1127000" />
+      <workItem from="1606859583004" duration="10008000" />
+      <workItem from="1607000464576" duration="5568000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1574104182555</created>
@@ -195,11 +213,109 @@
       <option name="project" value="LOCAL" />
       <updated>1605107634708</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="&#10;df">
+      <created>1605109450447</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1605109450447</updated>
+    </task>
+    <task id="LOCAL-00013" summary="modify the bd to add id">
+      <created>1606921046478</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1606921046478</updated>
+    </task>
+    <task id="LOCAL-00014" summary="README.md">
+      <created>1606923063334</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1606923063334</updated>
+    </task>
+    <task id="LOCAL-00015" summary="README.md">
+      <created>1606923173884</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1606923173884</updated>
+    </task>
+    <task id="LOCAL-00016" summary="push basic dick">
+      <created>1607003705638</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1607003705638</updated>
+    </task>
+    <task id="LOCAL-00017" summary="aaaaaaaaa">
+      <created>1607004622410</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1607004622411</updated>
+    </task>
+    <task id="LOCAL-00018" summary="aaaaaaaaa">
+      <created>1607004720976</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1607004720976</updated>
+    </task>
+    <task id="LOCAL-00019" summary="aaaaaaaaa">
+      <created>1607004767833</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1607004767833</updated>
+    </task>
+    <task id="LOCAL-00020" summary="aaaaaaaaa part 2">
+      <created>1607004882508</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1607004882508</updated>
+    </task>
+    <task id="LOCAL-00021" summary="aaaaaaaaa part 2">
+      <created>1607004942870</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1607004942870</updated>
+    </task>
+    <task id="LOCAL-00022" summary="aaaaaaaaa part 3">
+      <created>1607005127709</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1607005127709</updated>
+    </task>
+    <task id="LOCAL-00023" summary="aaaaaaaaa part 3">
+      <created>1607005877706</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1607005877706</updated>
+    </task>
+    <task id="LOCAL-00024" summary="aaaaaaaaa part 3">
+      <created>1607005945995</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1607005945995</updated>
+    </task>
+    <task id="LOCAL-00025" summary="aaaaaaaaa part 3">
+      <created>1607006853350</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1607006853350</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -236,9 +352,20 @@
     <MESSAGE value="res" />
     <MESSAGE value="&#10;allo" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="&#10;df" />
+    <MESSAGE value="modify the bd to add id" />
+    <MESSAGE value="README.md" />
+    <MESSAGE value="push basic dick" />
+    <MESSAGE value="aaaaaaaaa" />
+    <MESSAGE value="aaaaaaaaa part 2" />
+    <MESSAGE value="aaaaaaaaa part 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="aaaaaaaaa part 3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="320" y="95" key="#Deployment" timestamp="1606404546857">
+      <screen x="0" y="25" width="1440" height="815" />
+    </state>
+    <state x="320" y="95" key="#Deployment/0.25.1440.815@0.25.1440.815" timestamp="1606404546857" />
     <state x="453" y="222" key="#Node.js_and_NPM" timestamp="1604497658573">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -248,24 +375,47 @@
     </state>
     <state x="303" y="69" key="#SSH_Configurations/0.0.1440.900@0.0.1440.900" timestamp="1605099627416" />
     <state x="303" y="86" key="#SSH_Configurations/0.23.1440.823@0.23.1440.823" timestamp="1603292081642" />
+    <state x="100" y="100" width="1240" height="700" key="DiffContextDialog" timestamp="1607005993744">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="100" y="100" width="1240" height="700" key="DiffContextDialog/0.0.1440.900@0.0.1440.900" timestamp="1607005993744" />
+    <state x="144" y="74" key="MergeDialog" timestamp="1607004658699">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="144" y="74" key="MergeDialog/0.0.1440.900@0.0.1440.900" timestamp="1607004658699" />
+    <state x="144" y="92" key="MergeDialog/0.25.1440.815@0.25.1440.815" timestamp="1606405766949" />
+    <state x="358" y="215" key="MultipleFileMergeDialog" timestamp="1607004658737">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="358" y="215" key="MultipleFileMergeDialog/0.0.1440.900@0.0.1440.900" timestamp="1607004658737" />
+    <state x="485" y="156" key="RollbackChangesDialog" timestamp="1605708445811">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="485" y="156" key="RollbackChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1605708445811" />
     <state x="220" y="54" key="SettingsEditor" timestamp="1605109425642">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="220" y="54" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1605109425642" />
     <state x="221" y="73" key="SettingsEditor/0.23.1440.823@0.23.1440.823" timestamp="1603292175405" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1605107950931">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1607006856160">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1605107950931" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1607006856160" />
     <state x="642" y="191" key="VcsDiffUtil.ChangesDialog" timestamp="1605107843545">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="642" y="191" key="VcsDiffUtil.ChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1605107843545" />
-    <state x="626" y="162" width="336" height="525" key="ftp.server.browser" timestamp="1605107132868">
+    <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607006269791">
       <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1607006269791" />
+    <state x="521" y="358" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1440.815@0.25.1440.815" timestamp="1606405745452" />
+    <state x="626" y="172" width="336" height="525" key="ftp.server.browser" timestamp="1606404545512">
+      <screen x="0" y="25" width="1440" height="815" />
     </state>
     <state x="626" y="162" key="ftp.server.browser/0.0.1440.900@0.0.1440.900" timestamp="1605107132868" />
     <state x="626" y="171" width="336" height="525" key="ftp.server.browser/0.23.1440.823@0.23.1440.823" timestamp="1603292174182" />
+    <state x="626" y="172" key="ftp.server.browser/0.25.1440.815@0.25.1440.815" timestamp="1606404545512" />
     <state x="395" y="245" key="git4idea.merge.GitPullDialog" timestamp="1605107896277">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
