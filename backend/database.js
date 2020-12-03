@@ -1,6 +1,8 @@
 var mongoClient = require('mongodb').MongoClient;
 var url = 'mongodb://localhost:27017/hydra';
 
+var dict = require('./dictionnaryModule');
+
 exports.authentifyUser = function(userInfo, callback) {
     mongoClient.connect(url, function(err, db) {
         if (err) throw err;
@@ -177,10 +179,11 @@ exports.updateConfig = function (configId, config, callback) {
     })
 };
 
-exports.findDefaultThreshold = function (callback) {
+exports.findDefaultThreshold = function (data , callback) {
     mongoClient.connect(url, function (err, db) {
         if (err) throw err;
-        db.db('hydra').collection('threshold').findOne(function (err, result) {
+        var query = {serreId:  Number(data)};
+        db.db('hydra').collection('threshold').findOne(query, function (err, result) {
             if (err) throw err;
             callback(result);
             db.close();
@@ -188,12 +191,72 @@ exports.findDefaultThreshold = function (callback) {
     })
 };
 
+
+function sensorArrayToObject(values){
+    let retObj = {};
+    for(let i=0; i<values.length; ++i){
+		console.log("retObj ::");
+		console.log(retObj);
+        retObj[Object.keys(dict).find(key => dict[key] === values[i].header)] = values[i].data
+    }
+    console.log(retObj);
+    return retObj;
+}
+
+function getChangesFormatted(newValues) {
+    var changes = [];
+    console.log(dict);
+    for (propertyName in newValues){
+        var name = dict[propertyName];
+        changes.push({ [name] : newValues[propertyName] });
+    }
+    console.log(changes);
+    return changes;
+}
+
 exports.updateThreshold = function (thresholdId, newValues) {
+    newValues.configChanges = getChangesFormatted(newValues);
     mongoClient.connect(url, function (err, db) {
         if (err) throw err;
-        db.db('hydra').collection('threshold').update({_id: thresholdId}, {$set: newValues}, function (err, res) {
+        db.db('hydra').collection('threshold').updateOne({_id: thresholdId}, {$set: newValues}, function (err, res) {
             if (err) throw err;
             db.close();
         })
     })
 };
+
+exports.getConfigBuffer = function(ghId, callback){
+    mongoClient.connect(url, function (err, db){
+       if(err) throw err;
+       db.db('hydra').collection('threshold').findOne({serreId: ghId}, {configChanges: true, _id: false}, function (err, result){
+           if(err) throw err;
+           callback(result);
+           db.close();
+       })
+    });
+}
+
+exports.updateSensors = function(data, serreId, callback = null){
+	console.log("aaaaaaa :: " + serreId);
+    data = sensorArrayToObject(data);
+    console.log(data);
+    mongoClient.connect(url, function (err, db){
+        if(err) throw err;
+        db.db('hydra').collection('threshold').update({serreId: serreId}, {$set: data}, function (err, res){
+            if(err) throw err;
+            if(callback)callback(data);//todo change to res
+            db.close();
+        });
+    });
+};
+
+
+exports.saveConfigBuffer = function(ghId, changes){
+    mongoClient.connect(url, function (err, db){
+        if(err) throw err;
+        db.db('hydra').collection('threshold').update({serreId: ghId}, {$set:{configChanges: changes}}, function (err, result){
+            if(err) throw err;
+            db.close();
+        })
+    });
+}

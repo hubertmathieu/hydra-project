@@ -7,6 +7,9 @@
 var app = require('../app');
 var debug = require('debug')('hydra-project:server');
 var http = require('http');
+const logger = require('morgan');
+
+app.use(logger('dev'));
 
 /**
  * Get port from environment and store in Express.
@@ -93,27 +96,38 @@ function onListening() {
 
 var net = require('net');
 var server = net.createServer();
+var database = require('../database');
 
 server.on('connection', handleConnection);
 server.listen(9000, function() {
   console.log('server listening to %j', server.address());
 });
+
 function handleConnection(conn) {
   var remoteAddress = conn.remoteAddress + ':' + conn.remotePort;
   console.log('new client connection from %s', remoteAddress);
   conn.on('data', onConnData);
   conn.once('close', onConnClose);
   conn.on('error', onConnError);
+
   function onConnData(d) {
     console.log('connection data from %s: %j', remoteAddress, d);
     let userInput = binToData(d);
 	userInput[0].data = userInput[0].data + 1;
+	let id = userInput.shift();
+	console.log("this is user input");
+	console.log(userInput);
+    database.updateSensors(userInput, id.data, function (res){
+      console.log(res);
+    });
     console.log(userInput);
     conn.write(dataToBin(userInput));
   }
+
   function onConnClose() {
     console.log('connection from %s closed', remoteAddress);
   }
+
   function onConnError(err) {
     console.log('Connection %s error: %s', remoteAddress, err.message);
   }

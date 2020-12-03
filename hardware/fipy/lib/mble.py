@@ -8,6 +8,11 @@ WRITE_CHAR_UUID = 65505
 READ_CHAR_UUID = 65505
 SERVICE_UUID = 65504
 
+try:
+    close()
+except:
+    print("bluetooth is ready")
+
 bluetooth = Bluetooth()
 bluetooth.start_scan(-1)
 bluetooth.init()
@@ -53,7 +58,7 @@ def setCallBack(func):
 
 def sendData(data):
     global char
-    if connection.isconnected():
+    if connection.isconnected() and data is not None:
         char.write(data)
         #char.write(str.encode(data))
 
@@ -64,3 +69,6 @@ def close():
     bluetooth.disconnect_client()
     bluetooth.deinit()
     print("disconnected")
+
+def isConnected():
+    return connection.isconnected()

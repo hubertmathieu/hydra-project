@@ -61,7 +61,26 @@ $npm start
 * [Express](https://expressjs.com/fr/) - Infrastructure Web
 * [MongoDB](https://www.mongodb.com/fr) - Base de données
 
+## Registary of value
+* A = Temperature1
+* B = Temperature2
+* C = Temperature3
+* D = humidityLowerTreshold1
+* E = humidityUpperTreshold1
+* F = humidity1
+* G = humidity2
+* H = humidity3
+* I = humidityLowerTreshold2
+* J = humidityUpperTreshold2
+* K = humidityLowerTreshold3
+* L = humidityUpperTreshold3
+* M = ph
+* N = waterLevel1
+* O = waterLevel2
+* P = phTreshold
 
+## Current Serre
+    1 -> serre de la marina de St-Ours
 ## Auteurs
 
 * **[Cégep de Sorel-Tracy](https://cegepst.qc.ca)**

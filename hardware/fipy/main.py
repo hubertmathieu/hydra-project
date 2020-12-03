@@ -3,36 +3,57 @@ import time
 import lte
 import mble
 
-# soracom https://soracom.zendesk.com/hc/en-us/articles/218427317-What-is-an-APN-setting-and-how-do-you-set-it-up-
-# udp python https://wiki.python.org/moin/UdpCommunication
-# fipy manual
-# https://www.signalbooster.com/pages/what-are-4g-lte-frequencies-bands-of-telus-rogers-bell
+def closeConnections():
+    try:
+        lte.close()
+    except:
+        print("lte is ready")
 
 
 
 def charCallBack(chr):
     if (chr.properties() & Bluetooth.PROP_READ):
+        if (not lte.isConnected()):
+            print("lost connection to server")
+            lte.close()
+            lte.initLte()
         print('callback char {} value = {}'.format(chr.uuid(), chr.value().decode('utf-8')))
-        #lte.sendDataToLte(chr.value())
-        mble.sendData(chr.value())
-        mble.close()
+        lte.sendDataToLte(chr.value())
+        #https://nodejs.org/api/buffer.html#buffer_buf_readint32le_offset
 
+
+
+closeConnections()
 
 lte.initLte()
 
-#mble.initConnection("b\'1893d7152018\'")
+mble.initConnection("b\'1893d7152018\'")
 
-#mble.setCallBack(charCallBack)
+mble.setCallBack(charCallBack)
 running = True
 
-ctime =0
-while running and ctime < 5:
-    print(".")
+while running: 
+    
+    if (not mble.isConnected()):
+        print('lost connection to arduino')
+        mble.close()
+        mble.initConnection("b\'1893d7152018\'")
+
+    mble.sendData(lte.readData())
+    print('sending data')
     time.sleep(1)
-    ctime += 1
 
 
-#mble.close()
+
+
+mble.close()
 lte.close()
 
 print("done !")
+
+
+
+
+#11010000/00000111/01111011/00000010
+#11010000000001110111101100000010
+#00000010011110110000011111010000
