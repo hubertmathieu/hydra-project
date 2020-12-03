@@ -42,8 +42,7 @@ while running:
     mble.sendData(lte.readData())
     print('sending data')
     time.sleep(1)
-    #print(lte.readData())
-    #mble.sendData(lte.readData())
+
 
 
 
