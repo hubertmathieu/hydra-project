@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="f3d44440-beb8-4280-bb13-571001dedf9c" name="hydra-project" url="http://165.227.32.127">
-        <fileTransfer rootFolder="/home/hydra/hydra" accessType="SFTP" host="165.227.32.127" port="22" sshConfigId="cbcdf60f-1c59-498e-88f0-05e554d183ab" sshConfig="hydra-project">
+        <fileTransfer rootFolder="/home/hydra/hydra-project" accessType="SFTP" host="165.227.32.127" port="22" sshConfigId="cbcdf60f-1c59-498e-88f0-05e554d183ab" sshConfig="hydra-project">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
