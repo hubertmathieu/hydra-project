@@ -225,6 +225,18 @@ exports.getConfigBuffer = function(ghId, callback){
     });
 }
 
+exports.updateSensors = function(data, serreId, callback = null){
+    mongoClient.connect(url, function (err, db){
+        if(err) throw err;
+        db.db('hydra').collection('threshold').update({serreId: serreId}, {$set: data}, function (err, res){
+            if(err) throw err;
+            if(callback)callback(res);
+            db.close();
+        });
+    });
+};
+
+
 exports.saveConfigBuffer = function(ghId, changes){
     mongoClient.connect(url, function (err, db){
         if(err) throw err;
