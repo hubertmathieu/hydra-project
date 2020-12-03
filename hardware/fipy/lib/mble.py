@@ -8,6 +8,11 @@ WRITE_CHAR_UUID = 65505
 READ_CHAR_UUID = 65505
 SERVICE_UUID = 65504
 
+try:
+    close()
+except:
+    print("bluetooth is ready")
+
 bluetooth = Bluetooth()
 bluetooth.start_scan(-1)
 bluetooth.init()
