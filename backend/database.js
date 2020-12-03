@@ -239,7 +239,8 @@ exports.updateSensors = function(data, serreId, callback = null){
         if(err) throw err;
         db.db('hydra').collection('threshold').update({serreId: serreId}, {$set: data}, function (err, res){
             if(err) throw err;
-            if(callback)callback(res);
+            //if(callback)callback(res);
+            callback(sensorArrayToObject(data));
             db.close();
         });
     });
