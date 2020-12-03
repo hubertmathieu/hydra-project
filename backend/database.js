@@ -197,7 +197,7 @@ function getChangesFormatted(newValues) {
     console.log(dict);
     for (propertyName in newValues){
         var name = dict[propertyName];
-        changes.push({ [name] : [newValues[propertyName]] });
+        changes.push({ [name] : newValues[propertyName] });
     }
     console.log(changes);
     return [{'a':10}];
