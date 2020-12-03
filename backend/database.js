@@ -1,7 +1,7 @@
 var mongoClient = require('mongodb').MongoClient;
 var url = 'mongodb://localhost:27017/hydra';
 
-var dict = require('../dictionnaryModule');
+var dict = require('./dictionnaryModule');
 
 exports.authentifyUser = function(userInfo, callback) {
     mongoClient.connect(url, function(err, db) {
