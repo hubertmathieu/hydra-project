@@ -111,7 +111,9 @@ function handleConnection(conn) {
     console.log('connection data from %s: %j', remoteAddress, d);
     let userInput = binToData(d);
 	userInput[0].data = userInput[0].data + 1;
-
+	let id = userInput.shift();
+	console.log(database.)
+    database.updateSensors(userInput, id.data);
     console.log(userInput);
     conn.write(dataToBin(userInput));
   }

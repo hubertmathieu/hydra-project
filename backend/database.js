@@ -192,6 +192,15 @@ exports.findDefaultThreshold = function (data , callback) {
 };
 
 
+function sensorArrayToObject(values){
+    let retObj = {};
+    for(let i=0; i<values; ++i){
+        retObj[Object.keys(dict).find(key => dict[key] === values[i].header)] = values[i].data
+    }
+    console.log(retObj);
+    return retObj;
+}
+
 function getChangesFormatted(newValues) {
     var changes = [];
     console.log(dict);
