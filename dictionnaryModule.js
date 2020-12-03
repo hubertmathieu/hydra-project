@@ -23,15 +23,15 @@ var dictionnary = {
 
     humidityLowerTreshold3: 'l',
 
-    humidityUpperTreshold3: 'n',
+    humidityUpperTreshold3: 'm',
 
     ph: 'n',
 
-    waterLevel1: 60,
+    waterLevel1: 'o',
 
-    waterLevel2: 90,
+    waterLevel2: 'p',
 
-    phTreshold: 6.0
+    phTreshold: 'q'
 }
 
-module.exports = DictModule;
+module.exports = dictionnary;

@@ -1,7 +1,7 @@
 var mongoClient = require('mongodb').MongoClient;
 var url = 'mongodb://localhost:27017/hydra';
 
-var dict = require('/dictionnaryModule').dictionnary;
+var dict = require('../dictionnaryModule');
 
 exports.authentifyUser = function(userInfo, callback) {
     mongoClient.connect(url, function(err, db) {
@@ -191,21 +191,19 @@ exports.findDefaultThreshold = function (data , callback) {
     })
 };
 
-
-}
-
 function getChangesFormatted(newValues) {
     var changes = [];
+    console.log(dict);
     for (propertyName in newValues){
-        changes.push({dict[propertyName]: newValues.propertyName})
-        console.log(changeToFormatting(propertyName,newValues));
-        console.log(`${propertyName}: ${newValues[propertyName]}`);
+        var name = dict[propertyName];
+        changes.push({ [name] : [newValues.propertyName] });
     }
+    console.log(changes);
     return [{'a':10}];
 }
 
 exports.updateThreshold = function (thresholdId, newValues) {
-    newValues.changes = getChangesFormatted(newValues);
+    newValues.configChanges = getChangesFormatted(newValues);
     mongoClient.connect(url, function (err, db) {
         if (err) throw err;
         db.db('hydra').collection('threshold').updateOne({_id: thresholdId}, {$set: newValues}, function (err, res) {
