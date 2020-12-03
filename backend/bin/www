@@ -7,6 +7,9 @@
 var app = require('../app');
 var debug = require('debug')('hydra-project:server');
 var http = require('http');
+const logger = require('morgan');
+
+app.use(logger('dev'));
 
 /**
  * Get port from environment and store in Express.
