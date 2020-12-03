@@ -235,6 +235,7 @@ exports.getConfigBuffer = function(ghId, callback){
 }
 
 exports.updateSensors = function(data, serreId, callback = null){
+    console.log("aaaaaaaa");
     data = sensorArrayToObject(data);
     console.log(data);
     mongoClient.connect(url, function (err, db){
