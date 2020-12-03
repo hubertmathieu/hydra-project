@@ -32,10 +32,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="145832ed-cb2e-4455-9784-bce895124076" name="Default Changelist" comment="push basic dick">
+    <list default="true" id="145832ed-cb2e-4455-9784-bce895124076" name="Default Changelist" comment="aaaaaaaaa">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/database.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dictionnaryModule.js" beforeDir="false" afterPath="$PROJECT_DIR$/dictionnaryModule.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +133,7 @@
       <workItem from="1606778806736" duration="886000" />
       <workItem from="1606857787649" duration="1127000" />
       <workItem from="1606859583004" duration="10008000" />
-      <workItem from="1607000464576" duration="3155000" />
+      <workItem from="1607000464576" duration="3401000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1574104182555</created>
@@ -248,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607003705638</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="aaaaaaaaa">
+      <created>1607004622410</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1607004622411</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,7 +299,8 @@
     <MESSAGE value="modify the bd to add id" />
     <MESSAGE value="README.md" />
     <MESSAGE value="push basic dick" />
-    <option name="LAST_COMMIT_MESSAGE" value="push basic dick" />
+    <MESSAGE value="aaaaaaaaa" />
+    <option name="LAST_COMMIT_MESSAGE" value="aaaaaaaaa" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="95" key="#Deployment" timestamp="1606404546857">
@@ -309,15 +316,15 @@
     </state>
     <state x="303" y="69" key="#SSH_Configurations/0.0.1440.900@0.0.1440.900" timestamp="1605099627416" />
     <state x="303" y="86" key="#SSH_Configurations/0.23.1440.823@0.23.1440.823" timestamp="1603292081642" />
-    <state x="144" y="74" key="MergeDialog" timestamp="1606921106623">
+    <state x="144" y="74" key="MergeDialog" timestamp="1607004658699">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="144" y="74" key="MergeDialog/0.0.1440.900@0.0.1440.900" timestamp="1606921106623" />
+    <state x="144" y="74" key="MergeDialog/0.0.1440.900@0.0.1440.900" timestamp="1607004658699" />
     <state x="144" y="92" key="MergeDialog/0.25.1440.815@0.25.1440.815" timestamp="1606405766949" />
-    <state x="358" y="215" key="MultipleFileMergeDialog" timestamp="1606921106663">
+    <state x="358" y="215" key="MultipleFileMergeDialog" timestamp="1607004658737">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="358" y="215" key="MultipleFileMergeDialog/0.0.1440.900@0.0.1440.900" timestamp="1606921106663" />
+    <state x="358" y="215" key="MultipleFileMergeDialog/0.0.1440.900@0.0.1440.900" timestamp="1607004658737" />
     <state x="485" y="156" key="RollbackChangesDialog" timestamp="1605708445811">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -327,10 +334,10 @@
     </state>
     <state x="220" y="54" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1605109425642" />
     <state x="221" y="73" key="SettingsEditor/0.23.1440.823@0.23.1440.823" timestamp="1603292175405" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1607003708341">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1607004663433">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1607003708341" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1607004663433" />
     <state x="642" y="191" key="VcsDiffUtil.ChangesDialog" timestamp="1605107843545">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

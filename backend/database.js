@@ -192,8 +192,6 @@ exports.findDefaultThreshold = function (data , callback) {
 };
 
 
-}
-
 function getChangesFormatted(newValues) {
     var changes = [];
     console.log(dict);
