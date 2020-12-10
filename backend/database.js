@@ -207,7 +207,7 @@ function getChangesFormatted(newValues) {
         if(propertyName != "serreId") {
             newValues[propertyName] =  parseFloat(newValues[propertyName]);
             var name = dict[propertyName];
-            changes.push({[name]: newValues[propertyName]});
+            changes.push({ "header": name, "data" : newValues[propertyName]});
         }
     }
     console.log(changes);
@@ -228,11 +228,11 @@ exports.updateThreshold = function (thresholdId, newValues) {
 exports.getConfigBuffer = function(ghId, callback){
     mongoClient.connect(url, function (err, db){
        if(err) throw err;
-       db.db('hydra').collection('threshold').findOne({serreId: ghId}, {configChanges: true, _id: false}).toArray( function (err, result){
+       db.db('hydra').collection('threshold').findOne({serreId: ghId}, {configChanges: true, _id: false}, function (err, result){
            if(err) throw err;
            callback(result);
            db.close();
-       })
+       });
     });
 }
 
@@ -250,7 +250,8 @@ exports.updateSensors = function(data, serreId, callback = null){
 
 exports.cleanConfigBuffer = function cleanConfigBuffer(id){
 	mongoClient.connect(url, function(err, db){
-		db.db('hydra').collection('threshold').update({serreId: id}, {configChanges: []}, function(){
+
+		db.db('hydra').collection('threshold').updateOne({serreId: id}, {configChanges: []}, function(){
 			if(err) throw err;
 			db.close();
 		})

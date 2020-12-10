@@ -114,17 +114,14 @@ function handleConnection(conn) {
     console.log('connection data from %s: %j', remoteAddress, d);
     let userInput = binToData(d);
     console.log(userInput);
-	userInput[0].data = userInput[0].data + 1;
 	let id = userInput.shift();
     database.updateSensors(userInput, id.data, function (res){
-		database.getConfigBuffer(id, function(response){
-			if(response) conn.write(dataToBin(response));
-			database.cleanConfigBuffer(id);
+		database.getConfigBuffer(id.data, function(response){
+			console.log(response);
+			if(response) conn.write(dataToBin(response.configChanges));
+			database.cleanConfigBuffer(id.data);
 		});
-		console.log("res");
-        console.log(res);
     });
-    conn.write(dataToBin(userInput));
   }
 
   function onConnClose() {
