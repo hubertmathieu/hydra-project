@@ -195,11 +195,8 @@ exports.findDefaultThreshold = function (data , callback) {
 function sensorArrayToObject(values){
     let retObj = {};
     for(let i=0; i<values.length; ++i){
-		console.log("retObj ::");
-		console.log(retObj);
         retObj[Object.keys(dict).find(key => dict[key] === values[i].header)] = values[i].data
     }
-    console.log(retObj);
     return retObj;
 }
 
@@ -207,8 +204,11 @@ function getChangesFormatted(newValues) {
     var changes = [];
     console.log(dict);
     for (propertyName in newValues){
-        var name = dict[propertyName];
-        changes.push({ [name] : newValues[propertyName] });
+        if(propertyName != "serreId") {
+            newValues[propertyName] =  parseFloat(newValues[propertyName]);
+            var name = dict[propertyName];
+            changes.push({[name]: newValues[propertyName]});
+        }
     }
     console.log(changes);
     return changes;
@@ -228,7 +228,7 @@ exports.updateThreshold = function (thresholdId, newValues) {
 exports.getConfigBuffer = function(ghId, callback){
     mongoClient.connect(url, function (err, db){
        if(err) throw err;
-       db.db('hydra').collection('threshold').findOne({serreId: ghId}, {configChanges: true, _id: false}, function (err, result){
+       db.db('hydra').collection('threshold').findOne({serreId: ghId}, {configChanges: true, _id: false}).toArray( function (err, result){
            if(err) throw err;
            callback(result);
            db.close();
@@ -237,19 +237,26 @@ exports.getConfigBuffer = function(ghId, callback){
 }
 
 exports.updateSensors = function(data, serreId, callback = null){
-	console.log("serreId :: " + serreID);
     data = sensorArrayToObject(data);
-    console.log(data);
     mongoClient.connect(url, function (err, db){
         if(err) throw err;
         db.db('hydra').collection('threshold').update({serreId: serreId}, {$set: data}, function (err, res){
             if(err) throw err;
-            if(callback)callback(data);//todo change to res
+            if(callback)callback(res);//todo change to res
             db.close();
         });
     });
 };
 
+exports.cleanConfigBuffer = function cleanConfigBuffer(id){
+	mongoClient.connect(url, function(err, db){
+		db.db('hydra').collection('threshold').update({serreId: id}, {configChanges: []}, function(){
+			if(err) throw err;
+			db.close();
+		})
+
+	});
+}
 
 exports.saveConfigBuffer = function(ghId, changes){
     mongoClient.connect(url, function (err, db){
