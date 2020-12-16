@@ -112,6 +112,8 @@ function handleConnection(conn) {
 
   function onConnData(d) {
     console.log('connection data from %s: %j', remoteAddress, d);
+	console.log(d.length);
+	if(d.length % 5 !== 0) return; 
     let userInput = binToData(d);
     console.log(userInput);
 	let id = userInput.shift();
@@ -121,8 +123,9 @@ function handleConnection(conn) {
 			if(response) conn.write(dataToBin(response.configChanges));
 			database.cleanConfigBuffer(id.data);
 		});
-    });
-  }
+   	 });
+  
+}
 
   function onConnClose() {
     console.log('connection from %s closed', remoteAddress);

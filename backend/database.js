@@ -183,6 +183,8 @@ exports.findDefaultThreshold = function (data , callback) {
     mongoClient.connect(url, function (err, db) {
         if (err) throw err;
         var query = {serreId:  Number(data)};
+        console.log( Number(data));
+        console.log(query);
         db.db('hydra').collection('threshold').findOne(query, function (err, result) {
             if (err) throw err;
             callback(result);
@@ -251,7 +253,7 @@ exports.updateSensors = function(data, serreId, callback = null){
 exports.cleanConfigBuffer = function cleanConfigBuffer(id){
 	mongoClient.connect(url, function(err, db){
 
-		db.db('hydra').collection('threshold').updateOne({serreId: id}, {configChanges: []}, function(){
+		db.db('hydra').collection('threshold').updateOne({serreId: id}, {$set :{configChanges: []}}, function(){
 			if(err) throw err;
 			db.close();
 		})
