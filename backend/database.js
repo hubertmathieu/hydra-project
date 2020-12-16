@@ -183,6 +183,8 @@ exports.findDefaultThreshold = function (data , callback) {
     mongoClient.connect(url, function (err, db) {
         if (err) throw err;
         var query = {serreId:  Number(data)};
+        console.log( Number(data));
+        console.log(query);
         db.db('hydra').collection('threshold').findOne(query, function (err, result) {
             if (err) throw err;
             callback(result);
@@ -194,10 +196,9 @@ exports.findDefaultThreshold = function (data , callback) {
 
 function sensorArrayToObject(values){
     let retObj = {};
-    for(let i=0; i<values; ++i){
+    for(let i=0; i<values.length; ++i){
         retObj[Object.keys(dict).find(key => dict[key] === values[i].header)] = values[i].data
     }
-    console.log(retObj);
     return retObj;
 }
 
@@ -205,8 +206,11 @@ function getChangesFormatted(newValues) {
     var changes = [];
     console.log(dict);
     for (propertyName in newValues){
-        var name = dict[propertyName];
-        changes.push({ [name] : newValues[propertyName] });
+        if(propertyName != "serreId") {
+            newValues[propertyName] =  parseFloat(newValues[propertyName]);
+            var name = dict[propertyName];
+            changes.push({ "header": name, "data" : newValues[propertyName]});
+        }
     }
     console.log(changes);
     return changes;
@@ -230,15 +234,13 @@ exports.getConfigBuffer = function(ghId, callback){
            if(err) throw err;
            callback(result);
            db.close();
-       })
+       });
     });
 }
 
 
 exports.updateSensors = function(data, serreId, callback = null){
-    console.log("aaaaaaaa :: " + serreId);
     data = sensorArrayToObject(data);
-    console.log(data);
     mongoClient.connect(url, function (err, db){
         if(err) throw err;
         db.db('hydra').collection('threshold').update({serreId: serreId}, {$set: data}, function (err, res){
@@ -249,6 +251,16 @@ exports.updateSensors = function(data, serreId, callback = null){
     });
 };
 
+exports.cleanConfigBuffer = function cleanConfigBuffer(id){
+	mongoClient.connect(url, function(err, db){
+
+		db.db('hydra').collection('threshold').updateOne({serreId: id}, {$set :{configChanges: []}}, function(){
+			if(err) throw err;
+			db.close();
+		})
+
+	});
+}
 
 exports.saveConfigBuffer = function(ghId, changes){
     mongoClient.connect(url, function (err, db){
