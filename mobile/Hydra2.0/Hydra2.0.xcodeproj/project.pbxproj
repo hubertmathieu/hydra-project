@@ -1,0 +1,642 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2767A5A82577D1770027E632 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE121DCA256FEE81003A3A76 /* ContentView.swift */; };
+		DE121DC7256FEE81003A3A76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE121DC6256FEE81003A3A76 /* AppDelegate.swift */; };
+		DE121DC9256FEE81003A3A76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE121DC8256FEE81003A3A76 /* SceneDelegate.swift */; };
+		DE121DCD256FEE82003A3A76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE121DCC256FEE82003A3A76 /* Assets.xcassets */; };
+		DE121DD0256FEE82003A3A76 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE121DCF256FEE82003A3A76 /* Preview Assets.xcassets */; };
+		DE121DD3256FEE82003A3A76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE121DD1256FEE82003A3A76 /* LaunchScreen.storyboard */; };
+		DE121DDE256FEE82003A3A76 /* Hydra2_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE121DDD256FEE82003A3A76 /* Hydra2_0Tests.swift */; };
+		DE121DE9256FEE83003A3A76 /* Hydra2_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE121DE8256FEE83003A3A76 /* Hydra2_0UITests.swift */; };
+		DE3C5A412572CDF30085EB8A /* MainScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3C5A402572CDF30085EB8A /* MainScreenVM.swift */; };
+		DE40D37D25720162008FD265 /* Ambient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE40D37C25720162008FD265 /* Ambient.swift */; };
+		DE40D382257201A8008FD265 /* Calvette.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE40D381257201A8008FD265 /* Calvette.swift */; };
+		DE40D387257202D6008FD265 /* WaterTank.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE40D386257202D6008FD265 /* WaterTank.swift */; };
+		DEF714362577ED5F00C5CA67 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF714352577ED5F00C5CA67 /* InputView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DE121DDA256FEE82003A3A76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE121DBB256FEE81003A3A76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE121DC2256FEE81003A3A76;
+			remoteInfo = Hydra2.0;
+		};
+		DE121DE5256FEE83003A3A76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE121DBB256FEE81003A3A76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE121DC2256FEE81003A3A76;
+			remoteInfo = Hydra2.0;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DE121DC3256FEE81003A3A76 /* Hydra2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hydra2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE121DC6256FEE81003A3A76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DE121DC8256FEE81003A3A76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DE121DCA256FEE81003A3A76 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
+		DE121DCC256FEE82003A3A76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DE121DCF256FEE82003A3A76 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DE121DD2256FEE82003A3A76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DE121DD4256FEE82003A3A76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE121DD9256FEE82003A3A76 /* Hydra2.0Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Hydra2.0Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE121DDD256FEE82003A3A76 /* Hydra2_0Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hydra2_0Tests.swift; sourceTree = "<group>"; };
+		DE121DDF256FEE82003A3A76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE121DE4256FEE83003A3A76 /* Hydra2.0UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Hydra2.0UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE121DE8256FEE83003A3A76 /* Hydra2_0UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hydra2_0UITests.swift; sourceTree = "<group>"; };
+		DE121DEA256FEE83003A3A76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE3C5A402572CDF30085EB8A /* MainScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenVM.swift; sourceTree = "<group>"; };
+		DE40D37C25720162008FD265 /* Ambient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ambient.swift; sourceTree = "<group>"; };
+		DE40D381257201A8008FD265 /* Calvette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calvette.swift; sourceTree = "<group>"; };
+		DE40D386257202D6008FD265 /* WaterTank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterTank.swift; sourceTree = "<group>"; };
+		DEF714352577ED5F00C5CA67 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE121DC0256FEE81003A3A76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE121DD6256FEE82003A3A76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE121DE1256FEE83003A3A76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DE121DBA256FEE81003A3A76 = {
+			isa = PBXGroup;
+			children = (
+				DE121DC5256FEE81003A3A76 /* Hydra2.0 */,
+				DE121DDC256FEE82003A3A76 /* Hydra2.0Tests */,
+				DE121DE7256FEE83003A3A76 /* Hydra2.0UITests */,
+				DE121DC4256FEE81003A3A76 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DE121DC4256FEE81003A3A76 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE121DC3256FEE81003A3A76 /* Hydra2.0.app */,
+				DE121DD9256FEE82003A3A76 /* Hydra2.0Tests.xctest */,
+				DE121DE4256FEE83003A3A76 /* Hydra2.0UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE121DC5256FEE81003A3A76 /* Hydra2.0 */ = {
+			isa = PBXGroup;
+			children = (
+				DEF7142C2577DFEE00C5CA67 /* Views */,
+				DE3C5A3F2572CDBF0085EB8A /* ViewModels */,
+				DE40D3782571F227008FD265 /* Models */,
+				DE121DC6256FEE81003A3A76 /* AppDelegate.swift */,
+				DE121DC8256FEE81003A3A76 /* SceneDelegate.swift */,
+				DE121DCC256FEE82003A3A76 /* Assets.xcassets */,
+				DE121DD1256FEE82003A3A76 /* LaunchScreen.storyboard */,
+				DE121DD4256FEE82003A3A76 /* Info.plist */,
+				DE121DCE256FEE82003A3A76 /* Preview Content */,
+			);
+			path = Hydra2.0;
+			sourceTree = "<group>";
+		};
+		DE121DCE256FEE82003A3A76 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				DE121DCF256FEE82003A3A76 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DE121DDC256FEE82003A3A76 /* Hydra2.0Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DE121DDD256FEE82003A3A76 /* Hydra2_0Tests.swift */,
+				DE121DDF256FEE82003A3A76 /* Info.plist */,
+			);
+			path = Hydra2.0Tests;
+			sourceTree = "<group>";
+		};
+		DE121DE7256FEE83003A3A76 /* Hydra2.0UITests */ = {
+			isa = PBXGroup;
+			children = (
+				DE121DE8256FEE83003A3A76 /* Hydra2_0UITests.swift */,
+				DE121DEA256FEE83003A3A76 /* Info.plist */,
+			);
+			path = Hydra2.0UITests;
+			sourceTree = "<group>";
+		};
+		DE3C5A3F2572CDBF0085EB8A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DE3C5A402572CDF30085EB8A /* MainScreenVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DE40D3782571F227008FD265 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DE40D37C25720162008FD265 /* Ambient.swift */,
+				DE40D381257201A8008FD265 /* Calvette.swift */,
+				DE40D386257202D6008FD265 /* WaterTank.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DEF7142C2577DFEE00C5CA67 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE121DCA256FEE81003A3A76 /* ContentView.swift */,
+				DEF714352577ED5F00C5CA67 /* InputView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DE121DC2256FEE81003A3A76 /* Hydra2.0 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE121DED256FEE83003A3A76 /* Build configuration list for PBXNativeTarget "Hydra2.0" */;
+			buildPhases = (
+				DE121DBF256FEE81003A3A76 /* Sources */,
+				DE121DC0256FEE81003A3A76 /* Frameworks */,
+				DE121DC1256FEE81003A3A76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hydra2.0;
+			productName = Hydra2.0;
+			productReference = DE121DC3256FEE81003A3A76 /* Hydra2.0.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DE121DD8256FEE82003A3A76 /* Hydra2.0Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE121DF0256FEE83003A3A76 /* Build configuration list for PBXNativeTarget "Hydra2.0Tests" */;
+			buildPhases = (
+				DE121DD5256FEE82003A3A76 /* Sources */,
+				DE121DD6256FEE82003A3A76 /* Frameworks */,
+				DE121DD7256FEE82003A3A76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE121DDB256FEE82003A3A76 /* PBXTargetDependency */,
+			);
+			name = Hydra2.0Tests;
+			productName = Hydra2.0Tests;
+			productReference = DE121DD9256FEE82003A3A76 /* Hydra2.0Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DE121DE3256FEE83003A3A76 /* Hydra2.0UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE121DF3256FEE83003A3A76 /* Build configuration list for PBXNativeTarget "Hydra2.0UITests" */;
+			buildPhases = (
+				DE121DE0256FEE83003A3A76 /* Sources */,
+				DE121DE1256FEE83003A3A76 /* Frameworks */,
+				DE121DE2256FEE83003A3A76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE121DE6256FEE83003A3A76 /* PBXTargetDependency */,
+			);
+			name = Hydra2.0UITests;
+			productName = Hydra2.0UITests;
+			productReference = DE121DE4256FEE83003A3A76 /* Hydra2.0UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE121DBB256FEE81003A3A76 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					DE121DC2256FEE81003A3A76 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					DE121DD8256FEE82003A3A76 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = DE121DC2256FEE81003A3A76;
+					};
+					DE121DE3256FEE83003A3A76 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = DE121DC2256FEE81003A3A76;
+					};
+				};
+			};
+			buildConfigurationList = DE121DBE256FEE81003A3A76 /* Build configuration list for PBXProject "Hydra2.0" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DE121DBA256FEE81003A3A76;
+			productRefGroup = DE121DC4256FEE81003A3A76 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE121DC2256FEE81003A3A76 /* Hydra2.0 */,
+				DE121DD8256FEE82003A3A76 /* Hydra2.0Tests */,
+				DE121DE3256FEE83003A3A76 /* Hydra2.0UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE121DC1256FEE81003A3A76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE121DD3256FEE82003A3A76 /* LaunchScreen.storyboard in Resources */,
+				DE121DD0256FEE82003A3A76 /* Preview Assets.xcassets in Resources */,
+				DE121DCD256FEE82003A3A76 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE121DD7256FEE82003A3A76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE121DE2256FEE83003A3A76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE121DBF256FEE81003A3A76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE40D37D25720162008FD265 /* Ambient.swift in Sources */,
+				DE121DC7256FEE81003A3A76 /* AppDelegate.swift in Sources */,
+				2767A5A82577D1770027E632 /* ContentView.swift in Sources */,
+				DE121DC9256FEE81003A3A76 /* SceneDelegate.swift in Sources */,
+				DE40D382257201A8008FD265 /* Calvette.swift in Sources */,
+				DEF714362577ED5F00C5CA67 /* InputView.swift in Sources */,
+				DE40D387257202D6008FD265 /* WaterTank.swift in Sources */,
+				DE3C5A412572CDF30085EB8A /* MainScreenVM.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE121DD5256FEE82003A3A76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE121DDE256FEE82003A3A76 /* Hydra2_0Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE121DE0256FEE83003A3A76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE121DE9256FEE83003A3A76 /* Hydra2_0UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DE121DDB256FEE82003A3A76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE121DC2256FEE81003A3A76 /* Hydra2.0 */;
+			targetProxy = DE121DDA256FEE82003A3A76 /* PBXContainerItemProxy */;
+		};
+		DE121DE6256FEE83003A3A76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE121DC2256FEE81003A3A76 /* Hydra2.0 */;
+			targetProxy = DE121DE5256FEE83003A3A76 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DE121DD1256FEE82003A3A76 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE121DD2256FEE82003A3A76 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DE121DEB256FEE83003A3A76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DE121DEC256FEE83003A3A76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE121DEE256FEE83003A3A76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Hydra2.0/Preview Content\"";
+				DEVELOPMENT_TEAM = 8F5T3URMX2;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Hydra2.0/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cegepst.Hydra2-0";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DE121DEF256FEE83003A3A76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Hydra2.0/Preview Content\"";
+				DEVELOPMENT_TEAM = 8F5T3URMX2;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Hydra2.0/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cegepst.Hydra2-0";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DE121DF1256FEE83003A3A76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Hydra2.0Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cegepst.Hydra2-0Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hydra2.0.app/Hydra2.0";
+			};
+			name = Debug;
+		};
+		DE121DF2256FEE83003A3A76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Hydra2.0Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cegepst.Hydra2-0Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hydra2.0.app/Hydra2.0";
+			};
+			name = Release;
+		};
+		DE121DF4256FEE83003A3A76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Hydra2.0UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cegepst.Hydra2-0UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Hydra2.0;
+			};
+			name = Debug;
+		};
+		DE121DF5256FEE83003A3A76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Hydra2.0UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cegepst.Hydra2-0UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Hydra2.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE121DBE256FEE81003A3A76 /* Build configuration list for PBXProject "Hydra2.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE121DEB256FEE83003A3A76 /* Debug */,
+				DE121DEC256FEE83003A3A76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE121DED256FEE83003A3A76 /* Build configuration list for PBXNativeTarget "Hydra2.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE121DEE256FEE83003A3A76 /* Debug */,
+				DE121DEF256FEE83003A3A76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE121DF0256FEE83003A3A76 /* Build configuration list for PBXNativeTarget "Hydra2.0Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE121DF1256FEE83003A3A76 /* Debug */,
+				DE121DF2256FEE83003A3A76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE121DF3256FEE83003A3A76 /* Build configuration list for PBXNativeTarget "Hydra2.0UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE121DF4256FEE83003A3A76 /* Debug */,
+				DE121DF5256FEE83003A3A76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DE121DBB256FEE81003A3A76 /* Project object */;
+}
