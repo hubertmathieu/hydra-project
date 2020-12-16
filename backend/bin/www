@@ -118,6 +118,7 @@ function handleConnection(conn) {
     database.updateSensors(userInput, id.data, function (res){
       console.log(res);
     });
+    //todo get to update buffer and sed res
     console.log(userInput);
     conn.write(dataToBin(userInput));
   }

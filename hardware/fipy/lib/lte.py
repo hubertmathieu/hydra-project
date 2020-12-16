@@ -3,6 +3,7 @@ from network import LTE
 import socket
 import machine
 import ssl
+import pycom
 
 #socket doc
 #https://docs.python.org/3/library/socket.html
@@ -34,6 +35,7 @@ def connectLte():
     print("] connected!")
 
 def sendDataToLte(data):
+    #if(data.len)
     s.send(data)
     print("sending to hydra server " + str(data))
 
@@ -47,13 +49,17 @@ def cb_handler(arg):
 
 
 def initLte():
+    pycom.rgbled(0x0000ff)
     print("starting lte")
     attachLte()
     connectLte()
     #lte.lte_callback(LTE.EVENT_COVERAGE_LOSS, cb_handler)
     global s
     s = socket.socket()
+    #test if still blocking on recv
     s.connect((address, port))
+    s.setblocking(0)
+    pycom.rgbled(0x00ff00)
     #s.sendall("fipy connected")
     #print('Received', readData())
 
