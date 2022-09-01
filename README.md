@@ -34,17 +34,18 @@ Vous trouverez ci-dessous la liste des matériaux ainsi que la liste des différ
 
 La prochaine étape consiste à mettre sur pied un serveur Node Express. Nous avons utilisé la distribution Debian dans cet exemple. 
 
-Installez nodeJS et MongoDB, puis vérifiez la version de l'installation. 
+Installez nodeJS, Git et MongoDB, puis vérifiez la version de l'installation. 
 ```
+$sudo apt-get update
 $sudo apt-get install nodejs
-$node -v 
-v13.0.1 // Version du programme.
+$node -v
+$sudo apt-get install git-all
 ```
 
 Clonez le répositoire du projet. 
 ```
 $git clone https://github.com/LudoB99/hydra-project.git
-$cd hydra-project
+$cd hydra-project/backend
 $npm install // Mettre à jour les dépendences.
 ```
 
