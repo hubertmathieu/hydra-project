@@ -6,19 +6,19 @@
     "start": "node-dev ./bin/www"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.6.9",
-    "express": "~4.16.0",
-    "express-session": "^1.17.0",
-    "express-sse": "^0.5.1",
-    "http-errors": "~1.6.2",
+    "cookie-parser": "~1.4.6",
+    "debug": "~4.3.4",
+    "express": "~4.18.1",
+    "express-session": "^1.17.3",
+    "express-sse": "^0.5.3",
+    "http-errors": "~2.0.0",
     "jade": "~1.11.0",
     "jsonwebtoken": "^8.5.1",
-    "mongodb": "^3.3.5",
-    "morgan": "~1.9.0",
-    "node-dev": "^4.0.0",
-    "nodemon": "^2.0.1",
+    "mongodb": "^4.9.1",
+    "morgan": "~1.10.0",
+    "node-dev": "^7.4.3",
+    "nodemon": "^2.0.19",
     "pieces": "^0.2.0",
-    "pug": "^3.0.1"
+    "pug": "^3.0.2"
   }
 }

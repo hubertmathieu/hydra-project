@@ -33,9 +33,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="145832ed-cb2e-4455-9784-bce895124076" name="Default Changelist" comment="aaaaaaaaa part 3">
-      <change beforePath="$PROJECT_DIR$/.idea/sshConfigs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sshConfigs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/vendor/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/vendor/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/vendor/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/vendor/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +128,7 @@
       <workItem from="1606857787649" duration="1127000" />
       <workItem from="1606859583004" duration="10008000" />
       <workItem from="1607000464576" duration="5568000" />
-      <workItem from="1662140813669" duration="865000" />
+      <workItem from="1662140813669" duration="2319000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1574104182555</created>
