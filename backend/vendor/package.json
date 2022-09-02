@@ -5,7 +5,7 @@
   "private": true,
   "dependencies": {
     "animate.css": "^4.1.1",
-    "bootstrap": "^5.2.0",
+    "bootstrap": "^4.3.1",
     "chart.js": "^2.7.2",
     "font-awesome": "^4.7.0",
     "ionicons": "^4.6.3",
