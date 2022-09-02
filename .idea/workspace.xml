@@ -33,8 +33,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="145832ed-cb2e-4455-9784-bce895124076" name="Default Changelist" comment="aaaaaaaaa part 3">
+      <change beforePath="$PROJECT_DIR$/.idea/sshConfigs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sshConfigs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/dictionnaryModule.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/dictionnaryModule.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,8 +50,15 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="UPDATE_TYPE" value="MERGE" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="1jByUBCWaG2KedNh9EMaHmKtxIB" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -60,30 +68,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
-    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
-    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
-    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
-    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="15.3.0" />
-    <property name="javascript.nodejs.core.library.typings.version" value="14.14.10" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="web.server" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "true",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/backend" />
@@ -135,6 +128,7 @@
       <workItem from="1606857787649" duration="1127000" />
       <workItem from="1606859583004" duration="10008000" />
       <workItem from="1607000464576" duration="5568000" />
+      <workItem from="1662140813669" duration="865000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1574104182555</created>
@@ -341,7 +335,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
@@ -360,74 +353,5 @@
     <MESSAGE value="aaaaaaaaa part 2" />
     <MESSAGE value="aaaaaaaaa part 3" />
     <option name="LAST_COMMIT_MESSAGE" value="aaaaaaaaa part 3" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="320" y="95" key="#Deployment" timestamp="1606404546857">
-      <screen x="0" y="25" width="1440" height="815" />
-    </state>
-    <state x="320" y="95" key="#Deployment/0.25.1440.815@0.25.1440.815" timestamp="1606404546857" />
-    <state x="453" y="222" key="#Node.js_and_NPM" timestamp="1604497658573">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="453" y="222" key="#Node.js_and_NPM/0.0.1440.900@0.0.1440.900" timestamp="1604497658573" />
-    <state x="303" y="69" key="#SSH_Configurations" timestamp="1605099627416">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="303" y="69" key="#SSH_Configurations/0.0.1440.900@0.0.1440.900" timestamp="1605099627416" />
-    <state x="303" y="86" key="#SSH_Configurations/0.23.1440.823@0.23.1440.823" timestamp="1603292081642" />
-    <state x="100" y="100" width="1240" height="700" key="DiffContextDialog" timestamp="1607005993744">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="100" y="100" width="1240" height="700" key="DiffContextDialog/0.0.1440.900@0.0.1440.900" timestamp="1607005993744" />
-    <state x="144" y="74" key="MergeDialog" timestamp="1607004658699">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="144" y="74" key="MergeDialog/0.0.1440.900@0.0.1440.900" timestamp="1607004658699" />
-    <state x="144" y="92" key="MergeDialog/0.25.1440.815@0.25.1440.815" timestamp="1606405766949" />
-    <state x="358" y="215" key="MultipleFileMergeDialog" timestamp="1607004658737">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="358" y="215" key="MultipleFileMergeDialog/0.0.1440.900@0.0.1440.900" timestamp="1607004658737" />
-    <state x="485" y="156" key="RollbackChangesDialog" timestamp="1605708445811">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="485" y="156" key="RollbackChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1605708445811" />
-    <state x="220" y="54" key="SettingsEditor" timestamp="1605109425642">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="220" y="54" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1605109425642" />
-    <state x="221" y="73" key="SettingsEditor/0.23.1440.823@0.23.1440.823" timestamp="1603292175405" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1607006856160">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1607006856160" />
-    <state x="642" y="191" key="VcsDiffUtil.ChangesDialog" timestamp="1605107843545">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="642" y="191" key="VcsDiffUtil.ChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1605107843545" />
-    <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607006269791">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1607006269791" />
-    <state x="521" y="358" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1440.815@0.25.1440.815" timestamp="1606405745452" />
-    <state x="626" y="172" width="336" height="525" key="ftp.server.browser" timestamp="1606404545512">
-      <screen x="0" y="25" width="1440" height="815" />
-    </state>
-    <state x="626" y="162" key="ftp.server.browser/0.0.1440.900@0.0.1440.900" timestamp="1605107132868" />
-    <state x="626" y="171" width="336" height="525" key="ftp.server.browser/0.23.1440.823@0.23.1440.823" timestamp="1603292174182" />
-    <state x="626" y="172" key="ftp.server.browser/0.25.1440.815@0.25.1440.815" timestamp="1606404545512" />
-    <state x="395" y="245" key="git4idea.merge.GitPullDialog" timestamp="1605107896277">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="395" y="245" key="git4idea.merge.GitPullDialog/0.0.1440.900@0.0.1440.900" timestamp="1605107896277" />
-    <state width="600" height="428" key="javadoc.popup" timestamp="1604498399129">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="600" height="428" key="javadoc.popup/0.0.1440.900@0.0.1440.900" timestamp="1604498399129" />
-    <state x="514" y="464" key="publish.login" timestamp="1603292057054">
-      <screen x="0" y="23" width="1440" height="823" />
-    </state>
-    <state x="514" y="464" key="publish.login/0.23.1440.823@0.23.1440.823" timestamp="1603292057054" />
-    <state x="592" y="333" key="publish.login/0.23.1440.826@0.23.1440.826" timestamp="1603291877422" />
   </component>
 </project>
