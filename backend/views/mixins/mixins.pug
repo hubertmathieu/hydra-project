@@ -101,7 +101,8 @@ mixin footerCol(title, colClass)
 mixin footerMainCol(title, text)
     .col-lg-4.col-md-6.footer-info
         h3 #{title}
-        p #{text}
+        if text
+            p #{text}
 
 mixin footerAddress(address)
     p
@@ -128,4 +129,5 @@ mixin pageHeader(title, text, bgImgPath)
     header.page-header(style=`background-image: url('${ bgImgPath }')`)
         .page-header-content
             h1 #{title}
-            p #{text}
+            if text
+                p #{text}
