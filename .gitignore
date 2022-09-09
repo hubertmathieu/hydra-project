@@ -105,5 +105,7 @@ dist
 
 # Other
 .idea/
+backend/.idea/
+backend/package-lock.json
 database/
 package-lock.json
