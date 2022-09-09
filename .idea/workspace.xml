@@ -33,9 +33,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="145832ed-cb2e-4455-9784-bce895124076" name="Default Changelist" comment="aaaaaaaaa part 3">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/vendor/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/vendor/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/vendor/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/vendor/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/database/data/db/diagnostic.data/metrics.2022-09-02T20-18-28Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/backend/database/data/db/diagnostic.data/metrics.2022-09-02T20-18-28Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/database/data/db/diagnostic.data/metrics.interim" beforeDir="false" afterPath="$PROJECT_DIR$/backend/database/data/db/diagnostic.data/metrics.interim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/database/data/db/journal/WiredTigerLog.0000000006" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,15 +71,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "true",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.mappings&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.symlinks&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2022.2.1\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/backend" />
@@ -128,7 +137,8 @@
       <workItem from="1606857787649" duration="1127000" />
       <workItem from="1606859583004" duration="10008000" />
       <workItem from="1607000464576" duration="5568000" />
-      <workItem from="1662140813669" duration="2319000" />
+      <workItem from="1662140813669" duration="10936000" />
+      <workItem from="1662746035847" duration="213000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1574104182555</created>
