@@ -7,19 +7,4 @@ router.get('/statistiques', controller.getStatistiques);
 router.get('/serre', controller.getSerre);
 router.get('/a-propos', controller.getPropos);
 
-let guigui = [{
-  id: 1,
-  title: "Temp.",
-  value: "30.6 °C"
-},
-  {
-    id: 2,
-    title: "Humidité",
-    value: "56.43 %"
-}];
-
-router.get('/gui', function(req, res, next) {
-  res.send(guigui);
-});
-
 module.exports = router;
