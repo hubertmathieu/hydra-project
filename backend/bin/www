@@ -117,18 +117,12 @@ function handleConnection(conn) {
     let userInput = binToData(d);
     console.log(userInput);
 	let id = userInput.shift();
-    database.updateSensors(userInput, id.data, function (res){
-		database.getConfigBuffer(id.data, function(response){
-			console.log(response);
-			if(response) conn.write(dataToBin(response.configChanges));
-			database.cleanConfigBuffer(id.data);
-		});
-   	 });
-  
   }
+
   function onConnClose() {
     console.log('connection from %s closed', remoteAddress);
   }
+
   function onConnError(err) {
     console.log('Connection %s error: %s', remoteAddress, err.message);
   }
