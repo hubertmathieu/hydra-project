@@ -1,5 +1,5 @@
 var mongoClient = require('mongodb').MongoClient;
-var url = 'mongodb://hydra_database:27017';
+var url = 'mongodb://localhost:27017/hydra';
 let database = 'hydra';
 
 var dict = require('./dictionaryModule');

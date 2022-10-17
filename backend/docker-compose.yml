@@ -1,19 +1,23 @@
 version: "3.7"
 services:
   app:
-    container_name: "app"
+    container_name: app
     restart: always
     build: .
     ports:
       - 80:80
     depends_on:
-      - mongodb
+      - mongo
     volumes:
       - .:/usr/src/app
       - /usr/src/app/node_modules
-
-  mongodb:
-    container_name: "hydra_database"
+  mongo:
+    container_name: mongo
     image: mongo
+    restart: always
+    volumes:
+      - ./database/data/db:/data/db
     ports:
       - 27017:27017
+    environment:
+      MONGO_INITDB_DATABASE: database
