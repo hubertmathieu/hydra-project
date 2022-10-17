@@ -7,9 +7,6 @@
 var app = require('../app');
 var debug = require('debug')('hydra-project:server');
 var http = require('http');
-const logger = require('morgan');
-
-app.use(logger('dev'));
 
 /**
  * Get port from environment and store in Express.
@@ -62,8 +59,8 @@ function onError(error) {
   }
 
   var bind = typeof port === 'string'
-    ? 'Pipe ' + port
-    : 'Port ' + port;
+      ? 'Pipe ' + port
+      : 'Port ' + port;
 
   // handle specific listen errors with friendly messages
   switch (error.code) {
@@ -87,99 +84,7 @@ function onError(error) {
 function onListening() {
   var addr = server.address();
   var bind = typeof addr === 'string'
-    ? 'pipe ' + addr
-    : 'port ' + addr.port;
+      ? 'pipe ' + addr
+      : 'port ' + addr.port;
   debug('Listening on ' + bind);
 }
-
-
-
-var net = require('net');
-var server = net.createServer();
-var database = require('../database');
-
-server.on('connection', handleConnection);
-server.listen(9000, function() {
-  console.log('server listening to %j', server.address());
-});
-
-function handleConnection(conn) {
-  var remoteAddress = conn.remoteAddress + ':' + conn.remotePort;
-  console.log('new client connection from %s', remoteAddress);
-  conn.on('data', onConnData);
-  conn.once('close', onConnClose);
-  conn.on('error', onConnError);
-
-  function onConnData(d) {
-    console.log('connection data from %s: %j', remoteAddress, d);
-	console.log(d.length);
-	if(d.length % 5 !== 0) return; 
-    let userInput = binToData(d);
-    console.log(userInput);
-	let id = userInput.shift();
-  }
-
-  function onConnClose() {
-    console.log('connection from %s closed', remoteAddress);
-  }
-
-  function onConnError(err) {
-    console.log('Connection %s error: %s', remoteAddress, err.message);
-  }
-}
-
-function dataToBin(data){
-	console.log("sending");
-	console.log(data);
-	let buffer = Buffer.alloc(data.length * 5);
-	for(let i=0; i<data.length; ++i){
-		buffer.write(data[i].header, i * 5);
-		buffer.writeInt32BE(data[i].data * 100, (i*5) + 1);
-	}	
-	return buffer;
-}
-
-
-function binToData(bin){
-  const dataByteLength = 5;
-  let length = bin.length/dataByteLength;
-  let data = [];
-  for(let i=0; i<length; ++i){
-    let entry = {};
-    entry.header = String.fromCharCode(bin.readInt8(dataByteLength*i, 1));
-    entry.data = bin.readIntBE(dataByteLength*i + 1, 4);
-	entry.data /= 100;
-    data.push(entry);
-  }
-  return data;
-}
-
-function onConnData(d) {
-  console.log('connection data from %s: %j', remoteAddress, d);
-  console.log(d);
-
-}
-
-function bin2String(test) {
-  var temp =test.substring(0,8);
-  console.log(temp);
-  var start = String.fromCharCode(parseInt(temp,2));
-  console.log(start);
-  temp = test.substring(8);
-  console.log(temp);
-  var b1 = parseInt(temp,2);
-  if(b1 > 127) b1 -= 256;
-
-  console.log(start + b1);
-
-  return b1;
-}
-
-byteArrayToLong = function(/*byte[]*/byteArray) {
-  var value = 0;
-  for ( var i = byteArray.length - 1; i >= 0; i--) {
-    value = (value * 256) + byteArray[i];
-  }
-
-  return value;
-};
