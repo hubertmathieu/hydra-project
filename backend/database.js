@@ -15,7 +15,7 @@ exports.findConfig = function (callback) {
     });
 };
 
-exports.insertConfig = function (callback) {
+exports.insertDefaultConfig = function (callback) {
     mongoClient.connect(url, function (err, client) {
         if (err) throw err;
         client.db(database).collection('config').insertOne(dict, function(err, result) {

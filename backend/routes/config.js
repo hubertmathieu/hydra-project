@@ -5,7 +5,7 @@ const database = require('../database');
 router.get('/', function (req, res, next) {
     database.findConfig((config) => {
         if (config.length === 0) {
-            database.insertConfig( (config) => {
+            database.insertDefaultConfig( (config) => {
                 res.send(config[0]);
             });
         } else {
