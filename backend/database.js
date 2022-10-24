@@ -1,5 +1,5 @@
 var mongoClient = require('mongodb').MongoClient;
-var url = 'mongodb://localhost:27017/hydra';
+var url = 'mongodb://hydra_database:27017';
 let database = 'hydra';
 
 var dict = require('./dictionaryModule');
@@ -28,7 +28,6 @@ exports.insertConfig = function (callback) {
         });
     });
 };
-
 
 exports.updateConfig = function (configId, config, callback) {
     mongoClient.connect(url, function (err, client) {
