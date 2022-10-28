@@ -71,9 +71,6 @@ void setup() {
 }
 
 void loop() {
-
-  // set les treshold
-
   temperature1 = dht1.readTemperature();
   temperature2 = dht2.readTemperature();
   temperature3 = dht3.readTemperature();
