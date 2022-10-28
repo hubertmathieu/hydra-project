@@ -1,10 +1,35 @@
-var express = require('express');
-var router = express.Router();
-const controller = require('../controllers/index');
+const express = require('express');
+const router = express.Router();
+const piecesList = require('../pieces');
+const pageTitlePrefix = "Serre Aéroponique Flottante Connectée | ";
 
-router.get('/', controller.getAccueil);
-router.get('/statistiques', controller.getStatistiques);
-router.get('/serre', controller.getSerre);
-router.get('/a-propos', controller.getPropos);
+router.get('/',  function (req, res) {
+    res.render("pages/index", {
+        pageTitle: pageTitlePrefix + "Accueil",
+        path: "/index"
+    });
+});
+
+router.get('/statistiques',  function (req, res) {
+    res.render("pages/statistiques", {
+        pageTitle: pageTitlePrefix + "Statistiques",
+        path: "/statistiques",
+    });
+});
+
+router.get('/serre',  function (req, res) {
+    res.render("pages/serre", {
+        pageTitle: pageTitlePrefix + "Serre",
+        piecesList: piecesList,
+        path: "/serre"
+    });
+});
+
+router.get('/a-propos',  function (req, res) {
+    res.render("pages/a-propos", {
+        pageTitle: pageTitlePrefix + "À propos",
+        path: "/a-propos"
+    });
+});
 
 module.exports = router;

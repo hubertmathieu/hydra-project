@@ -1,26 +1,19 @@
-var express = require('express');
-var router = express.Router();
-const database = require('../database');
+const express = require('express');
+const router = express.Router();
+const configBroker = require("../models/brokers/configBroker")
 
-router.get('/', function (req, res, next) {
-    database.findConfig((config) => {
-        if (config.length === 0) {
-            database.insertDefaultConfig( (config) => {
-                res.send(config[0]);
-            });
-        } else {
-            res.send(config[0]);
-        }
-    });
+router.get('/', async function (req, res, next) {
+    let config = await configBroker.findConfig();
+    if (config.length === 0) {
+        await configBroker.insertDefaultConfig();
+        config = await configBroker.findConfig();
+        res.send(config[0])
+    }
 });
 
-router.post('/', function(req, res) {
-    database.findConfig((config) => {
-        database.updateConfig(config[0]._id, req.body, function (err) {
-            if (err) res.send({status: "error", title: "Erreur", message: "La modification n'a pas pu être complétée"});
-            else res.send({status: "success", title: "Succès", message: "La modification a été complétée avec succès"})
-        });
-    });
+router.post('/', async function (req) {
+    const config = await configBroker.findConfig();
+    await configBroker.updateConfig(config[0]._id, req.body);
 });
 
 module.exports = router;

@@ -1,41 +1,13 @@
-var mongoClient = require('mongodb').MongoClient;
-var url = 'mongodb://hydra_database:27017';
-let database = 'hydra';
+const {ObjectId, MongoClient} = require("mongodb");
+const url = 'mongodb://hydra_database:27017';
+const database = 'hydra';
 
-var dict = require('./dictionaryModule');
+exports.query = async function (collection, callback) {
+    const client = await MongoClient.connect(url);
+    let db = client.db(database);
+    const result = await callback(db.collection(collection));
+    await client.close();
+    return result;
+}
 
-exports.findConfig = function (callback) {
-    mongoClient.connect(url, function (err, client) {
-        if (err) throw err;
-        client.db(database).collection('config').find().toArray(function(err, result) {
-            if (err) throw err;
-            callback(result);
-            client.close().then();
-        });
-    });
-};
-
-exports.insertDefaultConfig = function (callback) {
-    mongoClient.connect(url, function (err, client) {
-        if (err) throw err;
-        client.db(database).collection('config').insertOne(dict, function(err, result) {
-            if (err) throw err;
-            client.db(database).collection('config').find().toArray(function(err, result) {
-                if (err) throw err;
-                callback(result);
-                client.close().then();
-            });
-        });
-    });
-};
-
-exports.updateConfig = function (configId, config, callback) {
-    mongoClient.connect(url, function (err, client) {
-        if (err) throw err;
-        client.db(database).collection('config').updateOne({_id: configId}, {$set: config}, function (err) {
-            if (err) throw err;
-            callback(err);
-            client.close().then();
-        });
-    });
-};
+module.exports.ObjectId = ObjectId;
