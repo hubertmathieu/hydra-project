@@ -86,6 +86,36 @@ void loop() {
 
   sendData();
 
+  if (waterLevel1 > waterLevelUpperTreshold) {
+    mySerial.println("Filter pump off");
+  }
+  if (waterLevel2 < waterLevelLowerTreshold) {
+    mySerial.println("Filter pump on");
+  }
+  if (humidity1 < humidityLowerTreshold1) {
+    mySerial.println("Sprayer1 on");
+  }
+  if (humidity1 > humidityUpperTreshold1) {
+    mySerial.println("Sprayer1 off");
+  }
+  if (humidity2 < humidityLowerTreshold2) {
+    mySerial.println("Sprayer2 on");
+  }
+  if (humidity2 > humidityUpperTreshold2) {
+    mySerial.println("Sprayer2 off");
+  }
+  if (humidity3 < humidityLowerTreshold3) {
+    mySerial.println("Sprayer3 on");
+  }
+  if (humidity3 > humidityUpperTreshold3) {
+    mySerial.println("Sprayer3 off");
+  }
+  if (phValue > phTreshold) {
+    mySerial.println("Add phDown");
+  } else {
+    mySerial.println("Close phDown");
+  }
+
   delay(500);
 }
 
