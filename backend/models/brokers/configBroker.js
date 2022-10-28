@@ -1,16 +1,9 @@
 require("../../database");
 const {query, ObjectId} = require("../../database");
-const {dictionary} = require("../../dictionaryModule");
 
 exports.findConfig = function () {
     return query("config", (collection) => {
         return collection.find().toArray();
-    });
-};
-
-exports.insertDefaultConfig = function () {
-    return query("config", (collection) => {
-        return collection.insertOne({dictionary});
     });
 };
 
