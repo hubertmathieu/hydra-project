@@ -6,6 +6,7 @@ const logger = require('morgan');
 
 const indexRouter = require('./routes/index');
 const configRouter = require('./routes/config');
+const thresholdRouter = require('./routes/threshold');
 
 const app = express();
 
@@ -33,6 +34,7 @@ app.use(express.static(path.join(__dirname, 'vendor/node_modules')));
 
 app.use('/', indexRouter);
 app.use('/api/v1/config/', configRouter);
+app.use('/api/v1/thresholds/', thresholdRouter);
 
 /******************************************************************************
  * ERROR HANDLING

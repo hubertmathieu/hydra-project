@@ -7,8 +7,8 @@ router.get('/', async function (req, res, next) {
     if (config.length === 0) {
         await configBroker.insertDefaultConfig();
         config = await configBroker.findConfig();
-        res.send(config[0])
     }
+    res.send(config[0]);
 });
 
 router.post('/', async function (req) {
