@@ -1,3 +1,4 @@
+#include <SoftwareSerial.h>
 #include <Adafruit_Sensor.h>
 #include <DHT.h>
 #include <DHT_U.h>
@@ -15,6 +16,8 @@
 DHT dht1(DHT11_PIN, DHTTYPE);
 DHT dht2(SECOND_DHT11_PIN, DHTTYPE);
 DHT dht3(THIRD_DHT11_PIN, DHTTYPE );
+
+SoftwareSerial mySerial(2, 3);
 
 long receiveTimerStart = 0;
 
@@ -165,8 +168,7 @@ void bSort(int *buf, short l) {
 }
 
 void sendData() {
-  //char data[] = "a=" + temperature1 + "&b=" + temperature2 + "&c=" + temperature3 + "&f=" + humidity1 + "&g=" + humidity2 + "&h=" + humidity3 + "&m=" + phValue + "&n=" + waterLevel1 + "&o=" + waterLevel2 + "";
-  char data[] = "a=1&b=2&c=1&f=1&g=1&h=1&m=1&n=1&o=1";
+  String data = "a=" + String(temperature1) + "&b=" + String(temperature2) + "&c=" + String(temperature3) + "&f=" + String(humidity1) + "&g=" + String(humidity2) + "&h=" + String(humidity3) + "&m=" + String(phValue) + "&n=" + String(waterLevel1) + "&o=" + String(waterLevel2) + "";
   if (client.connect(server, 80)) {
     client.println("POST /api/v1/config/ HTTP/1.1");
     client.println("Host: 134.122.126.29");
