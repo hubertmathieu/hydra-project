@@ -74,6 +74,8 @@ void setup() {
 }
 
 void loop() {
+  getThresholds();
+
   temperature1 = dht1.readTemperature();
   temperature2 = dht2.readTemperature();
   temperature3 = dht3.readTemperature();
@@ -164,6 +166,23 @@ void bSort(int *buf, short l) {
         buf[j] = temp;
       }
     }
+  }
+}
+
+void getThresholds() {
+  if (client.connect(server, 80)) {
+    Serial.println("connected to server");
+    client.println("GET /api/v1/thresholds/ HTTP/1.1");
+    client.println("Host: 134.122.126.29");
+    client.println("Connection: close");
+    client.println();
+  }
+  while (client.available()) {
+    char c = client.read();
+    Serial.write(c);
+  }
+  if (!client.connected()) {
+    client.stop();
   }
 }
 
