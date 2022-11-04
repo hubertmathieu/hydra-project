@@ -1,4 +1,5 @@
 [
+<<<<<<< Updated upstream
   {
     "categorie": "materiel",
     "description": "Serre (6' x 10' x 7')",
@@ -15,4 +16,134 @@
     "quantite": 1,
     "url": "https://www.amazon.ca/-/fr/Robojax-Super9shop-HT11-Temp%C3%A9rature-humidit%C3%A9-relative/dp/B079GBRYPD/"
   }
+=======
+    {
+        "categorie": "materiel",
+        "description": "Serre (6' x 10' x 7')",
+        "marque": "Palgram",
+        "modele": "HG5510",
+        "quantite": 1,
+        "url": "https://www.amazon.ca/Palram-HG5508PH-Greenhouse-Hangers-Included/dp/B079HDDQDM/"
+    },
+    {
+        "categorie": "electronique",
+        "description": "Capteur de température et d'humidité relative pour Arduino",
+        "marque": "ROBOJAX",
+        "modele": "DHT11",
+        "quantite": 3,
+        "url": "https://www.amazon.ca/-/fr/Robojax-Super9shop-HT11-Temp%C3%A9rature-humidit%C3%A9-relative/dp/B079GBRYPD/"
+    },
+    {
+      "categorie": "materiel",
+      "description": "Arduino uno",
+      "marque": "Arduino",
+      "modele": "Uno",
+      "quantite": 1,
+      "url": "https://www.amazon.ca/-/fr/A000066-Arduino-UNO-R3/dp/B008GRTSV6/ref=sr_1_5?__mk_fr_CA=ÅMÅŽÕÑ&crid=TZWC2P72YWIT&keywords=Arduino+uno&qid=1667588929&qu=eyJxc2MiOiI0LjY0IiwicXNhIjoiMy44NiIsInFzcCI6IjMuNjEifQ%3D%3D&sprefix=arduino+un%2Caps%2C181&sr=8-5"
+    },
+    {
+      "categorie": "materiel",
+      "description": "Relais 5V",
+      "marque": "XCSOURCE",
+      "modele": "TE213-FR1",
+      "quantite": 2,
+      "url": "https://www.amazon.ca/XCSOURCE®-Channel-optocoupler-Arduino-TE213/dp/B00ZR3B252/ref=sr_1_3?keywords=arduino%20relay&qid=1568662438&s=gateway&sr=8-3"
+    },
+    {
+      "categorie": "materiel",
+      "description": "Capteur de Ph",
+      "marque": "Reland Sung",
+      "modele": "",
+      "quantite": 1,
+      "url": "https://www.amazon.ca/-/fr/Détection-liquide-détecteur-contrôle-électrode/dp/B07RY6SJLQ/ref=sr_1_2?__mk_fr_CA=ÅMÅŽÕÑ&keywords=ph+sensor+arduino&qid=1568660392&s=gateway&sr=8-2"
+    },
+    {
+      "categorie": "materiel",
+      "description": "Capteur de niveau d'eau",
+      "marque": "",
+      "modele": "",
+      "quantite": 2,
+      "url": "https://www.amazon.ca/Solu-Detection-Arduino-Sensitivity-Surface/dp/B00UJ0DVN4/"
+    },
+    {
+      "categorie": "materiel",
+      "description": "Raspberry pi",
+      "marque": "",
+      "modele": "",
+      "quantite": 1,
+      "url": "https://www.amazon.ca/-/fr/Raspberry-Modèle-2019-Quad-Bluetooth/dp/B07TC2BK1X/ref=sr_1_3?__mk_fr_CA=ÅMÅŽÕÑ&crid=30EF6YKLRQVEY&keywords=Raspberry-pi&qid=1667590029&qu=eyJxc2MiOiIzLjk4IiwicXNhIjoiMi41NyIsInFzcCI6IjEuNTkifQ%3D%3D&s=electronics&sprefix=raspberry+pi%2Celectronics%2C73&sr=1-3"
+    },
+    {
+      "categorie": "materiel",
+      "description": "Valve solénoide",
+      "marque": "Yosoo",
+      "modele": "",
+      "quantite": 3,
+      "url": "https://www.amazon.ca/-/fr/Electric-Électrovanne-magnétique-commutateur-normalement/dp/B01M0TTSYW/"
+    },
+    {
+      "categorie": "materiel",
+      "description": "Convertisseur 12V vers 5V",
+      "marque": "DROK",
+      "modele": "",
+      "quantite": 1,
+      "url": "https://www.amazon.ca/Converter-DROK-Waterproof-Transformer-Motorcycle/dp/B01DBQP7OS"
+    },
+    {
+      "categorie": "materiel",
+      "description": "Convertisseur 12V vers 3.3V",
+      "marque": "DROK",
+      "modele": "",
+      "quantite": 1,
+      "url": "https://www.amazon.ca/DROK-Waterproof-Converter-Step-down-Transformer/dp/B00C64ZJYU"
+    },
+    {
+      "categorie": "materiel",
+      "description": "Pilote LED 150 W 12,5 A",
+      "marque": "LEDMO",
+      "modele": "",
+      "quantite": 1,
+      "url": "https://www.amazon.ca/LEDMO-Transformer-Waterproof-90V-250V-Computer/dp/B075RDM4K8/"
+    },
+    {
+      "categorie": "materiel",
+      "description": "Panneau de distribution",
+      "marque": "Blue Sea Systems",
+      "modele": "12 circuits avec couvercle et négatif",
+      "quantite": 1,
+      "url": "https://www.amazon.ca/Blue-Sea-Systems-Blade-Block/dp/B001P6FTHC/?th=1"
+    },
+    {
+      "categorie": "materiel",
+      "description": "Pompe à grand débit",
+      "marque": "Odysseus",
+      "modele": "",
+      "quantite": 1,
+      "url": "https://www.amazon.ca/100PSI-Pressure-Diaphragm-Water-Pump/dp/B00XDSJEJY"
+    },
+    {
+        "categorie": "materiel",
+        "description": "Pompe à eau centrifuge",
+        "marque": "AUBIG",
+        "modele": "",
+        "quantite": 1,
+        "url": "https://www.amazon.ca/Brushless-Magnetic-Centrifugal-Submersible-DC40A-1245/dp/B00C6XN9DE/"
+    },
+    {
+      "categorie": "materiel",
+      "description": "Répartiteur de tuyau 4 voies",
+      "marque": "Glorden",
+      "modele": "",
+      "quantite": 1,
+      "url": "https://www.amazon.ca/Glorden-Manifold-Splitter-Connector-Comfort/dp/B01F71TPRA/"
+    },
+    {
+      "categorie": "materiel",
+      "description": "Bac de rangement",
+      "marque": "Homz",
+      "modele": "",
+      "quantite": 1,
+      "url": "https://www.walmart.ca/fr/ip/Homz-Rangement-en-plastique-bacs-de-rangement-empilables-modulaires-avec-poign-es-de-verrouillage-bleues-15-5-pintes-transparent-paquet-de-4/PRD1AVJWEUV854O"
+    }
+>>>>>>> Stashed changes
 ]
