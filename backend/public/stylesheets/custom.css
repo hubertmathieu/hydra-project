@@ -140,7 +140,7 @@ section.page-section {
     height: 100%;
     width: 100%;
     top: 0;
-    background-color: rgba(136, 136, 136, 0.51);
+    background-color: rgba(136, 136, 136, 0.75);
 }
 
 .number-plus:after {
