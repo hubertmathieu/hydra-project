@@ -1,9 +1,9 @@
 section#clients.wow.fadeInUp.section-bg
-    .container
-        +sectionTitle("Partenaires")
-        .partners
-            - let partnersCount = 4; //- Utilisé pour diviser le width des images
-                +partnerImage("HUB du Cégep de Sorel-Tracy","images/partners/hub.png")
-                +partnerImage("Camping Parc Bellerive","images/partners/camping.png")
-                +partnerImage("Cégep de Sorel-Tracy","images/partners/cegepst.png")
-                +partnerImage("Société d'aide au développement de la collectivité","images/partners/sadc.png")
+  .container
+    +sectionTitle("Partenaires")
+    .partners
+        - let partnersCount = 4; //- Utilisé pour diviser le width des images
+          +partnerImage("HUB du Cégep de Sorel-Tracy","images/partners/hub.png", "https://fr-ca.facebook.com/HUBcegepsoreltracy/")
+          +partnerImage("Camping Parc Bellerive","images/partners/camping.png", "https://www.campingmarinabellerive.com/")
+          +partnerImage("Cégep de Sorel-Tracy","images/partners/cegepst.png", "https://www.cegepst.qc.ca/")
+          +partnerImage("Société d'aide au développement de la collectivité","images/partners/sadc.png", "https://www.sadcpierredesaurel.ca/")

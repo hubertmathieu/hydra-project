@@ -10,18 +10,21 @@
 
     var viewer = new Marzipano.Viewer(panoElement, viewerOpts);
 
-    var scenes = data.scenes.map(function(data) {
+    var scenes = data.scenes.map(function (data) {
         var urlPrefix = "images/tiles";
         var source = Marzipano.ImageUrlSource.fromString(
             urlPrefix + "/" + data.id + "/{z}/{f}/{y}/{x}.jpg",
-            { cubeMapPreviewUrl: urlPrefix + "/" + data.id + "/preview.jpg" });
+            {cubeMapPreviewUrl: urlPrefix + "/" + data.id + "/preview.jpg"});
         var geometry = new Marzipano.CubeGeometry(data.levels);
 
-        var limiter = Marzipano.RectilinearView.limit.traditional(data.faceSize, 100*Math.PI/180, 120*Math.PI/180);
+        var limiter = Marzipano.RectilinearView.limit.traditional(data.faceSize, 100 * Math.PI / 180, 120 * Math.PI / 180);
         var view = new Marzipano.RectilinearView(data.initialViewParameters, limiter);
 
         panoElement.addEventListener("click", function (e) {
-            console.log(viewer.view().screenToCoordinates({x : (e.pageX - this.offsetLeft), y: (e.pageY - this.offsetTop)}));
+            console.log(viewer.view().screenToCoordinates({
+                x: (e.pageX - this.offsetLeft),
+                y: (e.pageY - this.offsetTop)
+            }));
         });
 
         var scene = viewer.createScene({
@@ -31,9 +34,9 @@
             pinFirstLevel: true
         });
 
-        data.infoHotspots.forEach(function(hotspot) {
+        data.infoHotspots.forEach(function (hotspot) {
             var element = createInfoHotspotElement(hotspot);
-            scene.hotspotContainer().createHotspot(element, { yaw: hotspot.yaw, pitch: hotspot.pitch });
+            scene.hotspotContainer().createHotspot(element, {yaw: hotspot.yaw, pitch: hotspot.pitch});
         });
 
         return {
@@ -81,10 +84,10 @@
     }
 
     function stopTouchAndScrollEventPropagation(element, eventList) {
-        var eventList = [ 'touchstart', 'touchmove', 'touchend', 'touchcancel',
-            'wheel', 'mousewheel' ];
+        var eventList = ['touchstart', 'touchmove', 'touchend', 'touchcancel',
+            'wheel', 'mousewheel'];
         for (var i = 0; i < eventList.length; i++) {
-            element.addEventListener(eventList[i], function(event) {
+            element.addEventListener(eventList[i], function (event) {
                 event.stopPropagation();
             });
         }

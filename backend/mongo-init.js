@@ -1,7 +1,7 @@
 db = new Mongo().getDB('hydra');
 
-db.createCollection('config', { capped: false });
-db.createCollection('thresholds', { capped: false });
+db.createCollection('config', {capped: false});
+db.createCollection('thresholds', {capped: false});
 
 db.config.insert([
     {

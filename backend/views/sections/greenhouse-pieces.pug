@@ -1,20 +1,20 @@
 section#piecesList.wow.fadeInUp.page-section.section-bg
-    .container
-        +sectionTitle("Liste des pièces")
-        table.table.table-striped.table-hover.table-sm
-            thead
-                tr
-                    th(scope='col') Description
-                    th.w-auto.text-center(scope='col') Marque
-                    th.w-auto.text-center(scope='col') Modèle
-                    th.w-auto.text-center(scope='col') Quantité
-                    th.w-auto.text-center(scope='col') Lien
-            tbody
-                each element in piecesList
-                    tr
-                        td #{element.description}
-                        td.text-center #{element.marque}
-                        td.text-center #{element.modele}
-                        td.text-center #{element.quantite}
-                        td.text-center
-                            a(href=element.url).btn.btn-primary.btn-sm Lien
+  .container
+    +sectionTitle("Liste des pièces")
+    table.table.table-striped.table-hover.table-sm
+      thead
+        tr
+          th(scope='col') Description
+          th.w-auto.text-center(scope='col') Marque
+          th.w-auto.text-center(scope='col') Modèle
+          th.w-auto.text-center(scope='col') Quantité
+          th.w-auto.text-center(scope='col') Lien
+      tbody
+          each element in piecesList
+            tr
+              td #{element.description}
+              td.text-center #{element.marque}
+              td.text-center #{element.modele}
+              td.text-center #{element.quantite}
+              td.text-center
+                a(href=element.url).btn.btn-primary.btn-sm Lien
