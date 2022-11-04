@@ -8,7 +8,6 @@ section#piecesList.wow.fadeInUp.page-section.section-bg
           th.w-auto.text-center(scope='col') Marque
           th.w-auto.text-center(scope='col') Modèle
           th.w-auto.text-center(scope='col') Quantité
-          th.w-auto.text-center(scope='col') Lien
       tbody
           each piece in pieces
               tr(onclick=`window.location='${piece.url}';`)
