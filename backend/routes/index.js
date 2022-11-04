@@ -20,7 +20,7 @@ router.get('/statistiques', function (req, res) {
 router.get('/serre', function (req, res) {
     res.render("pages/serre", {
         pageTitle: pageTitlePrefix + "Serre",
-        piecesList: piecesList,
+        pieces: piecesList,
         path: "/serre"
     });
 });
