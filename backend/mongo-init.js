@@ -19,12 +19,12 @@ db.config.insert([
 
 db.thresholds.insert([
     {
-        treshold1: 0,
-        treshold2: 0,
-        treshold3: 0,
-        humiditytreshold1: 0,
-        humiditytreshold2: 0,
-        humiditytreshold3: 0,
-        phTreshold: 0
+        threshold1: 0,
+        threshold2: 0,
+        threshold3: 0,
+        humiditythreshold1: 0,
+        humiditythreshold2: 0,
+        humiditythreshold3: 0,
+        phThreshold: 0
     }
 ]);
