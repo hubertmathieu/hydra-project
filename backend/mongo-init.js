@@ -5,26 +5,26 @@ db.createCollection('thresholds', {capped: false});
 
 db.config.insert([
     {
-        a: 0,
-        b: 0,
-        c: 0,
-        f: 0,
-        g: 0,
-        h: 0,
-        m: 0,
-        n: 0,
-        o: 0
+        temperature1: 0,
+        temperature2: 0,
+        temperature3: 0,
+        humidity1: 0,
+        humidity2: 0,
+        humidity3: 0,
+        ph: 0,
+        waterLevel1: 0,
+        waterLevel2: 0
     }
 ]);
 
 db.thresholds.insert([
     {
-        d: 0,
-        e: 0,
-        i: 0,
-        j: 0,
-        k: 0,
-        l: 0,
-        p: 0
+        treshold1: 0,
+        treshold2: 0,
+        treshold3: 0,
+        humiditytreshold1: 0,
+        humiditytreshold2: 0,
+        humiditytreshold3: 0,
+        phTreshold: 0
     }
 ]);
