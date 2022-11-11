@@ -4,26 +4,31 @@ section#detailedList.wow.fadeInUp.page-section.section-bg
     table.table.table-striped.table-hover
       thead
         tr
-          th(scope='col') Capteur
+          th(scope='col') Calvette
           th.w-auto.text-center(scope='col') État
-          th.w-auto.text-center(scope='col') Valeur actuelle
-          th.w-auto.text-center(scope='col') Cible
-          th.w-auto.text-center(scope='col') Statut
-          th.w-auto.text-center(scope='col')
+          th.w-auto.text-center(scope='col') Température
+          th.w-auto.text-center(scope='col') Humidité
+          th.w-auto.text-center(scope='col') Humidité cible
       tbody
         tr
-          td pH de la rivière
+          td #1
           td.w-auto.text-center
-            span.ml-2.badge.badge-pill.badge-success En fonction
-          td.w-auto.text-center 8,2
-          td.w-auto.text-center 7,6
-          td.w-auto.text-center
-            span.ml-2.badge.badge-pill.badge-danger Trop élevé
+            span.ml-2.badge.badge-pill.badge-success=calvette1.status
+          td.w-auto.text-center=calvette1.temperature
+          td.w-auto.text-center=calvette1.humidity
+          td.w-auto.text-center=calvette1.treshold
         tr
-          td pH de l'eau traitée
+          td #2
           td.w-auto.text-center
-            span.ml-2.badge.badge-pill.badge-success En fonction
-          td.w-auto.text-center 7
-          td.w-auto.text-center 7
-          td.w-auto.text-center
-            span.ml-2.badge.badge-pill.badge-success Excellent
+            span.ml-2.badge.badge-pill.badge-success=calvette2.status
+          td.w-auto.text-center=calvette2.temperature
+          td.w-auto.text-center=calvette2.humidity
+          td.w-auto.text-center=calvette2.treshold
+        tr
+          td #3
+            td.w-auto.text-center
+              span.ml-2.badge.badge-pill.badge-success=calvette3.status
+            td.w-auto.text-center=calvette3.temperature
+            td.w-auto.text-center=calvette3.humidity
+            td.w-auto.text-center=calvette3.treshold
+          tr
