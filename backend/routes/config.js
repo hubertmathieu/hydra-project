@@ -8,10 +8,8 @@ router.get('/', async function (req, res, next) {
 });
 
 router.post('/', async function (req) {
-    const json = JSON.parse(req.body);
-    console.log(json)
-    //const config = await configBroker.findConfig();
-    //await configBroker.updateConfig(config[0]._id, json);
+    const config = await configBroker.findConfig();
+    await configBroker.updateConfig(config[0]._id, req.body);
 });
 
 module.exports = router;
