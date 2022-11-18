@@ -8,6 +8,7 @@ router.get('/', async function (req, res, next) {
 });
 
 router.post('/', async function (req) {
+    console.log(req.body)
     const json = JSON.parse(req.body);
     console.log(json)
     const config = await configBroker.findConfig();
