@@ -35,7 +35,7 @@ router.get('/statistiques', async function (req, res) {
     calvette3.minThreshold = threshold[0].humidityMinThreshold3 == 999 ? 0 : threshold[0].humidityMinThreshold3;
     calvette3.maxThreshold = threshold[0].humidityMaxThreshold3 == 999 ? 0 : threshold[0].humidityMaxThreshold3;
     calvette3.humidity = config[0].humidity3 == 999 ? 0 : config[0].humidity3;
-    
+
     res.render("pages/statistiques", {
         pageTitle: pageTitlePrefix + "Statistiques",
         calvette1: calvette1,
