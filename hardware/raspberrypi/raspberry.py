@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import requests
 import serial
+import json
 
 thresholdsUrl = "http://134.122.126.29/api/v1/thresholds"
 configUrl = "http://134.122.126.29/api/v1/config"
@@ -17,6 +18,7 @@ if __name__ == '__main__':
                     ser.write(str(response))
                 elif line.startswith('Data'):
                     print(line[4:])
-                    requests.post(configUrl, json=line[4:])
+                    data = json.loads(line[4:])
+                    requests.post(configUrl, data=data)
             except:
                 print("")
