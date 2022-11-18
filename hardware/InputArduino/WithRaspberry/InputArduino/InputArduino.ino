@@ -165,9 +165,7 @@ void bSort(int *buf, short l) {
 
 void getThresholds() {
   Serial.println("Envoi-moi les thresholds");
-  bool hasResponse = false;
-  while (!hasResponse) {
-    while (Serial.available() > 0) {
+  while (Serial.available() > 0) {
       String response = Serial.readString();
       StaticJsonBuffer<400> jsonBuffer;
       JsonObject& root = jsonBuffer.parseObject(response);
@@ -177,12 +175,10 @@ void getThresholds() {
       humidityUpperTreshold2 = root["humidityMaxThreshold2"];
       humidityLowerTreshold3 = root["humidityMinThreshold3"];
       humidityUpperTreshold3 = root["humidityMaxThreshold3"];
-      hasResponse = true;
     }
-  }
 }
 
 void sendData() {
   String data = "temperature1=" + String(temperature1) + "&temperature2=" + String(temperature2) + "&temperature3=" + String(temperature3) + "&humidity1=" + String(humidity1) + "&humidity2=" + String(humidity2) + "&humidity3=" + String(humidity3) + "&ph=" + String(phValue) + "&waterLevel1=" + String(waterLevel1) + "&waterLevel2=" + String(waterLevel2) + "";
-  Serial.println(data);
+  Serial.println("Data" + data);
 }
