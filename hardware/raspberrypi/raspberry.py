@@ -15,10 +15,9 @@ if __name__ == '__main__':
                 line = ser.readline().decode('utf-8').rstrip()
                 if line == 'Envoi-moi les thresholds':
                     response = requests.get(thresholdsUrl).text
-                    ser.write(str(response))
+                    ser.write(str(response).encode('utf-8'))
                 elif line.startswith('Data'):
-                    print(line[4:])
                     data = json.loads(line[4:])
-                    requests.post(configUrl, data=data)
+                    requests.post(configUrl, data=data, timeout=1)
             except:
                 print("")
