@@ -17,6 +17,6 @@ if __name__ == '__main__':
                     ser.write(str(response))
                 elif line.startswith('Data'):
                     print(line[4:])
-                    requests.post(configUrl, data=line[4:])
+                    requests.post(configUrl, json=line[4:])
             except:
                 print("")
