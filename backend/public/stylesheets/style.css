@@ -1433,6 +1433,27 @@ body.mobile-nav-active #mobile-nav-toggle {
     color: #ddd;
 }
 
+.phase-container .title-container {
+    width: 13rem;
+    border-bottom: 2px solid #18d26e;
+    margin-bottom: 0.5rem;
+}
+
+.phase-container h1 {
+    font-size: 1.9rem;
+    color: rgba(0, 0, 0, 0.7);
+    padding: 0;
+    margin: 0;
+}
+
+.phase-container ul {
+    padding: 0;
+}
+
+.phase-container ul li {
+    list-style: none;
+}
+
 /*--------------------------------------------------------------
 # Responsive Media Queries
 --------------------------------------------------------------*/
