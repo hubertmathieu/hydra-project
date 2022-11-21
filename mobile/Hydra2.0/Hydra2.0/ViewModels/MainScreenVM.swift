@@ -12,7 +12,6 @@ import UIKit
 class MainScreenVM: ObservableObject {
   @Published var ambient: Ambient = Ambient()
   @Published var calvettes: Calvette = Calvette()
-  @Published var waterTank: WaterTank = WaterTank()
   @Published var timer = Timer()
 
   init() {
@@ -24,7 +23,6 @@ class MainScreenVM: ObservableObject {
   @objc func update() {
     callOpenWeatherApi()
     callHydraApi()
-    waterTank.setWaterProgress()
   }
 
   func callOpenWeatherApi() {
@@ -44,7 +42,7 @@ class MainScreenVM: ObservableObject {
     let url = URL(string: "http://165.227.32.127/api/Threshold/1")!
     let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
       guard let data = data else { return }
-      let dataString = String(data: data, encoding: .utf8)
+        _ = String(data: data, encoding: .utf8)
       self.handleHydraRequest(data: data)
     }
     task.resume()
@@ -64,10 +62,8 @@ class MainScreenVM: ObservableObject {
   func handleHydraRequest(data: Data) {
     do {
       let decoded = try JSONDecoder().decode(Calvette.self, from: data)
-      let decoded2 = try JSONDecoder().decode(WaterTank.self, from: data)
       DispatchQueue.main.async {
         self.calvettes = decoded
-        self.waterTank = decoded2
       }
     } catch {
       print(error)

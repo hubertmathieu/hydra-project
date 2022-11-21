@@ -17,7 +17,6 @@ struct InputView: View {
   @State var humidityUT2: String = "95"
   @State var humidityLT3: String = "85"
   @State var humidityUT3: String = "95"
-  @State var phTreshold: String = "6.5"
   @State private var name: String = "Tim"
 
   var body: some View {
@@ -232,47 +231,6 @@ struct InputView: View {
               endRadius: 413.0167643229167)
           ).cornerRadius(10)
         }.padding(.all, 15)
-        VStack(alignment: .leading) {
-          VStack(alignment: .leading) {
-            Text("Réservoire").font(.custom("AppleSDGothicNeo-Light", size: 30)).foregroundColor(
-              Color.white)
-          }.padding(.top, 5)
-          VStack {
-            VStack(alignment: .leading) {
-              Text("PH").foregroundColor(Color.white).font(
-                .custom("AppleSDGothicNeo-Light", size: 20)
-              ).bold()
-              HStack {
-                TextField("LT1", text: $phTreshold).padding(.all, 10).background(
-                  RadialGradient(
-                    gradient: Gradient(stops: [
-                      Gradient.Stop(
-                        color: Color(
-                          hue: 0.6495239073971668, saturation: 1.0, brightness: 0.09040067282067725,
-                          opacity: 1.0), location: 0.0),
-                      Gradient.Stop(
-                        color: Color(
-                          hue: 0.6637860033885543, saturation: 0.030484302934393828,
-                          brightness: 0.0, opacity: 1.0), location: 1.0),
-                    ]), center: UnitPoint.center, startRadius: 0.0, endRadius: 297.56368001302087)
-                ).cornerRadius(5).foregroundColor(Color.white)
-              }
-            }.padding(.all, 15)
-          }.background(
-            RadialGradient(
-              gradient: Gradient(stops: [
-                Gradient.Stop(
-                  color: Color(
-                    hue: 0.6495239073971668, saturation: 0.365004206278238,
-                    brightness: 0.17169991458754943, opacity: 0.9369329659335586), location: 0.0),
-                Gradient.Stop(
-                  color: Color(
-                    hue: 0.6637860033885543, saturation: 0.06717392335455102,
-                    brightness: 0.04240022222679782, opacity: 0.4345752532223621), location: 1.0),
-              ]), center: UnitPoint.center, startRadius: 152.77913411458331,
-              endRadius: 413.0167643229167)
-          ).cornerRadius(10)
-        }.padding(.all, 15)
         VStack(alignment: .trailing) {
           HStack {
             Spacer()
@@ -300,28 +258,26 @@ struct InputView: View {
             color: Color(
               hue: 0.3590735469955996, saturation: 0.7599689070000707, brightness: 0.0, opacity: 1.0
             ), location: 1.0),
-        ]), center: UnitPoint.topLeading, startRadius: 0.0, endRadius: 174.96719360351562))
+        ]), center: UnitPoint.topLeading, startRadius: 0.0, endRadius: 174.96719360351562)).ignoresSafeArea()
   }
 
   func setCurrentTresholds() {
-    humidityLT1 = viewModel.calvettes.humidityLowerTreshold1.description
-    humidityUT1 = viewModel.calvettes.humidityUpperTreshold1.description
-    humidityLT2 = viewModel.calvettes.humidityLowerTreshold2.description
-    humidityUT2 = viewModel.calvettes.humidityUpperTreshold2.description
-    humidityLT3 = viewModel.calvettes.humidityLowerTreshold3.description
-    humidityUT3 = viewModel.calvettes.humidityUpperTreshold3.description
-    phTreshold = viewModel.waterTank.phTreshold.description
+    humidityLT1 = viewModel.calvettes.humidityMinThreshold1.description
+    humidityUT1 = viewModel.calvettes.humidityMaxThreshold1.description
+    humidityLT2 = viewModel.calvettes.humidityMinThreshold2.description
+    humidityUT2 = viewModel.calvettes.humidityMaxThreshold2.description
+    humidityLT3 = viewModel.calvettes.humidityMinThreshold3.description
+    humidityUT3 = viewModel.calvettes.humidityMaxThreshold3.description
   }
 
   func createSendParameters() {
     let parameters: [String: Any] = [
-      "humidityLowerTreshold1": Float(humidityLT1)!,
-      "humidityUpperTreshold1": Float(humidityUT1)!,
-      "humidityLowerTreshold2": Float(humidityLT2)!,
-      "humidityUpperTreshold2": Float(humidityUT2)!,
-      "humidityLowerTreshold3": Float(humidityLT3)!,
-      "humidityUpperTreshold3": Float(humidityUT3)!,
-      "phTreshold": Float(phTreshold)!,
+      "humidityMinThreshold1": Float(humidityLT1)!,
+      "humidityMaxThreshold1": Float(humidityUT1)!,
+      "humidityMinThreshold2": Float(humidityLT2)!,
+      "humidityMaxThreshold2": Float(humidityUT2)!,
+      "humidityMinThreshold3": Float(humidityLT3)!,
+      "humidityMaxThreshold3": Float(humidityUT3)!
     ]
     viewModel.sendData(data: parameters)
   }

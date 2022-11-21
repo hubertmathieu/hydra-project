@@ -18,7 +18,6 @@
 		DE3C5A412572CDF30085EB8A /* MainScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3C5A402572CDF30085EB8A /* MainScreenVM.swift */; };
 		DE40D37D25720162008FD265 /* Ambient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE40D37C25720162008FD265 /* Ambient.swift */; };
 		DE40D382257201A8008FD265 /* Calvette.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE40D381257201A8008FD265 /* Calvette.swift */; };
-		DE40D387257202D6008FD265 /* WaterTank.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE40D386257202D6008FD265 /* WaterTank.swift */; };
 		DEF714362577ED5F00C5CA67 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF714352577ED5F00C5CA67 /* InputView.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,7 +56,6 @@
 		DE3C5A402572CDF30085EB8A /* MainScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenVM.swift; sourceTree = "<group>"; };
 		DE40D37C25720162008FD265 /* Ambient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ambient.swift; sourceTree = "<group>"; };
 		DE40D381257201A8008FD265 /* Calvette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calvette.swift; sourceTree = "<group>"; };
-		DE40D386257202D6008FD265 /* WaterTank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterTank.swift; sourceTree = "<group>"; };
 		DEF714352577ED5F00C5CA67 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,7 +159,6 @@
 			children = (
 				DE40D37C25720162008FD265 /* Ambient.swift */,
 				DE40D381257201A8008FD265 /* Calvette.swift */,
-				DE40D386257202D6008FD265 /* WaterTank.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -311,7 +308,6 @@
 				DE121DC9256FEE81003A3A76 /* SceneDelegate.swift in Sources */,
 				DE40D382257201A8008FD265 /* Calvette.swift in Sources */,
 				DEF714362577ED5F00C5CA67 /* InputView.swift in Sources */,
-				DE40D387257202D6008FD265 /* WaterTank.swift in Sources */,
 				DE3C5A412572CDF30085EB8A /* MainScreenVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
