@@ -1,6 +1,3 @@
-//- --- TODOS -----------------------------------------------
-
-  -----------------------------------------------------------
 
 extends ../layouts/main-layout
 include ../mixins/mixins
@@ -21,6 +18,34 @@ block content
     section#process.wow.fadeInUp.page-section
       .container
         +sectionTitle("Déroulement (phase 1, 2...)")
+        .row.phase-container
+          .col
+            .title-container
+              h1 Phase 1
+            ul
+              li Création du quai
+              li Création de la serre
+              li Ajout des composantes dans la serre
+          .col
+            .title-container
+              h1 Phase 2
+            ul
+              li Création de l'application mobile
+              li Création du site web
+              li Création de l'API
+              li Création de la documentation
+          .col
+            .title-container
+              h1 Phase 3
+            ul
+              li Modification de l'API
+              li Modification de la page web
+              li Modification de l'application mobile
+              li Modification de la documentation
+              li Modification de la tuyauterie
+              li Modification du câblage
+              li Modélisation 3D de la calvette
+              li Modélisation 3D du supprt pour la calvette
     section#future.wow.fadeInUp.page-section.section-bg
       .container
         +sectionTitle("La suite des choses")
