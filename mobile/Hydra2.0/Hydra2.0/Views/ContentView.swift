@@ -11,7 +11,6 @@ import UIKit
 struct ContentView: View {
   @EnvironmentObject var ambient: Ambient
   @EnvironmentObject var calvettes: Calvette
-  @EnvironmentObject var waterTank: WaterTank
   @EnvironmentObject var viewModel: MainScreenVM
   @State private var showInput = false
 
@@ -163,60 +162,6 @@ struct ContentView: View {
                     endRadius: 413.0167643229167)
                 ).cornerRadius(10)
               }
-              VStack(alignment: .leading) {
-                HStack {
-                  Text("Réservoire").font(.custom("AppleSDGothicNeo-Light", size: 30))
-                    .foregroundColor(Color.white)
-                  Image("waterTank").resizable().frame(width: 25, height: 25)
-                  ZStack(alignment: .bottom) {
-                    Rectangle().frame(width: 10, height: 25).foregroundColor(Color.gray)
-                    Rectangle().frame(width: 10, height: CGFloat(viewModel.waterTank.progress))
-                      .foregroundColor(Color.blue)
-                  }
-                }
-              }.padding(.top, 10)
-              HStack {
-                VStack(alignment: .leading) {
-                  Text("PH").font(.custom("AppleSDGothicNeo-Light", size: 12)).foregroundColor(
-                    Color.white)
-                  Text("Ph: \(String(format:"%.1f",viewModel.waterTank.ph))").font(
-                    .custom("AppleSDGothicNeo-Light", size: 20)
-                  ).foregroundColor(Color.white)
-                  Spacer()
-                  Text("Flora Gro").font(.custom("AppleSDGothicNeo-Light", size: 12))
-                    .foregroundColor(Color.white)
-                  Text("12 ml/l").font(.custom("AppleSDGothicNeo-Light", size: 20)).foregroundColor(
-                    Color.white)
-                }
-                Spacer()
-                VStack(alignment: .trailing) {
-                  Text("Flora Bloom").font(.custom("AppleSDGothicNeo-Light", size: 12))
-                    .foregroundColor(Color.white)
-                  Text("20 ml/l").font(.custom("AppleSDGothicNeo-Light", size: 20)).foregroundColor(
-                    Color.white)
-                  Spacer()
-                  Text("Flora Micro").font(.custom("AppleSDGothicNeo-Light", size: 12))
-                    .foregroundColor(Color.white)
-                  Text("5 ml/l").font(.custom("AppleSDGothicNeo-Light", size: 20)).foregroundColor(
-                    Color.white)
-                }
-              }.frame(width: UIScreen.main.bounds.width - 40).padding(10).background(
-                RadialGradient(
-                  gradient: Gradient(stops: [
-                    Gradient.Stop(
-                      color: Color(
-                        hue: 0.6495239073971668, saturation: 0.365004206278238,
-                        brightness: 0.17169991458754943, opacity: 0.9369329659335586), location: 0.0
-                    ),
-                    Gradient.Stop(
-                      color: Color(
-                        hue: 0.6637860033885543, saturation: 0.06717392335455102,
-                        brightness: 0.04240022222679782, opacity: 0.4345752532223621), location: 1.0
-                    ),
-                  ]), center: UnitPoint.center, startRadius: 152.77913411458331,
-                  endRadius: 413.0167643229167)
-              ).cornerRadius(10)
-
             }.frame(alignment: .center).padding(15)
           }
         }
@@ -231,14 +176,14 @@ struct ContentView: View {
               color: Color(
                 hue: 0.3590735469955996, saturation: 0.7599689070000707, brightness: 0.0,
                 opacity: 1.0), location: 1.0),
-          ]), center: UnitPoint.topLeading, startRadius: 0.0, endRadius: 174.96719360351562))
+          ]), center: UnitPoint.topLeading, startRadius: 0.0, endRadius: 174.96719360351562)).ignoresSafeArea()
     }
   }
 }
 
-struct ContentView_Previews: PreviewProvider {
+/*struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
     ContentView()
   }
-}
+}*/
 
