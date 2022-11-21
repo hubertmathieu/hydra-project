@@ -2,6 +2,7 @@
 #include <Adafruit_Sensor.h>
 #include <DHT.h>
 #include <DHT_U.h>
+#include <ArduinoJson.h>
 #define DHT11_PIN 8
 #define SECOND_DHT11_PIN 9
 #define THIRD_DHT11_PIN 10
@@ -45,8 +46,6 @@ float waterLevel2;
 
 void setup() {
   Serial.begin(9600);
-  mySerial.begin(9600);
-
   dht1.begin();
   dht2.begin();
   dht3.begin();
@@ -60,15 +59,28 @@ void setup() {
 }
 
 void loop() {
+  getThresholds();
+
   temperature1 = dht1.readTemperature();
+  temperature1 = isnan(temperature1) ? 999 : temperature1;
   temperature2 = dht2.readTemperature();
+  temperature2 = isnan(temperature2) ? 999 : temperature2;
   temperature3 = dht3.readTemperature();
+  temperature3 = isnan(temperature3) ? 999 : temperature3;
   humidity1 = dht1.readHumidity();
+  humidity1 = isnan(humidity1) ? 999 : humidity1;
   humidity2 = dht2.readHumidity();
+  humidity2 = isnan(humidity2) ? 999 : humidity2;
   humidity3 = dht3.readHumidity();
+  humidity3 = isnan(humidity3) ? 999 : humidity3;
   waterLevel1 = readWaterLevel();
+  waterLevel1 = isnan(waterLevel1) ? 999 : waterLevel1;
   waterLevel2 = readSecondWaterLevel();
+  waterLevel2 = isnan(waterLevel2) ? 999 : waterLevel2;
   phValue = readPh();
+  phValue = isnan(phValue) ? 999 : phValue;
+
+  sendData();
 
   if (waterLevel1 > waterLevelUpperTreshold) {
     mySerial.println("Filter pump off");
@@ -100,7 +112,7 @@ void loop() {
     mySerial.println("Close phDown");
   }
 
-  delay(500);
+  delay(1000);
 }
 
 float readWaterLevel() {
@@ -149,4 +161,25 @@ void bSort(int *buf, short l) {
       }
     }
   }
+}
+
+void getThresholds() {
+  Serial.println("Envoi-moi les thresholds");
+  while (Serial.available() > 0) {
+    String response = Serial.readString();
+    Serial.flush();
+    StaticJsonBuffer<400> jsonBuffer;
+    JsonObject& root = jsonBuffer.parseObject(response);
+    humidityLowerTreshold1 = root["humidityMinThreshold1"];
+    humidityUpperTreshold1 = root["humidityMaxThreshold1"];
+    humidityLowerTreshold2 = root["humidityMinThreshold2"];
+    humidityUpperTreshold2 = root["humidityMaxThreshold2"];
+    humidityLowerTreshold3 = root["humidityMinThreshold3"];
+    humidityUpperTreshold3 = root["humidityMaxThreshold3"];
+  }
+}
+
+void sendData() {
+  String data = "{\"temperature1\":" + String(temperature1) + ",\"temperature2\":" + String(temperature2) + ",\"temperature3\":" + String(temperature3) + ",\"humidity1\":" + String(humidity1) + ",\"humidity2\":" + String(humidity2) + ",\"humidity3\":" + String(humidity3) + ",\"ph\":" + String(phValue) + ",\"waterLevel1\":" + String(waterLevel1) + ",\"waterLevel2\":" + String(waterLevel2) + "}";
+  Serial.println("Data" + data);
 }

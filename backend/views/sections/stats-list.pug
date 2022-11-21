@@ -1,34 +1,47 @@
 section#detailedList.wow.fadeInUp.page-section.section-bg
   .container
-    +sectionTitle("Liste détaillée des capteurs")
+    +sectionTitle("Liste détaillée des calvettes")
     table.table.table-striped.table-hover
       thead
         tr
           th(scope='col') Calvette
-          th.w-auto.text-center(scope='col') État
-          th.w-auto.text-center(scope='col') Température
+          th.w-auto.text-center(scope='col') État des gicleurs
+          th.w-auto.text-center(scope='col') Température ℃
           th.w-auto.text-center(scope='col') Humidité
-          th.w-auto.text-center(scope='col') Humidité cible
+          th.w-auto.text-center(scope='col') Humidité minimum
+          th.w-auto.text-center(scope='col') Humidité maximum
       tbody
         tr
           td #1
           td.w-auto.text-center
-            span.ml-2.badge.badge-pill.badge-success=calvette1.status
-          td.w-auto.text-center=calvette1.temperature
-          td.w-auto.text-center=calvette1.humidity
-          td.w-auto.text-center=calvette1.treshold
+            if calvette1.status === "En fonction"
+              span.ml-2.badge.badge-pill.badge-success=calvette1.status
+            else
+              span.ml-2.badge.badge-pill.badge-danger=calvette1.status
+          td.w-auto.text-center=calvette1.temperature + "℃"
+          td.w-auto.text-center=calvette1.humidity + "%"
+          td.w-auto.text-center=calvette1.minThreshold + "%"
+          td.w-auto.text-center=calvette1.maxThreshold + "%"
         tr
           td #2
           td.w-auto.text-center
-            span.ml-2.badge.badge-pill.badge-success=calvette2.status
-          td.w-auto.text-center=calvette2.temperature
-          td.w-auto.text-center=calvette2.humidity
-          td.w-auto.text-center=calvette2.treshold
+            if calvette2.status === "En fonction"
+              span.ml-2.badge.badge-pill.badge-success=calvette2.status
+            else
+              span.ml-2.badge.badge-pill.badge-danger=calvette2.status
+          td.w-auto.text-center=calvette2.temperature + "℃"
+          td.w-auto.text-center=calvette2.humidity + "%"
+          td.w-auto.text-center=calvette2.minThreshold + "%"
+          td.w-auto.text-center=calvette2.maxThreshold + "%"
         tr
           td #3
             td.w-auto.text-center
-              span.ml-2.badge.badge-pill.badge-success=calvette3.status
-            td.w-auto.text-center=calvette3.temperature
-            td.w-auto.text-center=calvette3.humidity
-            td.w-auto.text-center=calvette3.treshold
+              if calvette3.status === "En fonction"
+                span.ml-2.badge.badge-pill.badge-success=calvette3.status
+              else
+                span.ml-2.badge.badge-pill.badge-danger=calvette3.status
+            td.w-auto.text-center=calvette3.temperature + "℃"
+            td.w-auto.text-center=calvette3.humidity + "%"
+            td.w-auto.text-center=calvette3.minThreshold + "%"
+            td.w-auto.text-center=calvette3.maxThreshold + "%"
           tr

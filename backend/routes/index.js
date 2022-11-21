@@ -13,27 +13,28 @@ router.get('/', function (req, res) {
 });
 
 router.get('/statistiques', async function (req, res) {
-    let treshold = await thresholdBroker.findAll();
+    let threshold = await thresholdBroker.findAll();
     let config = await configBroker.findConfig();
     let calvette1 = {};
-    calvette1.status = "En fonction";
-    calvette1.temperature = config[0].temperature1;
-    calvette1.treshold = treshold[0].treshold1;
-    calvette1.humidity = config[0].humidity1;
+    calvette1.status = config[0].humidity1 < threshold[0].humidityMinThreshold1 ? "En Fonction" : "Hors d'usage";
+    calvette1.temperature = config[0].temperature1 == 999 ? 0 : config[0].temperature1;
+    calvette1.minThreshold = threshold[0].humidityMinThreshold1 == 999 ? 0 : threshold[0].humidityMinThreshold1;
+    calvette1.maxThreshold = threshold[0].humidityMaxThreshold1 == 999 ? 0 : threshold[0].humidityMaxThreshold1;
+    calvette1.humidity = config[0].humidity1 == 999 ? 0 : config[0].humidity1;
 
     let calvette2 = {};
-    calvette2.status = "En fonction";
-    calvette2.temperature = config[0].temperature2;
-    calvette2.treshold = treshold[0].treshold2;
-    calvette2.humidity = config[0].humidity2;
-    console.log(calvette2)
+    calvette2.status = config[0].humidity2 < threshold[0].humidityMinThreshold2 ? "En Fonction" : "Hors d'usage";
+    calvette2.temperature = config[0].temperature2 == 999 ? 0 : config[0].temperature2;
+    calvette2.minThreshold = threshold[0].humidityMinThreshold2 == 999 ? 0 : threshold[0].humidityMinThreshold2;
+    calvette2.maxThreshold = threshold[0].humidityMaxThreshold2 == 999 ? 0 : threshold[0].humidityMaxThreshold2;
+    calvette2.humidity = config[0].humidity2 == 999 ? 0 : config[0].humidity2;
 
     let calvette3 = {};
-    calvette3.status = "En fonction";
-    calvette3.temperature = config[0].temperature1;
-    calvette3.treshold = treshold[0].treshold3;
-    calvette3.humidity = config[0].humidity3;
-
+    calvette3.status = config[0].humidity3 < threshold[0].humidityMinThreshold3 ? "En Fonction" : "Hors d'usage";
+    calvette3.temperature = config[0].temperature1 == 999 ? 0 : config[0].temperature1;
+    calvette3.minThreshold = threshold[0].humidityMinThreshold3 == 999 ? 0 : threshold[0].humidityMinThreshold3;
+    calvette3.maxThreshold = threshold[0].humidityMaxThreshold3 == 999 ? 0 : threshold[0].humidityMaxThreshold3;
+    calvette3.humidity = config[0].humidity3 == 999 ? 0 : config[0].humidity3;
 
     res.render("pages/statistiques", {
         pageTitle: pageTitlePrefix + "Statistiques",
