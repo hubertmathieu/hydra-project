@@ -8,12 +8,12 @@
 import UIKit
 
 class CalvetteThresholds: ObservableObject, Codable {
-    @Published var humidityMinThreshold1: Float
-    @Published var humidityMaxThreshold1: Float
-    @Published var humidityMinThreshold2: Float
-    @Published var humidityMaxThreshold2: Float
-    @Published var humidityMinThreshold3: Float
-    @Published var humidityMaxThreshold3: Float
+    @Published var humidityMinThreshold1: Int
+    @Published var humidityMaxThreshold1: Int
+    @Published var humidityMinThreshold2: Int
+    @Published var humidityMaxThreshold2: Int
+    @Published var humidityMinThreshold3: Int
+    @Published var humidityMaxThreshold3: Int
     
     enum CodingKeys: CodingKey {
         case humidityMinThreshold1, humidityMaxThreshold1, humidityMinThreshold2, humidityMaxThreshold2,
@@ -21,12 +21,12 @@ class CalvetteThresholds: ObservableObject, Codable {
     }
     
     init() {
-        humidityMinThreshold1 = 85.0
-        humidityMaxThreshold1 = 95.0
-        humidityMinThreshold2 = 85.0
-        humidityMaxThreshold2 = 95.0
-        humidityMinThreshold3 = 85.0
-        humidityMaxThreshold3 = 95.0
+        humidityMinThreshold1 = 85
+        humidityMaxThreshold1 = 95
+        humidityMinThreshold2 = 85
+        humidityMaxThreshold2 = 95
+        humidityMinThreshold3 = 85
+        humidityMaxThreshold3 = 95
     }
     
     func encode(to encoder: Encoder) throws {
@@ -37,11 +37,11 @@ class CalvetteThresholds: ObservableObject, Codable {
     
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        humidityMinThreshold1 = try container.decode(Float.self, forKey: .humidityMinThreshold1)
-        humidityMaxThreshold1 = try container.decode(Float.self, forKey: .humidityMaxThreshold1)
-        humidityMinThreshold2 = try container.decode(Float.self, forKey: .humidityMinThreshold2)
-        humidityMaxThreshold2 = try container.decode(Float.self, forKey: .humidityMaxThreshold2)
-        humidityMinThreshold3 = try container.decode(Float.self, forKey: .humidityMinThreshold3)
-        humidityMaxThreshold3 = try container.decode(Float.self, forKey: .humidityMaxThreshold3)
+        humidityMinThreshold1 = try container.decode(Int.self, forKey: .humidityMinThreshold1)
+        humidityMaxThreshold1 = try container.decode(Int.self, forKey: .humidityMaxThreshold1)
+        humidityMinThreshold2 = try container.decode(Int.self, forKey: .humidityMinThreshold2)
+        humidityMaxThreshold2 = try container.decode(Int.self, forKey: .humidityMaxThreshold2)
+        humidityMinThreshold3 = try container.decode(Int.self, forKey: .humidityMinThreshold3)
+        humidityMaxThreshold3 = try container.decode(Int.self, forKey: .humidityMaxThreshold3)
     }
 }

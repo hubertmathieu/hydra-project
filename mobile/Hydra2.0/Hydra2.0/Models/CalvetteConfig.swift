@@ -8,12 +8,12 @@
 import UIKit
 
 class CalvetteConfig: ObservableObject, Codable {
-  @Published var temperature1: Float
-  @Published var humidity1: Float
-  @Published var temperature2: Float
-  @Published var humidity2: Float
-  @Published var temperature3: Float
-  @Published var humidity3: Float
+  @Published var temperature1: Int
+  @Published var humidity1: Int
+  @Published var temperature2: Int
+  @Published var humidity2: Int
+  @Published var temperature3: Int
+  @Published var humidity3: Int
 
   enum CodingKeys: CodingKey {
     case temperature1, humidity1, temperature2,
@@ -21,12 +21,12 @@ class CalvetteConfig: ObservableObject, Codable {
   }
 
   init() {
-    temperature1 = 25.0
-    humidity1 = 85.0
-    temperature2 = 25.0
-    humidity2 = 85.0 
-    temperature3 = 25.0
-    humidity3 = 85.0
+    temperature1 = 25
+    humidity1 = 85
+    temperature2 = 25
+    humidity2 = 85
+    temperature3 = 25
+    humidity3 = 85
   }
 
   func encode(to encoder: Encoder) throws {
@@ -37,11 +37,11 @@ class CalvetteConfig: ObservableObject, Codable {
 
   required init(from decoder: Decoder) throws {
     let container = try decoder.container(keyedBy: CodingKeys.self)
-    temperature1 = try container.decode(Float.self, forKey: .temperature1)
-    humidity1 = try container.decode(Float.self, forKey: .humidity1)
-    temperature2 = try container.decode(Float.self, forKey: .temperature2)
-    humidity2 = try container.decode(Float.self, forKey: .humidity2)
-    temperature3 = try container.decode(Float.self, forKey: .temperature3)
-    humidity3 = try container.decode(Float.self, forKey: .humidity3)
+    temperature1 = try container.decode(Int.self, forKey: .temperature1)
+    humidity1 = try container.decode(Int.self, forKey: .humidity1)
+    temperature2 = try container.decode(Int.self, forKey: .temperature2)
+    humidity2 = try container.decode(Int.self, forKey: .humidity2)
+    temperature3 = try container.decode(Int.self, forKey: .temperature3)
+    humidity3 = try container.decode(Int.self, forKey: .humidity3)
   }
 }

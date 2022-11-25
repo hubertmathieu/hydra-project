@@ -51,7 +51,7 @@ struct ContentView: View {
                                 VStack(alignment: .leading) {
                                     Text("Température").font(.custom("AppleSDGothicNeo-Light", size: 12))
                                         .foregroundColor(Color.white)
-                                    Text("\(String(format:"%.1f",viewModel.ambient.temp)) °C").font(
+                                    Text("\(String(format:"%.1f",viewModel.ambient.temp))°C").font(
                                         .custom("AppleSDGothicNeo-Light", size: 20)
                                     ).foregroundColor(Color.white)
                                 }
@@ -87,10 +87,10 @@ struct ContentView: View {
                                 VStack(spacing: 10) {
                                     Text("Calvette 1").font(.custom("AppleSDGothicNeo-Light", size: 20))
                                         .foregroundColor(Color.white)
-                                    Text("\(String(format:"%.1f",viewModel.calvettesConfig.temperature1)) °C").font(
+                                    Text("\(String(viewModel.calvettesConfig.temperature1))°C").font(
                                         .custom("AppleSDGothicNeo-Light", size: 20)
                                     ).foregroundColor(Color.white)
-                                    Text("\(String(format:"%.1f",viewModel.calvettesConfig.humidity1))%").font(
+                                    Text("\(String(viewModel.calvettesConfig.humidity1))%").font(
                                         .custom("AppleSDGothicNeo-Light", size: 20)
                                     ).foregroundColor(Color.white)
                                 }.frame(width: 100, height: 120, alignment: .center).background(
@@ -113,10 +113,10 @@ struct ContentView: View {
                                 VStack(spacing: 10) {
                                     Text("Calvette 2").font(.custom("AppleSDGothicNeo-Light", size: 20))
                                         .foregroundColor(Color.white)
-                                    Text("\(String(format:"%.1f",viewModel.calvettesConfig.temperature2)) °C").font(
+                                    Text("\(String(viewModel.calvettesConfig.temperature2))°C").font(
                                         .custom("AppleSDGothicNeo-Light", size: 20)
                                     ).foregroundColor(Color.white)
-                                    Text("\(String(format:"%.1f",viewModel.calvettesConfig.humidity2))%").font(
+                                    Text("\(String(viewModel.calvettesConfig.humidity2))%").font(
                                         .custom("AppleSDGothicNeo-Light", size: 20)
                                     ).foregroundColor(Color.white)
                                 }.frame(width: 100, height: 120, alignment: .center).background(
@@ -139,10 +139,10 @@ struct ContentView: View {
                                 VStack(spacing: 10) {
                                     Text("Calvette 3").font(.custom("AppleSDGothicNeo-Light", size: 20))
                                         .foregroundColor(Color.white)
-                                    Text("\(String(format:"%.1f", viewModel.calvettesConfig.temperature3)) °C").font(
+                                    Text("\(String(viewModel.calvettesConfig.temperature3))°C").font(
                                         .custom("AppleSDGothicNeo-Light", size: 20)
                                     ).foregroundColor(Color.white)
-                                    Text("\(String(format:"%.1f",viewModel.calvettesConfig.humidity3))%").font(
+                                    Text("\(String(viewModel.calvettesConfig.humidity3))%").font(
                                         .custom("AppleSDGothicNeo-Light", size: 20)
                                     ).foregroundColor(Color.white)
                                 }.frame(width: 100, height: 120, alignment: .center).background(
