@@ -237,7 +237,7 @@ struct InputView: View {
                             createSendParameters()
                             self.showSelf = false
                         }) {
-                            Text("Envoyer").foregroundColor(Color.white).padding(.all, 10)
+                            Text("Sauvegarder").foregroundColor(Color.white).padding(.all, 10)
                         }.background(
                             Color(
                                 hue: 0.5773694601403662, saturation: 0.9232538981610035,
