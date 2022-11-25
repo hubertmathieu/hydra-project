@@ -55,7 +55,7 @@ struct InputView: View {
                                 .custom("AppleSDGothicNeo-Light", size: 20)
                             ).bold()
                             HStack {
-                                TextField("LT1", text: $humidityLT1).padding(.all, 10).background(
+                                TextField("Humidité minimum calvette 1", text: $humidityLT1).padding(.all, 10).background(
                                     RadialGradient(
                                         gradient: Gradient(stops: [
                                             Gradient.Stop(
@@ -75,7 +75,7 @@ struct InputView: View {
                                 .custom("AppleSDGothicNeo-Light", size: 20)
                             ).bold()
                             HStack {
-                                TextField("Humidité maximum calvette 2", text: $humidityUT1).padding(.all, 10)
+                                TextField("Humidité maximum calvette 1", text: $humidityUT1).padding(.all, 10)
                                     .background(
                                         RadialGradient(
                                             gradient: Gradient(stops: [
@@ -117,7 +117,7 @@ struct InputView: View {
                                 .custom("AppleSDGothicNeo-Light", size: 20)
                             ).bold()
                             HStack {
-                                TextField("LT1", text: $humidityLT2).padding(.all, 10).background(
+                                TextField("Humidité minimum calvette 2", text: $humidityLT2).padding(.all, 10).background(
                                     RadialGradient(
                                         gradient: Gradient(stops: [
                                             Gradient.Stop(
@@ -179,7 +179,7 @@ struct InputView: View {
                                 .custom("AppleSDGothicNeo-Light", size: 20)
                             ).bold()
                             HStack {
-                                TextField("LT1", text: $humidityLT3).padding(.all, 10).background(
+                                TextField("Humidité minimum calvette 3", text: $humidityLT3).padding(.all, 10).background(
                                     RadialGradient(
                                         gradient: Gradient(stops: [
                                             Gradient.Stop(
@@ -199,7 +199,7 @@ struct InputView: View {
                                 .custom("AppleSDGothicNeo-Light", size: 20)
                             ).bold()
                             HStack {
-                                TextField("Humidité maximum calvette 2", text: $humidityUT3).padding(.all, 10)
+                                TextField("Humidité maximum calvette 3", text: $humidityUT3).padding(.all, 10)
                                     .background(
                                         RadialGradient(
                                             gradient: Gradient(stops: [
