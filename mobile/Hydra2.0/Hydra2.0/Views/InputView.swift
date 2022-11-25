@@ -17,7 +17,6 @@ struct InputView: View {
     @State var humidityUT2: String = "95"
     @State var humidityLT3: String = "85"
     @State var humidityUT3: String = "95"
-    @State private var name: String = "Tim"
     
     var body: some View {
         ScrollView {
@@ -271,13 +270,19 @@ struct InputView: View {
     }
     
     func createSendParameters() {
+        humidityLT1 = humidityLT1.isEmpty ? "0" : humidityLT1;
+        humidityUT1 = humidityUT1.isEmpty ? "0" : humidityUT1;
+        humidityLT2 = humidityLT2.isEmpty ? "0" : humidityLT2;
+        humidityUT2 = humidityUT2.isEmpty ? "0" : humidityUT2;
+        humidityLT3 = humidityLT3.isEmpty ? "0" : humidityLT3;
+        humidityUT3 = humidityUT3.isEmpty ? "0" : humidityUT3;
         let parameters: [String: Any] = [
-            "humidityMinThreshold1": Float(humidityLT1)!,
-            "humidityMaxThreshold1": Float(humidityUT1)!,
-            "humidityMinThreshold2": Float(humidityLT2)!,
-            "humidityMaxThreshold2": Float(humidityUT2)!,
-            "humidityMinThreshold3": Float(humidityLT3)!,
-            "humidityMaxThreshold3": Float(humidityUT3)!
+            "humidityMinThreshold1": Double(humidityLT1)! as Double,
+            "humidityMaxThreshold1": Double(humidityUT1)! as Double,
+            "humidityMinThreshold2": Double(humidityLT2)! as Double,
+            "humidityMaxThreshold2": Double(humidityUT2)! as Double,
+            "humidityMinThreshold3": Double(humidityLT3)! as Double,
+            "humidityMaxThreshold3": Double(humidityUT3)! as Double
         ]
         viewModel.sendData(data: parameters)
     }
