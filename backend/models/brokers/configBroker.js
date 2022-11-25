@@ -7,8 +7,15 @@ exports.findConfig = function () {
     });
 };
 
-exports.updateConfig = function (configId, config) {
+exports.updateConfig = function (configId, humidity1, humidity2, humidity3, temperature1, temperature2, temperature3) {
     return query("config", (collection) => {
-        return collection.updateOne({_id: ObjectId(configId)}, {$set: config});
+        return collection.updateOne({_id: ObjectId(configId)}, {
+            "humidity1": humidity1,
+            "humidity2": humidity2,
+            "humidity3": humidity3,
+            "temperature1": temperature1,
+            "temperature2": temperature2,
+            "temperature3": temperature3,
+        });
     });
 };
