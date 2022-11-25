@@ -10,7 +10,7 @@ import UIKit
 
 struct ContentView: View {
     @EnvironmentObject var ambient: Ambient
-    @EnvironmentObject var calvettes: Calvette
+    @EnvironmentObject var calvettesConfig: CalvetteConfig
     @EnvironmentObject var viewModel: MainScreenVM
     @State private var showInput = false
     
@@ -85,12 +85,12 @@ struct ContentView: View {
                             }.padding(.top, 10)
                             HStack {
                                 VStack(spacing: 10) {
-                                    Text("4 plantes").font(.custom("AppleSDGothicNeo-Light", size: 20))
+                                    Text("Calvette 1").font(.custom("AppleSDGothicNeo-Light", size: 20))
                                         .foregroundColor(Color.white)
-                                    Text("\(String(format:"%.1f",viewModel.calvettes.temperature1)) °C").font(
+                                    Text("\(String(format:"%.1f",viewModel.calvettesConfig.temperature1)) °C").font(
                                         .custom("AppleSDGothicNeo-Light", size: 20)
                                     ).foregroundColor(Color.white)
-                                    Text("\(String(format:"%.1f",viewModel.calvettes.humidity1))%").font(
+                                    Text("\(String(format:"%.1f",viewModel.calvettesConfig.humidity1))%").font(
                                         .custom("AppleSDGothicNeo-Light", size: 20)
                                     ).foregroundColor(Color.white)
                                 }.frame(width: 100, height: 120, alignment: .center).background(
@@ -111,12 +111,12 @@ struct ContentView: View {
                                 ).cornerRadius(10)
                                 Spacer()
                                 VStack(spacing: 10) {
-                                    Text("2 plantes").font(.custom("AppleSDGothicNeo-Light", size: 20))
+                                    Text("Calvette 2").font(.custom("AppleSDGothicNeo-Light", size: 20))
                                         .foregroundColor(Color.white)
-                                    Text("\(String(format:"%.1f",viewModel.calvettes.temperature2)) °C").font(
+                                    Text("\(String(format:"%.1f",viewModel.calvettesConfig.temperature2)) °C").font(
                                         .custom("AppleSDGothicNeo-Light", size: 20)
                                     ).foregroundColor(Color.white)
-                                    Text("\(String(format:"%.1f",viewModel.calvettes.humidity2))%").font(
+                                    Text("\(String(format:"%.1f",viewModel.calvettesConfig.humidity2))%").font(
                                         .custom("AppleSDGothicNeo-Light", size: 20)
                                     ).foregroundColor(Color.white)
                                 }.frame(width: 100, height: 120, alignment: .center).background(
@@ -137,12 +137,12 @@ struct ContentView: View {
                                 ).cornerRadius(10)
                                 Spacer()
                                 VStack(spacing: 10) {
-                                    Text("3 plantes").font(.custom("AppleSDGothicNeo-Light", size: 20))
+                                    Text("Calvette 3").font(.custom("AppleSDGothicNeo-Light", size: 20))
                                         .foregroundColor(Color.white)
-                                    Text("\(String(format:"%.1f", viewModel.calvettes.temperature3)) °C").font(
+                                    Text("\(String(format:"%.1f", viewModel.calvettesConfig.temperature3)) °C").font(
                                         .custom("AppleSDGothicNeo-Light", size: 20)
                                     ).foregroundColor(Color.white)
-                                    Text("\(String(format:"%.1f",viewModel.calvettes.humidity3))%").font(
+                                    Text("\(String(format:"%.1f",viewModel.calvettesConfig.humidity3))%").font(
                                         .custom("AppleSDGothicNeo-Light", size: 20)
                                     ).foregroundColor(Color.white)
                                 }.frame(width: 100, height: 120, alignment: .center).background(

@@ -262,12 +262,12 @@ struct InputView: View {
     }
     
     func setCurrentTresholds() {
-        humidityLT1 = viewModel.calvettes.humidityMinThreshold1.description
-        humidityUT1 = viewModel.calvettes.humidityMaxThreshold1.description
-        humidityLT2 = viewModel.calvettes.humidityMinThreshold2.description
-        humidityUT2 = viewModel.calvettes.humidityMaxThreshold2.description
-        humidityLT3 = viewModel.calvettes.humidityMinThreshold3.description
-        humidityUT3 = viewModel.calvettes.humidityMaxThreshold3.description
+        humidityLT1 = viewModel.calvettesThresholds.humidityMinThreshold1.description
+        humidityUT1 = viewModel.calvettesThresholds.humidityMaxThreshold1.description
+        humidityLT2 = viewModel.calvettesThresholds.humidityMinThreshold2.description
+        humidityUT2 = viewModel.calvettesThresholds.humidityMaxThreshold2.description
+        humidityLT3 = viewModel.calvettesThresholds.humidityMinThreshold3.description
+        humidityUT3 = viewModel.calvettesThresholds.humidityMaxThreshold3.description
     }
     
     func createSendParameters() {

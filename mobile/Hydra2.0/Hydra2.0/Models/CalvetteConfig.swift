@@ -24,7 +24,7 @@ class CalvetteConfig: ObservableObject, Codable {
     temperature1 = 25.0
     humidity1 = 85.0
     temperature2 = 25.0
-    humidity2 = 85.0
+    humidity2 = 85.0 
     temperature3 = 25.0
     humidity3 = 85.0
   }

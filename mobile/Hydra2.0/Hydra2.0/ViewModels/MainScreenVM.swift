@@ -23,7 +23,8 @@ class MainScreenVM: ObservableObject {
     
     @objc func update() {
         callOpenWeatherApi()
-        callHydraApi()
+        callHydraConfigApi()
+        callHydraThresholdsApi()
     }
     
     func callOpenWeatherApi() {
@@ -39,12 +40,22 @@ class MainScreenVM: ObservableObject {
         task.resume()
     }
     
-    func callHydraApi() {
+    func callHydraConfigApi() {
         let url = URL(string: "http://134.122.126.29/api/v1/config")!
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let data = data else { return }
             _ = String(data: data, encoding: .utf8)
-            self.handleHydraRequest(data: data)
+            self.handleHydraConfigRequest(data: data)
+        }
+        task.resume()
+    }
+    
+    func callHydraThresholdsApi() {
+        let url = URL(string: "http://134.122.126.29/api/v1/thresholds")!
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            guard let data = data else { return }
+            _ = String(data: data, encoding: .utf8)
+            self.handleHydraThresholdsRequest(data: data)
         }
         task.resume()
     }
@@ -60,11 +71,22 @@ class MainScreenVM: ObservableObject {
         }
     }
     
-    func handleHydraRequest(data: Data) {
+    func handleHydraConfigRequest(data: Data) {
         do {
-            let decoded = try JSONDecoder().decode(Calvette.self, from: data)
+            let decoded = try JSONDecoder().decode(CalvetteConfig.self, from: data)
             DispatchQueue.main.async {
-                self.calvettes = decoded
+                self.calvettesConfig = decoded
+            }
+        } catch {
+            print(error)
+        }
+    }
+    
+    func handleHydraThresholdsRequest(data: Data) {
+        do {
+            let decoded = try JSONDecoder().decode(CalvetteThresholds.self, from: data)
+            DispatchQueue.main.async {
+                self.calvettesThresholds = decoded
             }
         } catch {
             print(error)
