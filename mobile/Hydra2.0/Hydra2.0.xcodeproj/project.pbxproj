@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		253AF9CD292C1E7A00673731 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253AF9CC292C1E7A00673731 /* ContentView.swift */; };
+		256186F029314278008CD27C /* CalvetteConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256186EF29314278008CD27C /* CalvetteConfig.swift */; };
+		256186F229314284008CD27C /* CalvetteThresholds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256186F129314284008CD27C /* CalvetteThresholds.swift */; };
 		DE121DC7256FEE81003A3A76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE121DC6256FEE81003A3A76 /* AppDelegate.swift */; };
 		DE121DC9256FEE81003A3A76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE121DC8256FEE81003A3A76 /* SceneDelegate.swift */; };
 		DE121DCD256FEE82003A3A76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE121DCC256FEE82003A3A76 /* Assets.xcassets */; };
@@ -17,7 +19,6 @@
 		DE121DE9256FEE83003A3A76 /* Hydra2_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE121DE8256FEE83003A3A76 /* Hydra2_0UITests.swift */; };
 		DE3C5A412572CDF30085EB8A /* MainScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3C5A402572CDF30085EB8A /* MainScreenVM.swift */; };
 		DE40D37D25720162008FD265 /* Ambient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE40D37C25720162008FD265 /* Ambient.swift */; };
-		DE40D382257201A8008FD265 /* Calvette.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE40D381257201A8008FD265 /* Calvette.swift */; };
 		DEF714362577ED5F00C5CA67 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF714352577ED5F00C5CA67 /* InputView.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		253AF9CC292C1E7A00673731 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		256186EF29314278008CD27C /* CalvetteConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalvetteConfig.swift; sourceTree = "<group>"; };
+		256186F129314284008CD27C /* CalvetteThresholds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalvetteThresholds.swift; sourceTree = "<group>"; };
 		DE121DC3256FEE81003A3A76 /* Hydra2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hydra2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE121DC6256FEE81003A3A76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE121DC8256FEE81003A3A76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,7 +58,6 @@
 		DE121DEA256FEE83003A3A76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE3C5A402572CDF30085EB8A /* MainScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenVM.swift; sourceTree = "<group>"; };
 		DE40D37C25720162008FD265 /* Ambient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ambient.swift; sourceTree = "<group>"; };
-		DE40D381257201A8008FD265 /* Calvette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calvette.swift; sourceTree = "<group>"; };
 		DEF714352577ED5F00C5CA67 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,7 +160,8 @@
 			isa = PBXGroup;
 			children = (
 				DE40D37C25720162008FD265 /* Ambient.swift */,
-				DE40D381257201A8008FD265 /* Calvette.swift */,
+				256186EF29314278008CD27C /* CalvetteConfig.swift */,
+				256186F129314284008CD27C /* CalvetteThresholds.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -306,9 +309,10 @@
 				DE121DC7256FEE81003A3A76 /* AppDelegate.swift in Sources */,
 				253AF9CD292C1E7A00673731 /* ContentView.swift in Sources */,
 				DE121DC9256FEE81003A3A76 /* SceneDelegate.swift in Sources */,
-				DE40D382257201A8008FD265 /* Calvette.swift in Sources */,
+				256186F029314278008CD27C /* CalvetteConfig.swift in Sources */,
 				DEF714362577ED5F00C5CA67 /* InputView.swift in Sources */,
 				DE3C5A412572CDF30085EB8A /* MainScreenVM.swift in Sources */,
+				256186F229314284008CD27C /* CalvetteThresholds.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
