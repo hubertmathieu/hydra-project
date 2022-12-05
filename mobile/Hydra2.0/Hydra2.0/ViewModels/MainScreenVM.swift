@@ -98,7 +98,6 @@ class MainScreenVM: ObservableObject {
         let parameters = data
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
-        //let jsonData = try? JSONSerialization.data(withJSONObject: json)
         request.httpBody = parameters.percentEncoded()
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {
