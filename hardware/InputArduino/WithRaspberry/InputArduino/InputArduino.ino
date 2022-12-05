@@ -180,6 +180,16 @@ void getThresholds() {
 }
 
 void sendData() {
-  String data = "{\"temperature1\":" + String(temperature1) + ",\"temperature2\":" + String(temperature2) + ",\"temperature3\":" + String(temperature3) + ",\"humidity1\":" + String(humidity1) + ",\"humidity2\":" + String(humidity2) + ",\"humidity3\":" + String(humidity3) + ",\"ph\":" + String(phValue) + ",\"waterLevel1\":" + String(waterLevel1) + ",\"waterLevel2\":" + String(waterLevel2) + "}";
+  String data = "{
+    \"temperature1\":" + String(temperature1) + 
+    ",\"temperature2\":" + String(temperature2) + 
+    ",\"temperature3\":" + String(temperature3) + 
+    ",\"humidity1\":" + String(humidity1) + 
+    ",\"humidity2\":" + String(humidity2) + 
+    ",\"humidity3\":" + String(humidity3) + 
+    ",\"ph\":" + String(phValue) + 
+    ",\"waterLevel1\":" + String(waterLevel1) + 
+    ",\"waterLevel2\":" + String(waterLevel2) + 
+    "}";
   Serial.println("Data" + data);
 }
