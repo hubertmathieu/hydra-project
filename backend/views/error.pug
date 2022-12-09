@@ -1,20 +1,20 @@
 include ./misc/head
 
 body.section-bg
-    .container
-        .d-flex.align-items-center.justify-content-center.p-5
-            img(src="/images/hydra_logo_v2.png" alt="Logo Hydra" title="Logo Hydra").w-50
-        h1 Désolé, cette page n'existe pas!
-        .card
-            .card-body
-                h5 Détails de l'erreur
-                pre #{error.stack}
-        .d-flex.flex-column.mt-3.align-items-center.pb-5
-            p
-                a(href="/").btn.btn-primary Retourner à la page d'accueil
-            small.text-center
-                | Message d'erreur:&nbsp
-                strong #{message}
-                br
-                | Code d'erreur:&nbsp
-                strong #{error.status}
+  .container
+    .d-flex.align-items-center.justify-content-center.p-5
+      img(src="/images/hydra_logo_v2.png" alt="Logo Hydra" title="Logo Hydra").w-50
+    h1 Désolé, cette page n'existe pas!
+    .card
+      .card-body
+        h5 Détails de l'erreur
+        pre #{error.stack}
+    .d-flex.flex-column.mt-3.align-items-center.pb-5
+      p
+        a(href="/").btn.btn-primary Retourner à la page d'accueil
+      small.text-center
+        | Message d'erreur:&nbsp
+        strong #{message}
+        br
+        | Code d'erreur:&nbsp
+        strong #{error.status}

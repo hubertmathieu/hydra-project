@@ -1,23 +1,22 @@
-version: "3.7"
+version: '3'
 services:
-  app:
-    container_name: app
-    restart: always
-    build: .
+  node:
+    build:
+      context: .
+      dockerfile: "Dockerfile"
+    container_name: "hydra_webserver"
+    restart: 'always'
+    links:
+      - mongodb
     ports:
-      - 80:80
-    depends_on:
-      - mongo
+      - 80:3000
     volumes:
-      - .:/usr/src/app
-      - /usr/src/app/node_modules
-  mongo:
-    container_name: mongo
+      - ./:/app
+
+  mongodb:
+    container_name: "hydra_database"
     image: mongo
-    restart: always
-    volumes:
-      - ./database/data/db:/data/db
     ports:
       - 27017:27017
-    environment:
-      MONGO_INITDB_DATABASE: database
+    volumes:
+      - ./mongo-init.js:/docker-entrypoint-initdb.d/init-mongo.js

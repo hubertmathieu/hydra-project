@@ -7,15 +7,12 @@
 var app = require('../app');
 var debug = require('debug')('hydra-project:server');
 var http = require('http');
-const logger = require('morgan');
-
-app.use(logger('dev'));
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '80');
+var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
 /**
@@ -37,19 +34,19 @@ server.on('listening', onListening);
  */
 
 function normalizePort(val) {
-  var port = parseInt(val, 10);
+    var port = parseInt(val, 10);
 
-  if (isNaN(port)) {
-    // named pipe
-    return val;
-  }
+    if (isNaN(port)) {
+        // named pipe
+        return val;
+    }
 
-  if (port >= 0) {
-    // port number
-    return port;
-  }
+    if (port >= 0) {
+        // port number
+        return port;
+    }
 
-  return false;
+    return false;
 }
 
 /**
@@ -57,27 +54,27 @@ function normalizePort(val) {
  */
 
 function onError(error) {
-  if (error.syscall !== 'listen') {
-    throw error;
-  }
+    if (error.syscall !== 'listen') {
+        throw error;
+    }
 
-  var bind = typeof port === 'string'
-    ? 'Pipe ' + port
-    : 'Port ' + port;
+    var bind = typeof port === 'string'
+        ? 'Pipe ' + port
+        : 'Port ' + port;
 
-  // handle specific listen errors with friendly messages
-  switch (error.code) {
-    case 'EACCES':
-      console.error(bind + ' requires elevated privileges');
-      process.exit(1);
-      break;
-    case 'EADDRINUSE':
-      console.error(bind + ' is already in use');
-      process.exit(1);
-      break;
-    default:
-      throw error;
-  }
+    // handle specific listen errors with friendly messages
+    switch (error.code) {
+        case 'EACCES':
+            console.error(bind + ' requires elevated privileges');
+            process.exit(1);
+            break;
+        case 'EADDRINUSE':
+            console.error(bind + ' is already in use');
+            process.exit(1);
+            break;
+        default:
+            throw error;
+    }
 }
 
 /**
@@ -85,107 +82,9 @@ function onError(error) {
  */
 
 function onListening() {
-  var addr = server.address();
-  var bind = typeof addr === 'string'
-    ? 'pipe ' + addr
-    : 'port ' + addr.port;
-  debug('Listening on ' + bind);
+    var addr = server.address();
+    var bind = typeof addr === 'string'
+        ? 'pipe ' + addr
+        : 'port ' + addr.port;
+    debug('Listening on ' + bind);
 }
-
-
-
-var net = require('net');
-var server = net.createServer();
-var database = require('../database');
-
-server.on('connection', handleConnection);
-server.listen(9000, function() {
-  console.log('server listening to %j', server.address());
-});
-
-function handleConnection(conn) {
-  var remoteAddress = conn.remoteAddress + ':' + conn.remotePort;
-  console.log('new client connection from %s', remoteAddress);
-  conn.on('data', onConnData);
-  conn.once('close', onConnClose);
-  conn.on('error', onConnError);
-
-  function onConnData(d) {
-    console.log('connection data from %s: %j', remoteAddress, d);
-	console.log(d.length);
-	if(d.length % 5 !== 0) return; 
-    let userInput = binToData(d);
-    console.log(userInput);
-	let id = userInput.shift();
-    database.updateSensors(userInput, id.data, function (res){
-		database.getConfigBuffer(id.data, function(response){
-			console.log(response);
-			if(response) conn.write(dataToBin(response.configChanges));
-			database.cleanConfigBuffer(id.data);
-		});
-   	 });
-  
-  }
-  function onConnClose() {
-    console.log('connection from %s closed', remoteAddress);
-  }
-  function onConnError(err) {
-    console.log('Connection %s error: %s', remoteAddress, err.message);
-  }
-}
-
-function dataToBin(data){
-	console.log("sending");
-	console.log(data);
-	let buffer = Buffer.alloc(data.length * 5);
-	for(let i=0; i<data.length; ++i){
-		buffer.write(data[i].header, i * 5);
-		buffer.writeInt32BE(data[i].data * 100, (i*5) + 1);
-	}	
-	return buffer;
-}
-
-
-function binToData(bin){
-  const dataByteLength = 5;
-  let length = bin.length/dataByteLength;
-  let data = [];
-  for(let i=0; i<length; ++i){
-    let entry = {};
-    entry.header = String.fromCharCode(bin.readInt8(dataByteLength*i, 1));
-    entry.data = bin.readIntBE(dataByteLength*i + 1, 4);
-	entry.data /= 100;
-    data.push(entry);
-  }
-  return data;
-}
-
-function onConnData(d) {
-  console.log('connection data from %s: %j', remoteAddress, d);
-  console.log(d);
-
-}
-
-function bin2String(test) {
-  var temp =test.substring(0,8);
-  console.log(temp);
-  var start = String.fromCharCode(parseInt(temp,2));
-  console.log(start);
-  temp = test.substring(8);
-  console.log(temp);
-  var b1 = parseInt(temp,2);
-  if(b1 > 127) b1 -= 256;
-
-  console.log(start + b1);
-
-  return b1;
-}
-
-byteArrayToLong = function(/*byte[]*/byteArray) {
-  var value = 0;
-  for ( var i = byteArray.length - 1; i >= 0; i--) {
-    value = (value * 256) + byteArray[i];
-  }
-
-  return value;
-};

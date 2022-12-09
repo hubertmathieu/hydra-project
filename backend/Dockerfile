@@ -1,13 +1,6 @@
-FROM node:latest
-
-# Create app directory
-WORKDIR /usr/src/app
-
-# Install app dependencies
-COPY package.json .
-RUN npm install
-
+FROM node:18.8.0
+WORKDIR /app
+COPY ["package.json", "package-lock.json*", "./"]
+RUN npm install -g nodemon && npm install
 COPY . .
-
-EXPOSE 80
-CMD [ "npm", "start" ]
+CMD ["npm", "run", "watch"]

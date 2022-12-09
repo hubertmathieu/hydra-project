@@ -1,21 +1,21 @@
 footer#footer
-    .footer-top
-        .container
-            .row
-                +footerMainCol("Hydra", "Texte")
-                +footerCol("Menu", "footer-links")
-                    ul
-                        +footerMenuItem("Accueil", "/")
-                        +footerMenuItem("Statistiques", "/statistiques")
-                        +footerMenuItem("Serre", "/serre")
-                        +footerMenuItem("À propos", "/a-propos")
-                +footerCol("Venez visiter la serre!", "footer-contact")
-                    +footerAddress([
-                        "1999 Chemin des Patriotes",
-                        "Saint-Ours, QC J0G 1P0",
-                        "Canada",
-                        "<strong>Téléphone:</strong> <a href='tel:+14507855566'>+1 450-785-5566</a>",
-                        "<strong>Courriel:</strong> <a href='mailto:info@campingmarinabellerive.com'>info@campingmarinabellerive.com</a>",
-                        "<strong>Site Web:</strong> <a href='campingmarinabellerive.com'>campingmarinabellerive.com</a>"
-                    ])
-    +footerCopyright("Hydra")
+  .footer-top
+    .container
+      .row
+        +footerMainCol("Hydra")
+        +footerCol("Menu", "footer-links")
+          ul
+            +footerMenuItem("Accueil", "/")
+            +footerMenuItem("Statistiques", "/statistiques")
+            +footerMenuItem("Serre", "/serre")
+            +footerMenuItem("À propos", "/a-propos")
+        +footerCol("Venez visiter la serre!", "footer-contact")
+          +footerAddress([
+              "1999 Chemin des Patriotes",
+              "Saint-Ours, QC J0G 1P0",
+              "Canada",
+              "<strong>Téléphone:</strong> <a href='tel:+14507855566'>+1 450-785-5566</a>",
+              "<strong>Courriel:</strong> <a href='mailto:info@campingmarinabellerive.com'>info@campingmarinabellerive.com</a>",
+              "<strong>Site Web:</strong> <a href='https://www.campingmarinabellerive.com'>campingmarinabellerive.com</a>"
+          ])
+  +footerCopyright("Hydra")

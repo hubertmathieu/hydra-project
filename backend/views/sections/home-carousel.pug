@@ -1,12 +1,12 @@
 - const subtext1 = "La culture hydroponique est un mode de plantation pratiqué par l'homme depuis l'Antiquité. La pratique s'est certainement modernisée depuis ce temps, mais la technologie d'aujourd'hui nous permet de croire que l'on pourrait rendre le procédé encore plus efficace.";
 - const subtext2 = "Les données récoltées permettront de mieux gérer les différents processus, et d'avoir une meilleure compréhension des résultats obtenus, autant les bons que les mauvais.";
-- const subtext3 = "Placée directement sur un quai, cette serre connectée puisera directement son eau en-dessous d'elle. Il sera également possible de monitorer et de configurer la serre via son ordinateur ou une application mobile.";
+- const subtext3 = "Placée directement sur un quai, cette serre connectée puisera directement son eau en-dessous d'elle. Il sera également possible de monitorer et de configurer la serre via une application mobile.";
 - const subtext4 = "Grâce à l\'aide financière de la <abbr title=\"Société d\'aide au développement de la collectivité\">SADC</abbr>, ce projet de serre intelligente a été pensé et conçu par les élèves de 3e année du programme de <em>Développement d'application Web et mobiles</em> du Cégep de Sorel-Tracy. Développé au HUB du Cégep de Sorel-Tracy, les étudiants ont pu mettre leurs connaissances acquises en Internet des Objets pour faire de ce projet un succès.";
 
 section#intro
-    .intro-container
-        +carousel('introCarousel')
-            +carouselItem("images/intro-carousel/1.jpg", "Une serre aéroponique flottante connectée", subtext1, "#").active
-            +carouselItem("images/intro-carousel/2.jpg", "Des données pertinentes pour une gestion efficace", subtext2, "#")
-            +carouselItem("images/intro-carousel/3.jpg", "Une serre pas comme les autres", subtext3, "#")
-            +carouselItem("images/intro-carousel/4.jpg", "Un projet à saveur pédagogique", subtext4, "#")
+  .intro-container
+    +carousel('introCarousel')
+      +carouselItem("images/intro-carousel/1.jpg", "Une serre aéroponique flottante connectée", subtext1, "#").active
+      +carouselItem("images/intro-carousel/2.jpg", "Des données pertinentes pour une gestion efficace", subtext2, "#")
+      +carouselItem("images/intro-carousel/3.jpg", "Une serre pas comme les autres", subtext3, "#")
+      +carouselItem("images/intro-carousel/4.jpg", "Un projet à saveur pédagogique", subtext4, "#")

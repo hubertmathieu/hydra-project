@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="SshConfigs">
-    <configs>
-      <sshConfig authType="PASSWORD" host="165.227.32.127" id="cbcdf60f-1c59-498e-88f0-05e554d183ab" port="22" customName="hydra-project" nameFormat="CUSTOM" username="hydra" />
-    </configs>
-  </component>
-</project>

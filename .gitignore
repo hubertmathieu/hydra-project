@@ -102,3 +102,11 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Other
+.idea/
+backend/.idea/
+backend/package-lock.json
+database/
+package-lock.json
+.idea/workspace.xml

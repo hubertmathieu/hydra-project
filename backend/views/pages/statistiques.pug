@@ -7,18 +7,9 @@ include ../mixins/mixins
 
 block content
 
-    +pageHeader("Statistiques", "Sous-texte", "images/intro-carousel/1.jpg")
+  +pageHeader("Statistiques", "", "images/intro-carousel/1.jpg")
 
-    main#main
+  main#main
 
-        // ===== SECTION HOTSPOTS =====
-        include ../sections/stats-hotspots
-
-        // ===== SECTION LISTE DÉTAILLÉE =====
-        include ../sections/stats-list
-
-block scripts
-    script(src='/javascripts/stats.js' type="module")
-    script(src='/marzipano/dist/marzipano.js')
-    script(src='/javascripts/data.js')
-    script(src='/javascripts/pano.js' type="module")
+    // ===== SECTION LISTE DÉTAILLÉE =====
+    include ../sections/stats-list

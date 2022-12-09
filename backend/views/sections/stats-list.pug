@@ -1,36 +1,47 @@
 section#detailedList.wow.fadeInUp.page-section.section-bg
-    .container
-        +sectionTitle("Liste détaillée des capteurs")
-        table.table.table-striped.table-hover
-            thead
-                tr
-                    th(scope='col') Capteur
-                    th.w-auto.text-center(scope='col') État
-                    th.w-auto.text-center(scope='col') Valeur actuelle
-                    th.w-auto.text-center(scope='col') Valeur moyenne
-                    th.w-auto.text-center(scope='col') Cible
-                    th.w-auto.text-center(scope='col') Statut
-                    th.w-auto.text-center(scope='col')
-            tbody
-                tr
-                    td pH de la rivière
-                    td.w-auto.text-center
-                        span.ml-2.badge.badge-pill.badge-success En fonction
-                    td.w-auto.text-center 8,2
-                    td.w-auto.text-center 8,1
-                    td.w-auto.text-center 7,6
-                    td.w-auto.text-center
-                        span.ml-2.badge.badge-pill.badge-danger Trop élevé
-                    td.w-auto.text-center
-                        button.btn.btn-sm.btn-primary Voir graphique
-                tr
-                    td pH de l'eau traitée
-                    td.w-auto.text-center
-                        span.ml-2.badge.badge-pill.badge-success En fonction
-                    td.w-auto.text-center 7
-                    td.w-auto.text-center 7
-                    td.w-auto.text-center 7
-                    td.w-auto.text-center
-                        span.ml-2.badge.badge-pill.badge-success Excellent
-                    td.w-auto.text-center
-                        button.btn.btn-sm.btn-primary Voir graphique
+  .container
+    +sectionTitle("Liste détaillée des calvettes")
+    table.table.table-striped.table-hover
+      thead
+        tr
+          th(scope='col') Calvette
+          th.w-auto.text-center(scope='col') État des gicleurs
+          th.w-auto.text-center(scope='col') Température ℃
+          th.w-auto.text-center(scope='col') Humidité
+          th.w-auto.text-center(scope='col') Humidité minimum
+          th.w-auto.text-center(scope='col') Humidité maximum
+      tbody
+        tr
+          td #1
+          td.w-auto.text-center
+            if calvette1.status === "En fonction"
+              span.ml-2.badge.badge-pill.badge-success=calvette1.status
+            else
+              span.ml-2.badge.badge-pill.badge-danger=calvette1.status
+          td.w-auto.text-center=calvette1.temperature + "℃"
+          td.w-auto.text-center=calvette1.humidity + "%"
+          td.w-auto.text-center=calvette1.minThreshold + "%"
+          td.w-auto.text-center=calvette1.maxThreshold + "%"
+        tr
+          td #2
+          td.w-auto.text-center
+            if calvette2.status === "En fonction"
+              span.ml-2.badge.badge-pill.badge-success=calvette2.status
+            else
+              span.ml-2.badge.badge-pill.badge-danger=calvette2.status
+          td.w-auto.text-center=calvette2.temperature + "℃"
+          td.w-auto.text-center=calvette2.humidity + "%"
+          td.w-auto.text-center=calvette2.minThreshold + "%"
+          td.w-auto.text-center=calvette2.maxThreshold + "%"
+        tr
+          td #3
+            td.w-auto.text-center
+              if calvette3.status === "En fonction"
+                span.ml-2.badge.badge-pill.badge-success=calvette3.status
+              else
+                span.ml-2.badge.badge-pill.badge-danger=calvette3.status
+            td.w-auto.text-center=calvette3.temperature + "℃"
+            td.w-auto.text-center=calvette3.humidity + "%"
+            td.w-auto.text-center=calvette3.minThreshold + "%"
+            td.w-auto.text-center=calvette3.maxThreshold + "%"
+          tr
