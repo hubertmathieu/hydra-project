@@ -54,9 +54,7 @@ $npm install
 Démarrez le serveur 
 ```
 $cd hydra-project/backend
-$npm start
-> hydra-project@0.0.0 start /home/hydra-project //Output attendu.
-> node-dev ./bin/www
+$docker compose up
 ```
 
 ## Écrit avec l'aide de:
