@@ -1,6 +1,0 @@
-2 -> packet length -> unsigned short
-
-on repeat data packet -> 5 bytes
-	1 -> data header -> byte / char
-	4 -> data value -> int / float
-nb data packets = packetLength / dataPaketLength(5)
